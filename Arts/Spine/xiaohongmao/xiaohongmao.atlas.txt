@@ -1,0 +1,160 @@
+
+xiaohongmao.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xiaohongmao_Ldabi
+  rotate: true
+  xy: 81, 2
+  size: 7, 17
+  orig: 7, 17
+  offset: 0, 0
+  index: -1
+xiaohongmao_Ldatui
+  rotate: true
+  xy: 2, 2
+  size: 10, 24
+  orig: 10, 24
+  offset: 0, 0
+  index: -1
+xiaohongmao_Ljiao
+  rotate: false
+  xy: 113, 2
+  size: 10, 7
+  orig: 10, 7
+  offset: 0, 0
+  index: -1
+xiaohongmao_Lxiaobi
+  rotate: true
+  xy: 140, 2
+  size: 8, 21
+  orig: 8, 21
+  offset: 0, 0
+  index: -1
+xiaohongmao_Lxiaotui
+  rotate: true
+  xy: 54, 2
+  size: 7, 25
+  orig: 7, 25
+  offset: 0, 0
+  index: -1
+xiaohongmao_Rdabi
+  rotate: false
+  xy: 495, 45
+  size: 6, 17
+  orig: 6, 17
+  offset: 0, 0
+  index: -1
+xiaohongmao_Rdatui
+  rotate: true
+  xy: 28, 2
+  size: 10, 24
+  orig: 10, 24
+  offset: 0, 0
+  index: -1
+xiaohongmao_Rjiao
+  rotate: false
+  xy: 100, 2
+  size: 11, 7
+  orig: 11, 7
+  offset: 0, 0
+  index: -1
+xiaohongmao_Rxiaobi
+  rotate: false
+  xy: 257, 9
+  size: 11, 20
+  orig: 11, 20
+  offset: 0, 0
+  index: -1
+xiaohongmao_Rxiaotui
+  rotate: true
+  xy: 140, 12
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+xiaohongmao_lian
+  rotate: false
+  xy: 373, 32
+  size: 29, 30
+  orig: 29, 30
+  offset: 0, 0
+  index: -1
+xiaohongmao_maohou
+  rotate: false
+  xy: 140, 22
+  size: 46, 40
+  orig: 46, 40
+  offset: 0, 0
+  index: -1
+xiaohongmao_maoqian
+  rotate: false
+  xy: 188, 22
+  size: 46, 40
+  orig: 46, 40
+  offset: 0, 0
+  index: -1
+xiaohongmao_pifenghou
+  rotate: false
+  xy: 78, 11
+  size: 60, 51
+  orig: 60, 51
+  offset: 0, 0
+  index: -1
+xiaohongmao_pifengqian
+  rotate: false
+  xy: 2, 14
+  size: 74, 48
+  orig: 74, 48
+  offset: 0, 0
+  index: -1
+xiaohongmao_pijianhou
+  rotate: false
+  xy: 404, 39
+  size: 35, 23
+  orig: 35, 23
+  offset: 0, 0
+  index: -1
+xiaohongmao_pijianqian
+  rotate: false
+  xy: 236, 31
+  size: 47, 31
+  orig: 47, 31
+  offset: 0, 0
+  index: -1
+xiaohongmao_qianxiong
+  rotate: false
+  xy: 236, 2
+  size: 19, 27
+  orig: 19, 27
+  offset: 0, 0
+  index: -1
+xiaohongmao_qun1
+  rotate: true
+  xy: 441, 41
+  size: 21, 28
+  orig: 21, 28
+  offset: 0, 0
+  index: -1
+xiaohongmao_qun2
+  rotate: false
+  xy: 330, 29
+  size: 41, 33
+  orig: 41, 33
+  offset: 0, 0
+  index: -1
+xiaohongmao_toufa
+  rotate: true
+  xy: 285, 32
+  size: 30, 43
+  orig: 30, 43
+  offset: 0, 0
+  index: -1
+xiaohongmao_tunbu
+  rotate: true
+  xy: 471, 45
+  size: 17, 22
+  orig: 17, 22
+  offset: 0, 0
+  index: -1

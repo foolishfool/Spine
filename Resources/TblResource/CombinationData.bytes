@@ -1,0 +1,153 @@
+
+\combinationName_001combinationString_001"[2,1]*%{"effectType":1000,"effectValue":200}
+ZcombinationName_002combinationString_002"[2,25]*"{"effectType":7,"effectValue":500}
+ZcombinationName_003combinationString_003"[2,26]*"{"effectType":6,"effectValue":500}
+]combinationName_004combinationString_004"[1,25]*%{"effectType":3000,"effectValue":800}
+ZcombinationName_005combinationString_005"[1,26]*"{"effectType":9,"effectValue":500}
+^combinationName_006combinationString_006"[25,26]*%{"effectType":3000,"effectValue":800}
+\combinationName_007combinationString_007"[3,5]*%{"effectType":2000,"effectValue":160}
+ZcombinationName_008combinationString_008"[3,46]*"{"effectType":9,"effectValue":500}
+]	combinationName_009combinationString_009"[3,16]*%{"effectType":1000,"effectValue":200}
+Z
+combinationName_010combinationString_010"[4,47]*"{"effectType":9,"effectValue":500}
+]combinationName_011combinationString_011"[4,48]*%{"effectType":1000,"effectValue":200}
+ZcombinationName_012combinationString_012"[4,46]*"{"effectType":6,"effectValue":500}
+]combinationName_013combinationString_013"[5,49]*%{"effectType":2000,"effectValue":160}
+]combinationName_014combinationString_014"[5,47]*%{"effectType":3000,"effectValue":800}
+[combinationName_015combinationString_015"[6,103]*"{"effectType":6,"effectValue":500}
+]combinationName_016combinationString_016"[6,31]*%{"effectType":1000,"effectValue":200}
+\combinationName_017combinationString_017"[6,49]*${"effectType":4000,"effectValue":20}
+]combinationName_018combinationString_018"[7,27]*%{"effectType":1000,"effectValue":200}
+ZcombinationName_019combinationString_019"[7,76]*"{"effectType":6,"effectValue":500}
+ZcombinationName_020combinationString_020"[7,11]*"{"effectType":7,"effectValue":500}
+]combinationName_021combinationString_021"[8,71]*%{"effectType":3000,"effectValue":800}
+]combinationName_022combinationString_022"[8,78]*%{"effectType":2000,"effectValue":160}
+]combinationName_023combinationString_023"[8,77]*%{"effectType":2000,"effectValue":160}
+]combinationName_024combinationString_024"[9,29]*%{"effectType":1000,"effectValue":200}
+[combinationName_025combinationString_025"[9,91]*#{"effectType":10,"effectValue":500}
+ZcombinationName_026combinationString_026"[9,82]*"{"effectType":9,"effectValue":500}
+^combinationName_027combinationString_027"[10,36]*%{"effectType":1000,"effectValue":200}
+^combinationName_028combinationString_028"[10,33]*%{"effectType":1000,"effectValue":200}
+[combinationName_029combinationString_029"[10,61]*"{"effectType":6,"effectValue":500}
+^combinationName_030combinationString_030"[11,33]*%{"effectType":3000,"effectValue":800}
+^combinationName_031combinationString_031"[11,34]*%{"effectType":2000,"effectValue":160}
+^ combinationName_032combinationString_032"[33,12]*%{"effectType":3000,"effectValue":800}
+^!combinationName_033combinationString_033"[12,35]*%{"effectType":2000,"effectValue":160}
+^"combinationName_034combinationString_034"[12,81]*%{"effectType":1000,"effectValue":200}
+[#combinationName_035combinationString_035"[13,78]*"{"effectType":7,"effectValue":500}
+^$combinationName_036combinationString_036"[13,20]*%{"effectType":1000,"effectValue":200}
+]%combinationName_037combinationString_037"[13,37]*${"effectType":4000,"effectValue":20}
+]&combinationName_038combinationString_038"[14,38]*${"effectType":4000,"effectValue":20}
+]'combinationName_039combinationString_039"[14,41]*${"effectType":4000,"effectValue":20}
+^(combinationName_040combinationString_040"[15,44]*%{"effectType":1000,"effectValue":200}
+[)combinationName_041combinationString_041"[15,42]*"{"effectType":6,"effectValue":500}
+^*combinationName_042combinationString_042"[15,43]*%{"effectType":3000,"effectValue":800}
+^+combinationName_043combinationString_043"[16,45]*%{"effectType":1000,"effectValue":200}
+[,combinationName_044combinationString_044"[16,46]*"{"effectType":6,"effectValue":500}
+^-combinationName_045combinationString_045"[17,55]*%{"effectType":1000,"effectValue":200}
+^.combinationName_046combinationString_046"[17,45]*%{"effectType":1000,"effectValue":200}
+^/combinationName_047combinationString_047"[17,19]*%{"effectType":1000,"effectValue":200}
+^0combinationName_048combinationString_048"[18,19]*%{"effectType":1000,"effectValue":200}
+^1combinationName_049combinationString_049"[18,40]*%{"effectType":1000,"effectValue":200}
+^2combinationName_050combinationString_050"[18,45]*%{"effectType":1000,"effectValue":200}
+[3combinationName_051combinationString_051"[19,40]*"{"effectType":6,"effectValue":500}
+^4combinationName_052combinationString_052"[20,37]*%{"effectType":3000,"effectValue":800}
+[5combinationName_053combinationString_053"[20,24]*"{"effectType":8,"effectValue":500}
+]6combinationName_054combinationString_054"[21,77]*${"effectType":4000,"effectValue":20}
+^7combinationName_055combinationString_055"[21,50]*%{"effectType":3000,"effectValue":800}
+^8combinationName_056combinationString_056"[22,23]*%{"effectType":3000,"effectValue":800}
+_9combinationName_057combinationString_057"[22,102]*%{"effectType":1000,"effectValue":200}
+[:combinationName_058combinationString_058"[22,99]*"{"effectType":6,"effectValue":500}
+_;combinationName_059combinationString_059"[23,102]*%{"effectType":2000,"effectValue":160}
+\<combinationName_060combinationString_060"[23,99]*#{"effectType":10,"effectValue":500}
+\=combinationName_061combinationString_061"[102,99]*"{"effectType":8,"effectValue":500}
+^>combinationName_062combinationString_062"[24,37]*%{"effectType":1000,"effectValue":200}
+[?combinationName_063combinationString_063"[24,72]*"{"effectType":7,"effectValue":500}
+^@combinationName_064combinationString_064"[27,69]*%{"effectType":3000,"effectValue":800}
+^AcombinationName_065combinationString_065"[27,154]*${"effectType":4000,"effectValue":20}
+[BcombinationName_066combinationString_066"[28,90]*"{"effectType":6,"effectValue":500}
+^CcombinationName_067combinationString_067"[28,80]*%{"effectType":1000,"effectValue":200}
+]DcombinationName_068combinationString_068"[28,39]*${"effectType":4000,"effectValue":20}
+^EcombinationName_069combinationString_069"[29,70]*%{"effectType":1000,"effectValue":200}
+^FcombinationName_070combinationString_070"[29,60]*%{"effectType":3000,"effectValue":800}
+[GcombinationName_071combinationString_071"[30,31]*"{"effectType":8,"effectValue":500}
+^HcombinationName_072combinationString_072"[30,74]*%{"effectType":1000,"effectValue":200}
+[IcombinationName_073combinationString_073"[30,59]*"{"effectType":7,"effectValue":500}
+^JcombinationName_074combinationString_074"[31,90]*%{"effectType":1000,"effectValue":200}
+^KcombinationName_075combinationString_075"[32,58]*%{"effectType":2000,"effectValue":160}
+^LcombinationName_076combinationString_076"[32,80]*%{"effectType":3000,"effectValue":800}
+[McombinationName_077combinationString_077"[32,83]*"{"effectType":6,"effectValue":500}
+^NcombinationName_078combinationString_078"[34,35]*%{"effectType":2000,"effectValue":160}
+^OcombinationName_079combinationString_079"[34,36]*%{"effectType":3000,"effectValue":800}
+[PcombinationName_080combinationString_080"[35,70]*"{"effectType":6,"effectValue":500}
+^QcombinationName_081combinationString_081"[36,62]*%{"effectType":2000,"effectValue":160}
+]RcombinationName_082combinationString_082"[41,38]*${"effectType":4000,"effectValue":20}
+^ScombinationName_083combinationString_083"[39,75]*%{"effectType":1000,"effectValue":200}
+_TcombinationName_084combinationString_084"[39,105]*%{"effectType":3000,"effectValue":800}
+\UcombinationName_085combinationString_085"[42,43]*#{"effectType":10,"effectValue":500}
+[VcombinationName_086combinationString_086"[42,44]*"{"effectType":6,"effectValue":500}
+[WcombinationName_087combinationString_087"[43,44]*"{"effectType":8,"effectValue":500}
+^XcombinationName_088combinationString_088"[47,48]*%{"effectType":2000,"effectValue":160}
+^YcombinationName_089combinationString_089"[49,48]*%{"effectType":1000,"effectValue":200}
+\ZcombinationName_090combinationString_090"[51,152]*"{"effectType":9,"effectValue":400}
+\[combinationName_091combinationString_091"[51,144]*"{"effectType":8,"effectValue":400}
+\\combinationName_092combinationString_092"[51,145]*"{"effectType":6,"effectValue":400}
+^]combinationName_093combinationString_093"[52,53]*%{"effectType":1000,"effectValue":160}
+^^combinationName_094combinationString_094"[52,54]*%{"effectType":1000,"effectValue":160}
+[_combinationName_095combinationString_095"[53,54]*"{"effectType":6,"effectValue":400}
+^`combinationName_096combinationString_096"[55,56]*%{"effectType":3000,"effectValue":640}
+\acombinationName_097combinationString_097"[56,98]*#{"effectType":10,"effectValue":400}
+\bcombinationName_098combinationString_098"[56,104]*"{"effectType":9,"effectValue":400}
+^ccombinationName_099combinationString_099"[58,79]*%{"effectType":3000,"effectValue":640}
+^dcombinationName_100combinationString_100"[58,83]*%{"effectType":1000,"effectValue":160}
+^ecombinationName_101combinationString_101"[63,64]*%{"effectType":3000,"effectValue":640}
+[fcombinationName_102combinationString_102"[65,66]*"{"effectType":9,"effectValue":400}
+^gcombinationName_103combinationString_103"[65,67]*%{"effectType":3000,"effectValue":640}
+^hcombinationName_104combinationString_104"[65,68]*%{"effectType":2000,"effectValue":128}
+[icombinationName_105combinationString_105"[67,66]*"{"effectType":9,"effectValue":400}
+^jcombinationName_106combinationString_106"[66,68]*%{"effectType":3000,"effectValue":640}
+^kcombinationName_107combinationString_107"[67,68]*%{"effectType":2000,"effectValue":128}
+[lcombinationName_108combinationString_108"[74,69]*"{"effectType":6,"effectValue":400}
+[mcombinationName_109combinationString_109"[70,92]*"{"effectType":6,"effectValue":400}
+^ncombinationName_110combinationString_110"[156,71]*${"effectType":4000,"effectValue":20}
+\ocombinationName_111combinationString_111"[79,73]*#{"effectType":10,"effectValue":400}
+[pcombinationName_112combinationString_112"[74,82]*"{"effectType":9,"effectValue":400}
+^qcombinationName_113combinationString_113"[76,75]*%{"effectType":3000,"effectValue":640}
+^rcombinationName_114combinationString_114"[78,77]*%{"effectType":1000,"effectValue":160}
+^scombinationName_115combinationString_115"[88,81]*%{"effectType":1000,"effectValue":160}
+[tcombinationName_116combinationString_116"[84,91]*"{"effectType":8,"effectValue":400}
+^ucombinationName_117combinationString_117"[84,85]*%{"effectType":1000,"effectValue":160}
+^vcombinationName_118combinationString_118"[84,86]*%{"effectType":2000,"effectValue":128}
+[wcombinationName_119combinationString_119"[85,89]*"{"effectType":8,"effectValue":400}
+^xcombinationName_120combinationString_120"[85,86]*%{"effectType":3000,"effectValue":640}
+[ycombinationName_121combinationString_121"[86,89]*"{"effectType":6,"effectValue":400}
+^zcombinationName_122combinationString_122"[93,87]*%{"effectType":1000,"effectValue":160}
+\{combinationName_123combinationString_123"[91,155]*"{"effectType":7,"effectValue":400}
+_|combinationName_124combinationString_124"[94,108]*%{"effectType":1000,"effectValue":160}
+\}combinationName_125combinationString_125"[94,106]*"{"effectType":6,"effectValue":400}
+_~combinationName_126combinationString_126"[94,107]*%{"effectType":3000,"effectValue":640}
+]combinationName_127combinationString_127"	[108,106]*"{"effectType":9,"effectValue":400}
+_ÄcombinationName_128combinationString_128"	[107,106]*#{"effectType":10,"effectValue":400}
+^ÅcombinationName_129combinationString_129"	[107,108]*"{"effectType":8,"effectValue":400}
+_ÇcombinationName_130combinationString_130"[96,95]*%{"effectType":1000,"effectValue":160}
+]ÉcombinationName_131combinationString_131"[95,111]*"{"effectType":6,"effectValue":400}
+`ÑcombinationName_132combinationString_132"[96,111]*%{"effectType":3000,"effectValue":640}
+]ÖcombinationName_133combinationString_133"[95,109]*"{"effectType":9,"effectValue":400}
+^ÜcombinationName_134combinationString_134"[96,109]*#{"effectType":10,"effectValue":400}
+^ácombinationName_135combinationString_135"	[109,111]*"{"effectType":8,"effectValue":300}
+`àcombinationName_136combinationString_136"[97,112]*%{"effectType":1000,"effectValue":160}
+]âcombinationName_137combinationString_137"[97,110]*"{"effectType":6,"effectValue":400}
+`äcombinationName_138combinationString_138"[97,113]*%{"effectType":3000,"effectValue":640}
+^ãcombinationName_139combinationString_139"	[110,112]*"{"effectType":9,"effectValue":300}
+_åcombinationName_140combinationString_140"	[110,113]*#{"effectType":10,"effectValue":300}
+^çcombinationName_141combinationString_141"	[112,113]*"{"effectType":8,"effectValue":300}
+]écombinationName_142combinationString_142"[98,148]*"{"effectType":6,"effectValue":400}
+]ècombinationName_143combinationString_143"[98,104]*"{"effectType":7,"effectValue":400}
+aêcombinationName_144combinationString_144"	[104,105]*%{"effectType":1000,"effectValue":160}
+aëcombinationName_145combinationString_145"	[101,100]*%{"effectType":3000,"effectValue":640}
+^ícombinationName_146combinationString_146"	[100,103]*"{"effectType":8,"effectValue":400}
+^ìcombinationName_147combinationString_147"	[101,103]*"{"effectType":7,"effectValue":400}
+^îcombinationName_148combinationString_148"	[134,135]*"{"effectType":6,"effectValue":300}
+^ïcombinationName_149combinationString_149"	[149,151]*"{"effectType":6,"effectValue":300}
+^ñcombinationName_150combinationString_150"	[153,150]*"{"effectType":6,"effectValue":300}
+`ócombinationName_151combinationString_151"	[157,158]*${"effectType":4000,"effectValue":20}

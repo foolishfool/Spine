@@ -1,0 +1,146 @@
+
+dfxiaoyaozhanshi.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dabiL
+  rotate: false
+  xy: 247, 8
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+dabiR
+  rotate: true
+  xy: 465, 49
+  size: 13, 16
+  orig: 13, 16
+  offset: 0, 0
+  index: -1
+datuiL
+  rotate: true
+  xy: 2, 6
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+datuiR
+  rotate: true
+  xy: 32, 8
+  size: 14, 23
+  orig: 14, 23
+  offset: 0, 0
+  index: -1
+dun
+  rotate: true
+  xy: 198, 26
+  size: 36, 40
+  orig: 36, 40
+  offset: 0, 0
+  index: -1
+duzi
+  rotate: true
+  xy: 240, 29
+  size: 33, 42
+  orig: 33, 42
+  offset: 0, 0
+  index: -1
+huxinjia
+  rotate: false
+  xy: 358, 39
+  size: 27, 23
+  orig: 27, 23
+  offset: 0, 0
+  index: -1
+jianjia
+  rotate: false
+  xy: 387, 39
+  size: 24, 23
+  orig: 24, 23
+  offset: 0, 0
+  index: -1
+jianjiamao
+  rotate: false
+  xy: 329, 38
+  size: 27, 24
+  orig: 27, 24
+  offset: 0, 0
+  index: -1
+jiaozhangL
+  rotate: false
+  xy: 413, 47
+  size: 24, 15
+  orig: 24, 15
+  offset: 0, 0
+  index: -1
+jiaozhangR
+  rotate: false
+  xy: 439, 49
+  size: 24, 13
+  orig: 24, 13
+  offset: 0, 0
+  index: -1
+qianbiL
+  rotate: true
+  xy: 198, 2
+  size: 22, 47
+  orig: 22, 47
+  offset: 0, 0
+  index: -1
+qianxiong
+  rotate: false
+  xy: 315, 2
+  size: 28, 27
+  orig: 28, 27
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 99, 19
+  size: 53, 43
+  orig: 53, 43
+  offset: 0, 0
+  index: -1
+toufa
+  rotate: false
+  xy: 284, 2
+  size: 29, 27
+  orig: 29, 27
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: false
+  xy: 2, 24
+  size: 95, 38
+  orig: 95, 38
+  offset: 0, 0
+  index: -1
+xiaobiR
+  rotate: true
+  xy: 284, 31
+  size: 31, 43
+  orig: 31, 43
+  offset: 0, 0
+  index: -1
+xiaotuiL
+  rotate: false
+  xy: 268, 14
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+xiaotuiR
+  rotate: true
+  xy: 57, 7
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+yaojianguashi
+  rotate: false
+  xy: 154, 25
+  size: 42, 37
+  orig: 42, 37
+  offset: 0, 0
+  index: -1

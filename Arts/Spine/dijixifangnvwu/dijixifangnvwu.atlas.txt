@@ -1,0 +1,174 @@
+
+dijixifangnvwu.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+nvwu_Ldabi
+  rotate: true
+  xy: 19, 2
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1
+nvwu_Ldatui
+  rotate: true
+  xy: 455, 53
+  size: 9, 23
+  orig: 9, 23
+  offset: 0, 0
+  index: -1
+nvwu_Ljiao
+  rotate: true
+  xy: 500, 51
+  size: 11, 10
+  orig: 11, 10
+  offset: 0, 0
+  index: -1
+nvwu_Lxiabai
+  rotate: true
+  xy: 361, 51
+  size: 11, 26
+  orig: 11, 26
+  offset: 0, 0
+  index: -1
+nvwu_Lxiaobi
+  rotate: false
+  xy: 413, 41
+  size: 19, 21
+  orig: 19, 21
+  offset: 0, 0
+  index: -1
+nvwu_Lxiaotui
+  rotate: true
+  xy: 480, 55
+  size: 7, 18
+  orig: 7, 18
+  offset: 0, 0
+  index: -1
+nvwu_Rdabi
+  rotate: true
+  xy: 2, 2
+  size: 8, 15
+  orig: 8, 15
+  offset: 0, 0
+  index: -1
+nvwu_Rdatui
+  rotate: true
+  xy: 47, 2
+  size: 10, 19
+  orig: 10, 19
+  offset: 0, 0
+  index: -1
+nvwu_Rjiao
+  rotate: true
+  xy: 35, 2
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+nvwu_Rxiabaishang
+  rotate: false
+  xy: 206, 18
+  size: 25, 23
+  orig: 25, 23
+  offset: 0, 0
+  index: -1
+nvwu_Rxiabaixia
+  rotate: true
+  xy: 299, 46
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+nvwu_Rxiaobi
+  rotate: true
+  xy: 62, 24
+  size: 14, 27
+  orig: 14, 27
+  offset: 0, 0
+  index: -1
+nvwu_Rxiaotui
+  rotate: true
+  xy: 327, 53
+  size: 9, 32
+  orig: 9, 32
+  offset: 0, 0
+  index: -1
+nvwu_erduo
+  rotate: false
+  xy: 206, 43
+  size: 33, 19
+  orig: 33, 19
+  offset: 0, 0
+  index: -1
+nvwu_fahou
+  rotate: true
+  xy: 241, 44
+  size: 18, 29
+  orig: 18, 29
+  offset: 0, 0
+  index: -1
+nvwu_houshangshang
+  rotate: true
+  xy: 272, 44
+  size: 18, 25
+  orig: 18, 25
+  offset: 0, 0
+  index: -1
+nvwu_houshangxia
+  rotate: false
+  xy: 32, 16
+  size: 28, 22
+  orig: 28, 22
+  offset: 0, 0
+  index: -1
+nvwu_lian
+  rotate: false
+  xy: 2, 12
+  size: 28, 26
+  orig: 28, 26
+  offset: 0, 0
+  index: -1
+nvwu_maozi
+  rotate: false
+  xy: 91, 21
+  size: 58, 41
+  orig: 58, 41
+  offset: 0, 0
+  index: -1
+nvwu_pifengxia
+  rotate: true
+  xy: 151, 14
+  size: 48, 53
+  orig: 48, 53
+  offset: 0, 0
+  index: -1
+nvwu_tunbu
+  rotate: false
+  xy: 434, 47
+  size: 19, 15
+  orig: 19, 15
+  offset: 0, 0
+  index: -1
+nvwu_weibo
+  rotate: true
+  xy: 233, 26
+  size: 15, 9
+  orig: 15, 9
+  offset: 0, 0
+  index: -1
+nvwu_wuqi
+  rotate: true
+  xy: 2, 40
+  size: 22, 87
+  orig: 22, 87
+  offset: 0, 0
+  index: -1
+nvwu_xiong
+  rotate: true
+  xy: 389, 41
+  size: 21, 22
+  orig: 21, 22
+  offset: 0, 0
+  index: -1

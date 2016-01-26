@@ -1,0 +1,153 @@
+
+tieshangongzhu.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+datuiL
+  rotate: false
+  xy: 55, 13
+  size: 10, 23
+  orig: 10, 23
+  offset: 0, 0
+  index: -1
+datui_R
+  rotate: false
+  xy: 40, 13
+  size: 13, 23
+  orig: 13, 23
+  offset: 0, 0
+  index: -1
+lian
+  rotate: false
+  xy: 37, 38
+  size: 32, 34
+  orig: 32, 34
+  offset: 0, 0
+  index: -1
+qianbiaodai
+  rotate: false
+  xy: 15, 9
+  size: 11, 26
+  orig: 11, 26
+  offset: 0, 0
+  index: -1
+qibiL
+  rotate: true
+  xy: 40, 3
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1
+qibiR
+  rotate: false
+  xy: 119, 94
+  size: 7, 13
+  orig: 7, 13
+  offset: 0, 0
+  index: -1
+qibiyixiuL
+  rotate: true
+  xy: 71, 57
+  size: 15, 37
+  orig: 15, 37
+  offset: 0, 0
+  index: -1
+qibiyixiuR
+  rotate: true
+  xy: 71, 42
+  size: 13, 34
+  orig: 13, 34
+  offset: 0, 0
+  index: -1
+shajinL
+  rotate: false
+  xy: 119, 74
+  size: 5, 18
+  orig: 5, 18
+  offset: 0, 0
+  index: -1
+shajinR
+  rotate: true
+  xy: 71, 23
+  size: 17, 19
+  orig: 17, 19
+  offset: 0, 0
+  index: -1
+shangbiR
+  rotate: false
+  xy: 92, 23
+  size: 8, 17
+  orig: 8, 17
+  offset: 0, 0
+  index: -1
+shangbi_R
+  rotate: false
+  xy: 119, 109
+  size: 7, 17
+  orig: 7, 17
+  offset: 0, 0
+  index: -1
+toufa
+  rotate: false
+  xy: 2, 37
+  size: 33, 35
+  orig: 33, 35
+  offset: 0, 0
+  index: -1
+toushi
+  rotate: false
+  xy: 81, 5
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+tun
+  rotate: false
+  xy: 110, 51
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: false
+  xy: 2, 74
+  size: 115, 52
+  orig: 115, 52
+  offset: 0, 0
+  index: -1
+wuqi01
+  rotate: false
+  xy: 2, 74
+  size: 115, 52
+  orig: 115, 52
+  offset: 0, 0
+  index: -1
+xiaotuiL
+  rotate: false
+  xy: 2, 8
+  size: 11, 27
+  orig: 11, 27
+  offset: 0, 0
+  index: -1
+xiaotui_L
+  rotate: false
+  xy: 28, 8
+  size: 10, 27
+  orig: 10, 27
+  offset: 0, 0
+  index: -1
+xiong
+  rotate: false
+  xy: 107, 25
+  size: 19, 24
+  orig: 19, 24
+  offset: 0, 0
+  index: -1
+yaobu
+  rotate: true
+  xy: 67, 2
+  size: 19, 12
+  orig: 19, 12
+  offset: 0, 0
+  index: -1

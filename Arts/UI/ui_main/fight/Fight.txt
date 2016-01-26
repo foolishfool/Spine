@@ -1,0 +1,180 @@
+{"frames": {
+
+"baiozhen.png":
+{
+	"frame": {"x":402,"y":67,"w":23,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":31},
+	"sourceSize": {"w":23,"h":31}
+},
+"biaopan.png":
+{
+	"frame": {"x":319,"y":121,"w":85,"h":85},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":85,"h":85},
+	"sourceSize": {"w":85,"h":85}
+},
+"chibang.png":
+{
+	"frame": {"x":451,"y":67,"w":48,"h":109},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":109},
+	"sourceSize": {"w":48,"h":109}
+},
+"chibang_2.png":
+{
+	"frame": {"x":405,"y":99,"w":45,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":86},
+	"sourceSize": {"w":45,"h":86}
+},
+"guang.png":
+{
+	"frame": {"x":325,"y":73,"w":17,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":39},
+	"sourceSize": {"w":17,"h":39}
+},
+"huo_1.png":
+{
+	"frame": {"x":319,"y":207,"w":90,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":90,"h":48},
+	"sourceSize": {"w":90,"h":48}
+},
+"huo_2.png":
+{
+	"frame": {"x":217,"y":226,"w":47,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":20},
+	"sourceSize": {"w":47,"h":20}
+},
+"shenti.png":
+{
+	"frame": {"x":405,"y":1,"w":101,"h":65},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":101,"h":65},
+	"sourceSize": {"w":101,"h":65}
+},
+"tiao_1.png":
+{
+	"frame": {"x":141,"y":248,"w":6,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":6,"h":6},
+	"sourceSize": {"w":6,"h":6}
+},
+"tiao_2.png":
+{
+	"frame": {"x":141,"y":241,"w":6,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":6,"h":6},
+	"sourceSize": {"w":6,"h":6}
+},
+"tiao_3.png":
+{
+	"frame": {"x":109,"y":241,"w":18,"h":10},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":10},
+	"sourceSize": {"w":18,"h":10}
+},
+"touxiangkuang_1.png":
+{
+	"frame": {"x":109,"y":1,"w":107,"h":119},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":119},
+	"sourceSize": {"w":107,"h":119}
+},
+"touxiangkuang_2.png":
+{
+	"frame": {"x":1,"y":132,"w":107,"h":119},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":119},
+	"sourceSize": {"w":107,"h":119}
+},
+"touxiangkuang_3.png":
+{
+	"frame": {"x":217,"y":1,"w":107,"h":119},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":119},
+	"sourceSize": {"w":107,"h":119}
+},
+"touxiangkuang_4.png":
+{
+	"frame": {"x":109,"y":121,"w":107,"h":119},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":119},
+	"sourceSize": {"w":107,"h":119}
+},
+"xuetiao.PNG":
+{
+	"frame": {"x":128,"y":248,"w":12,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":6},
+	"sourceSize": {"w":12,"h":6}
+},
+"xuetiao1.PNG":
+{
+	"frame": {"x":128,"y":241,"w":12,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":6},
+	"sourceSize": {"w":12,"h":6}
+},
+"yali.png":
+{
+	"frame": {"x":217,"y":121,"w":101,"h":104},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":101,"h":104},
+	"sourceSize": {"w":101,"h":104}
+},
+"zanting.png":
+{
+	"frame": {"x":325,"y":1,"w":76,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":71},
+	"sourceSize": {"w":76,"h":71}
+},
+"zchibang.png":
+{
+	"frame": {"x":451,"y":177,"w":48,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":70},
+	"sourceSize": {"w":48,"h":70}
+},
+"ͷ.png":
+{
+	"frame": {"x":1,"y":1,"w":107,"h":130},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":130},
+	"sourceSize": {"w":107,"h":130}
+}},
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "Fight.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":256},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:19cb2b399c783d845ee01b5756802fec$"
+}
+}

@@ -1,0 +1,83 @@
+
+juxiangbing.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+juxiangbing_Ldabi
+  rotate: false
+  xy: 2, 10
+  size: 71, 53
+  orig: 71, 53
+  offset: 0, 0
+  index: -1
+juxiangbing_Ljiao
+  rotate: true
+  xy: 101, 2
+  size: 32, 26
+  orig: 32, 26
+  offset: 0, 0
+  index: -1
+juxiangbing_Ltui
+  rotate: true
+  xy: 453, 98
+  size: 28, 41
+  orig: 28, 41
+  offset: 0, 0
+  index: -1
+juxiangbing_Lxiaobi
+  rotate: true
+  xy: 90, 74
+  size: 52, 89
+  orig: 52, 89
+  offset: 0, 0
+  index: -1
+juxiangbing_Rdabi
+  rotate: false
+  xy: 326, 82
+  size: 55, 44
+  orig: 55, 44
+  offset: 0, 0
+  index: -1
+juxiangbing_Rjiao
+  rotate: true
+  xy: 75, 23
+  size: 40, 24
+  orig: 40, 24
+  offset: 0, 0
+  index: -1
+juxiangbing_Rtui
+  rotate: false
+  xy: 101, 36
+  size: 34, 36
+  orig: 34, 36
+  offset: 0, 0
+  index: -1
+juxiangbing_Rxiaobi
+  rotate: true
+  xy: 181, 78
+  size: 48, 74
+  orig: 48, 74
+  offset: 0, 0
+  index: -1
+juxiangbing_tou
+  rotate: true
+  xy: 257, 72
+  size: 54, 67
+  orig: 54, 67
+  offset: 0, 0
+  index: -1
+juxiangbing_tun
+  rotate: false
+  xy: 383, 96
+  size: 68, 30
+  orig: 68, 30
+  offset: 0, 0
+  index: -1
+juxiangbing_xiong
+  rotate: false
+  xy: 2, 65
+  size: 86, 61
+  orig: 86, 61
+  offset: 0, 0
+  index: -1

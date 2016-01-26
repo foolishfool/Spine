@@ -1,0 +1,153 @@
+
+baixuegongzhu.png
+size: 256,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+baixuegongzhu_Ldabi
+  rotate: false
+  xy: 165, 9
+  size: 13, 19
+  orig: 13, 19
+  offset: 0, 0
+  index: -1
+baixuegongzhu_Ldatui
+  rotate: true
+  xy: 17, 9
+  size: 11, 25
+  orig: 11, 25
+  offset: 0, 0
+  index: -1
+baixuegongzhu_Ljiao
+  rotate: false
+  xy: 76, 12
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+baixuegongzhu_Lpiaodai
+  rotate: true
+  xy: 44, 14
+  size: 6, 30
+  orig: 6, 30
+  offset: 0, 0
+  index: -1
+baixuegongzhu_Lxiaobi
+  rotate: true
+  xy: 228, 41
+  size: 8, 23
+  orig: 8, 23
+  offset: 0, 0
+  index: -1
+baixuegongzhu_Lxiaotui
+  rotate: false
+  xy: 145, 2
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+baixuegongzhu_Rdabi
+  rotate: false
+  xy: 2, 2
+  size: 13, 18
+  orig: 13, 18
+  offset: 0, 0
+  index: -1
+baixuegongzhu_Rdatui
+  rotate: true
+  xy: 228, 51
+  size: 11, 25
+  orig: 11, 25
+  offset: 0, 0
+  index: -1
+baixuegongzhu_Rjiao
+  rotate: false
+  xy: 67, 2
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+baixuegongzhu_Rxiaobi
+  rotate: true
+  xy: 44, 2
+  size: 10, 21
+  orig: 10, 21
+  offset: 0, 0
+  index: -1
+baixuegongzhu_Rxiaotui
+  rotate: false
+  xy: 155, 2
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+baixuegongzhu_qunbai
+  rotate: false
+  xy: 91, 2
+  size: 30, 25
+  orig: 30, 25
+  offset: 0, 0
+  index: -1
+baixuegongzhu_tou
+  rotate: false
+  xy: 139, 30
+  size: 31, 32
+  orig: 31, 32
+  offset: 0, 0
+  index: -1
+baixuegongzhu_toufa
+  rotate: false
+  xy: 91, 29
+  size: 46, 33
+  orig: 46, 33
+  offset: 0, 0
+  index: -1
+baixuegongzhu_tun
+  rotate: false
+  xy: 206, 39
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: -1
+baixuegongzhu_wuqi
+  rotate: false
+  xy: 2, 22
+  size: 87, 40
+  orig: 87, 40
+  offset: 0, 0
+  index: -1
+baixuegongzhu_wuqi2
+  rotate: false
+  xy: 2, 22
+  size: 87, 40
+  orig: 87, 40
+  offset: 0, 0
+  index: -1
+baixuegongzhu_wuqifg
+  rotate: false
+  xy: 172, 32
+  size: 32, 30
+  orig: 32, 30
+  offset: 0, 0
+  index: -1
+baixuegongzhu_wuqifg2
+  rotate: false
+  xy: 172, 32
+  size: 32, 30
+  orig: 32, 30
+  offset: 0, 0
+  index: -1
+baixuegongzhu_xiong1
+  rotate: true
+  xy: 17, 2
+  size: 5, 15
+  orig: 5, 15
+  offset: 0, 0
+  index: -1
+baixuegongzhu_xiong2
+  rotate: false
+  xy: 123, 2
+  size: 20, 25
+  orig: 20, 25
+  offset: 0, 0
+  index: -1

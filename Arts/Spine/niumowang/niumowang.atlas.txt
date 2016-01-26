@@ -1,0 +1,132 @@
+
+niumowang.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+datuiL
+  rotate: true
+  xy: 414, 85
+  size: 41, 58
+  orig: 41, 58
+  offset: 0, 0
+  index: -1
+datuiR
+  rotate: true
+  xy: 241, 2
+  size: 42, 59
+  orig: 42, 59
+  offset: 0, 0
+  index: -1
+fujia
+  rotate: false
+  xy: 443, 18
+  size: 26, 25
+  orig: 26, 25
+  offset: 0, 0
+  index: -1
+jianjia
+  rotate: false
+  xy: 302, 18
+  size: 43, 49
+  orig: 43, 49
+  offset: 0, 0
+  index: -1
+jianjiaL
+  rotate: true
+  xy: 183, 9
+  size: 28, 45
+  orig: 28, 45
+  offset: 0, 0
+  index: -1
+kuloutou
+  rotate: false
+  xy: 347, 14
+  size: 30, 22
+  orig: 30, 22
+  offset: 0, 0
+  index: -1
+niujiao
+  rotate: false
+  xy: 64, 15
+  size: 66, 22
+  orig: 66, 22
+  offset: 0, 0
+  index: -1
+qianbaiR
+  rotate: false
+  xy: 354, 38
+  size: 49, 43
+  orig: 49, 43
+  offset: 0, 0
+  index: -1
+qianbiL
+  rotate: false
+  xy: 405, 32
+  size: 36, 49
+  orig: 36, 49
+  offset: 0, 0
+  index: -1
+qianbiR
+  rotate: true
+  xy: 2, 4
+  size: 33, 60
+  orig: 33, 60
+  offset: 0, 0
+  index: -1
+qiandai
+  rotate: true
+  xy: 132, 10
+  size: 27, 49
+  orig: 27, 49
+  offset: 0, 0
+  index: -1
+shangbiL
+  rotate: false
+  xy: 474, 65
+  size: 36, 61
+  orig: 36, 61
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 241, 46
+  size: 54, 80
+  orig: 54, 80
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: false
+  xy: 2, 39
+  size: 237, 87
+  orig: 237, 87
+  offset: 0, 0
+  index: -1
+xiaotuiL
+  rotate: false
+  xy: 443, 45
+  size: 27, 38
+  orig: 27, 38
+  offset: 0, 0
+  index: -1
+xiaotuiR
+  rotate: true
+  xy: 472, 36
+  size: 27, 37
+  orig: 27, 37
+  offset: 0, 0
+  index: -1
+xiong
+  rotate: false
+  xy: 297, 69
+  size: 55, 57
+  orig: 55, 57
+  offset: 0, 0
+  index: -1
+yaodai
+  rotate: false
+  xy: 354, 83
+  size: 58, 43
+  orig: 58, 43
+  offset: 0, 0
+  index: -1

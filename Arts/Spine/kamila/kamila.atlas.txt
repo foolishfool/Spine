@@ -1,0 +1,153 @@
+
+kamila.png
+size: 256,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+kamila_Ldabi
+  rotate: true
+  xy: 235, 54
+  size: 8, 17
+  orig: 8, 17
+  offset: 0, 0
+  index: -1
+kamila_Ldatui
+  rotate: true
+  xy: 184, 35
+  size: 10, 23
+  orig: 10, 23
+  offset: 0, 0
+  index: -1
+kamila_Ljiao
+  rotate: false
+  xy: 70, 2
+  size: 10, 12
+  orig: 10, 12
+  offset: 0, 0
+  index: -1
+kamila_Lniujiao
+  rotate: false
+  xy: 52, 2
+  size: 16, 12
+  orig: 16, 12
+  offset: 0, 0
+  index: -1
+kamila_Lshou
+  rotate: false
+  xy: 112, 37
+  size: 24, 25
+  orig: 24, 25
+  offset: 0, 0
+  index: -1
+kamila_Lxiaobi
+  rotate: false
+  xy: 106, 17
+  size: 7, 13
+  orig: 7, 13
+  offset: 0, 0
+  index: -1
+kamila_Lxiaotui
+  rotate: true
+  xy: 2, 2
+  size: 7, 23
+  orig: 7, 23
+  offset: 0, 0
+  index: -1
+kamila_Rdabi
+  rotate: true
+  xy: 235, 44
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1
+kamila_Rdatui
+  rotate: true
+  xy: 209, 34
+  size: 10, 23
+  orig: 10, 23
+  offset: 0, 0
+  index: -1
+kamila_Rjiao
+  rotate: false
+  xy: 82, 2
+  size: 10, 12
+  orig: 10, 12
+  offset: 0, 0
+  index: -1
+kamila_Rniujiao
+  rotate: false
+  xy: 234, 31
+  size: 14, 11
+  orig: 14, 11
+  offset: 0, 0
+  index: -1
+kamila_Rshou
+  rotate: false
+  xy: 138, 38
+  size: 23, 24
+  orig: 23, 24
+  offset: 0, 0
+  index: -1
+kamila_Rxiaobi
+  rotate: false
+  xy: 94, 2
+  size: 8, 12
+  orig: 8, 12
+  offset: 0, 0
+  index: -1
+kamila_Rxiaotui
+  rotate: true
+  xy: 27, 2
+  size: 7, 23
+  orig: 7, 23
+  offset: 0, 0
+  index: -1
+kamila_fahou
+  rotate: false
+  xy: 41, 16
+  size: 37, 46
+  orig: 37, 46
+  offset: 0, 0
+  index: -1
+kamila_faqian
+  rotate: false
+  xy: 2, 11
+  size: 37, 51
+  orig: 37, 51
+  offset: 0, 0
+  index: -1
+kamila_lian
+  rotate: false
+  xy: 80, 32
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+kamila_qianxiong
+  rotate: false
+  xy: 163, 39
+  size: 19, 23
+  orig: 19, 23
+  offset: 0, 0
+  index: -1
+kamila_qunzi
+  rotate: false
+  xy: 80, 16
+  size: 24, 14
+  orig: 24, 14
+  offset: 0, 0
+  index: -1
+kamila_tun
+  rotate: true
+  xy: 211, 46
+  size: 16, 22
+  orig: 16, 22
+  offset: 0, 0
+  index: -1
+kamila_xiayi
+  rotate: true
+  xy: 184, 47
+  size: 15, 25
+  orig: 15, 25
+  offset: 0, 0
+  index: -1

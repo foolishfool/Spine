@@ -1,0 +1,188 @@
+
+sunwukong.png
+size: 510,254
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+biaodai
+  rotate: true
+  xy: 419, 113
+  size: 25, 35
+  orig: 25, 35
+  offset: 0, 0
+  index: -1
+datuiL
+  rotate: false
+  xy: 154, 69
+  size: 26, 36
+  orig: 26, 36
+  offset: 0, 0
+  index: -1
+datuiR
+  rotate: false
+  xy: 47, 24
+  size: 19, 34
+  orig: 19, 34
+  offset: 0, 0
+  index: -1
+fujiaL
+  rotate: false
+  xy: 123, 15
+  size: 24, 25
+  orig: 24, 25
+  offset: 0, 0
+  index: -1
+fujiaR
+  rotate: true
+  xy: 380, 97
+  size: 14, 25
+  orig: 14, 25
+  offset: 0, 0
+  index: -1
+houBiaoDai
+  rotate: false
+  xy: 204, 109
+  size: 136, 145
+  orig: 136, 145
+  offset: 0, 0
+  index: -1
+hutuiL
+  rotate: true
+  xy: 342, 109
+  size: 29, 36
+  orig: 29, 36
+  offset: 0, 0
+  index: -1
+hutuiR
+  rotate: false
+  xy: 494, 108
+  size: 16, 30
+  orig: 16, 30
+  offset: 0, 0
+  index: -1
+huyao
+  rotate: false
+  xy: 380, 113
+  size: 37, 25
+  orig: 37, 25
+  offset: 0, 0
+  index: -1
+jianjiaKouR
+  rotate: false
+  xy: 134, 4
+  size: 8, 9
+  orig: 8, 9
+  offset: 0, 0
+  index: -1
+jianjiaL
+  rotate: false
+  xy: 68, 33
+  size: 31, 27
+  orig: 31, 27
+  offset: 0, 0
+  index: -1
+jianjiaR
+  rotate: true
+  xy: 76, 2
+  size: 29, 27
+  orig: 29, 27
+  offset: 0, 0
+  index: -1
+jianjianKou_L
+  rotate: false
+  xy: 123, 2
+  size: 9, 11
+  orig: 9, 11
+  offset: 0, 0
+  index: -1
+maozi
+  rotate: true
+  xy: 47, 2
+  size: 20, 27
+  orig: 20, 27
+  offset: 0, 0
+  index: -1
+maozimao
+  rotate: false
+  xy: 2, 60
+  size: 64, 45
+  orig: 64, 45
+  offset: 0, 0
+  index: -1
+shoubiL
+  rotate: false
+  xy: 105, 2
+  size: 16, 29
+  orig: 16, 29
+  offset: 0, 0
+  index: -1
+shoubiL01
+  rotate: true
+  xy: 119, 42
+  size: 23, 26
+  orig: 23, 26
+  offset: 0, 0
+  index: -1
+shoubiR
+  rotate: false
+  xy: 101, 33
+  size: 14, 27
+  orig: 14, 27
+  offset: 0, 0
+  index: -1
+shoubiR01
+  rotate: true
+  xy: 407, 89
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 2, 2
+  size: 43, 56
+  orig: 43, 56
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: false
+  xy: 2, 107
+  size: 200, 147
+  orig: 200, 147
+  offset: 0, 0
+  index: -1
+wuqifaguang
+  rotate: false
+  xy: 342, 140
+  size: 167, 114
+  orig: 167, 114
+  offset: 0, 0
+  index: -1
+xiaotuiL
+  rotate: true
+  xy: 456, 116
+  size: 22, 36
+  orig: 22, 36
+  offset: 0, 0
+  index: -1
+xiaotuiR
+  rotate: false
+  xy: 182, 72
+  size: 18, 33
+  orig: 18, 33
+  offset: 0, 0
+  index: -1
+xiong
+  rotate: true
+  xy: 68, 62
+  size: 43, 49
+  orig: 43, 49
+  offset: 0, 0
+  index: -1
+yaodai
+  rotate: false
+  xy: 119, 67
+  size: 33, 38
+  orig: 33, 38
+  offset: 0, 0
+  index: -1

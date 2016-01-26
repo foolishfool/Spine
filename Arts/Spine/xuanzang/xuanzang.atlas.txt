@@ -1,0 +1,139 @@
+
+xuanzang.png
+size: 506,62
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xuanzang_Ldatui
+  rotate: true
+  xy: 110, 2
+  size: 13, 24
+  orig: 13, 24
+  offset: 0, 0
+  index: -1
+xuanzang_Lqianbi
+  rotate: false
+  xy: 495, 39
+  size: 11, 23
+  orig: 11, 23
+  offset: 0, 0
+  index: -1
+xuanzang_Lshangbi
+  rotate: false
+  xy: 230, 7
+  size: 31, 55
+  orig: 31, 55
+  offset: 0, 0
+  index: -1
+xuanzang_Lxiaotui
+  rotate: true
+  xy: 110, 17
+  size: 12, 31
+  orig: 12, 31
+  offset: 0, 0
+  index: -1
+xuanzang_Rdatui
+  rotate: true
+  xy: 296, 2
+  size: 13, 25
+  orig: 13, 25
+  offset: 0, 0
+  index: -1
+xuanzang_Rqianbi
+  rotate: false
+  xy: 476, 42
+  size: 17, 20
+  orig: 17, 20
+  offset: 0, 0
+  index: -1
+xuanzang_Rshangbi
+  rotate: true
+  xy: 52, 8
+  size: 21, 56
+  orig: 21, 56
+  offset: 0, 0
+  index: -1
+xuanzang_Rxiaotui
+  rotate: true
+  xy: 263, 2
+  size: 13, 31
+  orig: 13, 31
+  offset: 0, 0
+  index: -1
+xuanzang_guanghuan
+  rotate: true
+  xy: 158, 6
+  size: 56, 70
+  orig: 56, 70
+  offset: 0, 0
+  index: -1
+xuanzang_hulu
+  rotate: false
+  xy: 143, 10
+  size: 12, 19
+  orig: 12, 19
+  offset: 0, 0
+  index: -1
+xuanzang_paozi1
+  rotate: true
+  xy: 400, 31
+  size: 31, 42
+  orig: 31, 42
+  offset: 0, 0
+  index: -1
+xuanzang_paozi2
+  rotate: true
+  xy: 353, 30
+  size: 32, 45
+  orig: 32, 45
+  offset: 0, 0
+  index: -1
+xuanzang_shangyi
+  rotate: false
+  xy: 263, 17
+  size: 40, 45
+  orig: 40, 45
+  offset: 0, 0
+  index: -1
+xuanzang_tou
+  rotate: true
+  xy: 305, 26
+  size: 36, 46
+  orig: 36, 46
+  offset: 0, 0
+  index: -1
+xuanzang_weijing
+  rotate: true
+  xy: 2, 2
+  size: 27, 48
+  orig: 27, 48
+  offset: 0, 0
+  index: -1
+xuanzang_wuqi
+  rotate: true
+  xy: 2, 31
+  size: 31, 154
+  orig: 31, 154
+  offset: 0, 0
+  index: -1
+xuanzang_wuqi03
+  rotate: true
+  xy: 2, 31
+  size: 31, 154
+  orig: 31, 154
+  offset: 0, 0
+  index: -1
+xuanzang_wuqi02
+  rotate: true
+  xy: 2, 31
+  size: 31, 154
+  orig: 31, 154
+  offset: 0, 0
+  index: -1
+xuanzang_yaodai
+  rotate: false
+  xy: 444, 32
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1

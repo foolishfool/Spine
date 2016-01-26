@@ -1,0 +1,146 @@
+
+langren.png
+size: 1024,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+langren_Ldabi
+  rotate: false
+  xy: 336, 27
+  size: 55, 35
+  orig: 55, 35
+  offset: 0, 0
+  index: -1
+langren_Ldatui
+  rotate: true
+  xy: 595, 26
+  size: 36, 46
+  orig: 36, 46
+  offset: 0, 0
+  index: -1
+langren_Lhuxi
+  rotate: false
+  xy: 867, 47
+  size: 26, 15
+  orig: 26, 15
+  offset: 0, 0
+  index: -1
+langren_Lshou
+  rotate: true
+  xy: 448, 16
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+langren_Ltizi
+  rotate: true
+  xy: 827, 34
+  size: 28, 38
+  orig: 28, 38
+  offset: 0, 0
+  index: -1
+langren_Ltuidai
+  rotate: false
+  xy: 895, 43
+  size: 21, 19
+  orig: 21, 19
+  offset: 0, 0
+  index: -1
+langren_Lxiaobi
+  rotate: true
+  xy: 205, 28
+  size: 34, 65
+  orig: 34, 65
+  offset: 0, 0
+  index: -1
+langren_Lxiaotui
+  rotate: false
+  xy: 740, 37
+  size: 43, 25
+  orig: 43, 25
+  offset: 0, 0
+  index: -1
+langren_Rdabi
+  rotate: false
+  xy: 643, 31
+  size: 50, 31
+  orig: 50, 31
+  offset: 0, 0
+  index: -1
+langren_Rdatui
+  rotate: true
+  xy: 695, 22
+  size: 40, 43
+  orig: 40, 43
+  offset: 0, 0
+  index: -1
+langren_Rshou
+  rotate: false
+  xy: 497, 21
+  size: 46, 41
+  orig: 46, 41
+  offset: 0, 0
+  index: -1
+langren_Rtizi
+  rotate: true
+  xy: 740, 2
+  size: 33, 34
+  orig: 33, 34
+  offset: 0, 0
+  index: -1
+langren_Rxiaobi
+  rotate: true
+  xy: 393, 19
+  size: 43, 53
+  orig: 43, 53
+  offset: 0, 0
+  index: -1
+langren_Rxiaotui
+  rotate: false
+  xy: 785, 36
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+langren_erduo
+  rotate: false
+  xy: 918, 43
+  size: 18, 19
+  orig: 18, 19
+  offset: 0, 0
+  index: -1
+langren_qianxiong
+  rotate: false
+  xy: 2, 9
+  size: 74, 53
+  orig: 74, 53
+  offset: 0, 0
+  index: -1
+langren_tou
+  rotate: false
+  xy: 78, 11
+  size: 63, 51
+  orig: 63, 51
+  offset: 0, 0
+  index: -1
+langren_weiba1
+  rotate: false
+  xy: 545, 26
+  size: 48, 36
+  orig: 48, 36
+  offset: 0, 0
+  index: -1
+langren_weiba2
+  rotate: true
+  xy: 272, 25
+  size: 37, 62
+  orig: 37, 62
+  offset: 0, 0
+  index: -1
+langren_yao
+  rotate: true
+  xy: 143, 16
+  size: 46, 60
+  orig: 46, 60
+  offset: 0, 0
+  index: -1
