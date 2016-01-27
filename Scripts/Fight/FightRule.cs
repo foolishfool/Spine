@@ -37,8 +37,10 @@ public class FightAttribute
     public int level;//等级
 
     public float NormalAttackSpace { get { return (float)Const.CONST_ATTACK_INTERVAL / Mathf.Max(1,attackSpeed); } }//攻击间隔
-    public float MoveSpeed { get { return Const.MoveSpeed * Mathf.Max(0, 1 + moveSpeedBuff); } }
+	public float MoveSpeed { get { return Const.MoveSpeed * Mathf.Max(0, 1 + moveSpeedBuff); } }
+	public float PursueSpeed { get { return Const.PursueSpeed * Mathf.Max(0, 1 + moveSpeedBuff); } }
     public int Defence { get { return Mathf.RoundToInt((float)defence * Mathf.Max(0, 1 + defenceBuff)); } }
+	public float alarmRange = 400f;
 
     /*只供buff改变*/
     public float criticalRateBuff;//暴击buff修正
@@ -1153,30 +1155,49 @@ public static class FightRule
     /// <summary>
     /// 获取攻击目标
     /// </summary>
-    public static FightUnit GetFightTarget(FightUnit self, FightGroup targetGroup)
+    public static FightUnit GetFightTarget(FightUnit self, FightGroup targetGroup )
     {
         FightUnit target = null;
         for (int i = 0; i < targetGroup.fightUnits.Count; i++)
         {
             if (targetGroup.fightUnits[i] == self)
-                continue;
-            if (target == null)
+                continue; // does not find self
+			if (target == null  ) 
             {
                 target = targetGroup.fightUnits[i];
                 continue;
             }
-            if (Distance(self, targetGroup.fightUnits[i]) < Distance(self, target))
+            if (Distance(self, targetGroup.fightUnits[i]) < Distance(self, target)) // if already has a target change the target 
                 target = targetGroup.fightUnits[i];
         }
         return target;
     }
+
+	public static FightUnit GetAlarmedFightTarget(FightUnit self, FightGroup targetGroup )
+	{
+		FightUnit target = null;
+		for (int i = 0; i < targetGroup.fightUnits.Count; i++)
+		{
+			if (targetGroup.fightUnits[i] == self)
+				continue; // does not find self
+			if (target == null &&  Distance (self, targetGroup.fightUnits [i]) <= self.fightAttribute.alarmRange  ) 
+			{
+//				Debug.Log (Distance (self, targetGroup.fightUnits [i]) + "###############");
+				target = targetGroup.fightUnits[i];
+				continue;
+			}
+			if (target != null && Distance(self, targetGroup.fightUnits[i]) < Distance(self, target))
+				target = targetGroup.fightUnits[i];
+		}
+		return target;
+	}
 
     /// <summary>
     /// 算出修正距离
     /// </summary>
     public static float Distance(FightUnit from, FightUnit to)
     {
-        float factor = DistanceFactorDic[(int)from.fightAttribute.elementType * 10 + (int)to.fightAttribute.elementType].factor;
+        float factor = DistanceFactorDic[(int)from.fightAttribute.elementType * 10 + (int)to.fightAttribute.elementType].factor; //不同的属性之间攻击距离不同
         //float factor = 1;
         return Util.Distance(from.transform.localPosition, to.transform.localPosition) * factor;
     }

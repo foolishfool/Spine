@@ -37,6 +37,8 @@ public class FightUnit : MonoBehaviour {
     public float modifiedZ = 0;//Z轴修正，防止重叠
     [HideInInspector]
     public Transform mTrans;
+
+	public bool isMoveforward = true; //初始朝向
     /// <summary>
     /// 挂载点
     /// </summary>
@@ -46,14 +48,16 @@ public class FightUnit : MonoBehaviour {
     public enum UnitState
     {
         MoveForward,
-        MoveToTarget,
+		MoveBack,
+        MoveToTarget, //移动或者追击目标
         Fighting,
         Wait,
         MoveToNext,
         Win,
         Dead,
+		GetBack, //get back to the original point
     }
-    public UnitState state = UnitState.MoveForward;
+	public UnitState state = UnitState.Wait;
 
 #region 战斗事件
 
@@ -189,76 +193,84 @@ public class FightUnit : MonoBehaviour {
         Head = mTrans.Find("Top");
         Body = mTrans.Find("Body");
         attack.Init();
+
     }
 
-    public virtual void Update()
-    {
-        if (state == UnitState.MoveForward && beAbleMove)
-        {
-            if (TryAttack())
-                state = UnitState.Fighting;
-            else
-                MoveForward();
-        }
-        else if (state == UnitState.MoveToTarget && beAbleMove)
-        {
-            if (TryAttack())
-            {
-                anim.Play(Const.IdleAction, true);
-                state = UnitState.Fighting;
-            }
-            else
-            {
-                if (targetUnit == null)
-                    return;
-                else
-                    MoveTowardsTarget();
-            }
-        }
-        else if (state == UnitState.Fighting && beAbleFight)
-        {
-            if (modifiedY != 0 || modifiedZ != 0)
-                mTrans.localPosition = Vector3.MoveTowards(mTrans.localPosition, new Vector3(mTrans.localPosition.x, modifiedY, modifiedZ), Const.MoveSpeed * Time.deltaTime);
-            if (TryAttack())
-                attack.DoAttack(targetUnit);
-            else
-            {
-                //attack.StopCurrent();
-                if(attack.currentSkill != null)
-                    return;
-                if (targetUnit == null)
-                    state = UnitState.Wait;
-                else
-                    state = UnitState.MoveToTarget;
-            }
-        }       
-        else if (state == UnitState.MoveToNext)
-        {
-            //attack.StopCurrent();
-            if (attack.currentSkill != null)
-                return;
-            anim.Play(Const.RunAction, true);
-        }
-        else if (state == UnitState.Dead)
-        {
-            enabled = false;
-            attack.StopCurrent();
-            attack.EndAttack();
-        }
-        else if (state == UnitState.Win)
-        {
-            if (attack.currentSkill == null)
-            {
-                anim.isLocked = true;
-                anim.state.SetAnimation(0, Const.WinAction, false);
-                anim.state.AddAnimation(0, Const.IdleAction, true, anim.state.GetCurrent(0).animation.Duration);
-                enabled = false;
-            }
-        }
-        else
-        {
-            anim.Play(Const.IdleAction, true);
-        }
+	public virtual void Update ()
+	{
+
+
+		if (state == UnitState.Wait && beAbleMove)
+		{
+			anim.Play (Const.IdleAction, true);
+		}
+
+//        if (state == UnitState.MoveForward && beAbleMove)
+//        {
+//            if (TryAttack())
+//                state = UnitState.Fighting;
+//            else
+//                MoveForward();
+//        }
+//        else if (state == UnitState.MoveToTarget && beAbleMove)
+//        {
+//            if (TryAttack())
+//            {
+//                anim.Play(Const.IdleAction, true); //调整动作
+//                state = UnitState.Fighting; //有目标既进入战斗状态
+//            }
+//            else
+//            {
+//                if (targetUnit == null)
+//                    return;
+//                else
+//                    MoveTowardsTarget();
+//            }
+//        }
+//        else if (state == UnitState.Fighting && beAbleFight)
+//        {
+//            if (modifiedY != 0 || modifiedZ != 0)
+//                mTrans.localPosition = Vector3.MoveTowards(mTrans.localPosition, new Vector3(mTrans.localPosition.x, modifiedY, modifiedZ), Const.MoveSpeed * Time.deltaTime);
+//            if (TryAttack())
+//                attack.DoAttack(targetUnit);
+//            else
+//            {
+//                //attack.StopCurrent();
+//                if(attack.currentSkill != null)
+//                    return;
+//                if (targetUnit == null)
+//                    state = UnitState.Wait;
+//                else
+//                    state = UnitState.MoveToTarget;
+//            }
+//        }       
+//        else if (state == UnitState.MoveToNext)
+//        {
+//            //attack.StopCurrent();
+//            if (attack.currentSkill != null)
+//                return;
+//            anim.Play(Const.RunAction, true);
+//        }
+//        else if (state == UnitState.Dead)
+//        {
+//            enabled = false;
+//            attack.StopCurrent();
+//            attack.EndAttack();
+//        }
+//        else if (state == UnitState.Win)
+//        {
+//            if (attack.currentSkill == null)
+//            {
+//                anim.isLocked = true;
+//                anim.state.SetAnimation(0, Const.WinAction, false);
+//                anim.state.AddAnimation(0, Const.IdleAction, true, anim.state.GetCurrent(0).animation.Duration);
+//                enabled = false;
+//            }
+//        }
+//        else
+//        {
+//            anim.Play(Const.IdleAction, true);
+//        }
     }
 
     public bool TryAttack()
@@ -269,17 +281,26 @@ public class FightUnit : MonoBehaviour {
            return false;
        return Util.Distance(targetUnit.transform.localPosition, mTrans.localPosition) <= fightAttribute.range;
     }
+		
 
     public void MoveForward()
     {
-        mTrans.localPosition += (parentGroup.group == FightGroup.GroupType.Mine ? 1 : -1) * (isEntice ? -1 : 1) * Vector3.right * fightAttribute.MoveSpeed * Time.deltaTime;
+		isMoveforward = true;
+		mTrans.localPosition += (parentGroup.group == FightGroup.GroupType.Mine ? 1 : -1) * (isEntice ? -1 : 1) * Vector3.right * fightAttribute.MoveSpeed * Time.deltaTime;
         anim.Play(Const.RunAction, true);
-    }
+    }	
 
+	public void MoveBack()
+	{
+		isMoveforward = false;
+		mTrans.localPosition += (parentGroup.group == FightGroup.GroupType.Mine ? 1 : -1) * (isEntice ? -1 : 1) * Vector3.left * fightAttribute.MoveSpeed * Time.deltaTime;
+		anim.Play(Const.RunAction, true);
+	}
+	//追击目标
     public void MoveTowardsTarget()
     {
         float x = mTrans.localPosition.x < targetUnit.transform.localPosition.x ? targetUnit.transform.localPosition.x - fightAttribute.range : targetUnit.transform.localPosition.x + fightAttribute.range;
-        mTrans.localPosition = Vector3.MoveTowards(mTrans.localPosition, new Vector3(x, modifiedY == 0 ? mTrans.localPosition.y : modifiedY, mTrans.localPosition.z), fightAttribute.MoveSpeed * Time.deltaTime);
+		mTrans.localPosition = Vector3.MoveTowards(mTrans.localPosition, new Vector3(x, modifiedY == 0 ? mTrans.localPosition.y : modifiedY, mTrans.localPosition.z), fightAttribute.PursueSpeed * Time.deltaTime);
         anim.Play(Const.RunAction, true);
     }
 

@@ -18,6 +18,7 @@ public class Const{
     public static string HomeLevel = "home";
     public static string FightLevel = "fight";
     public static float MoveSpeed = 130f;
+	public static float PursueSpeed = 280f;
     public static float MoveToNextSpeed = 0.7f;
     public static float DieTime = 1.5f;
     public static float HurtNumEmitterTime = 0f;

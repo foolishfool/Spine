@@ -172,14 +172,17 @@ namespace Mono.Xml
 				return true;
 			case 11:
 			case 12:
-				IL_1F:
 				if (c != 32)
 				{
 					return false;
 				}
 				return true;
 			}
-			goto IL_1F;
+			if (c != 32)
+			{
+				return false;
+			}
+			return true;
 		}
 		public void SkipWhitespaces()
 		{
@@ -216,7 +219,12 @@ namespace Mono.Xml
 					}
 					goto IL_31;
 				}
-				goto IL_24;
+				if (num != 32)
+				{
+					goto Block_0;
+				}
+				goto IL_31;
+
 				IL_31:
 				this.Read();
 				if (expected)

@@ -34,8 +34,43 @@ public class HeroFightUnit : FightUnit {
         Combo.GetInstance().RegesterCombo(this);
     }
 
-    public override void Update()
+	public override void Update()
     {
-        base.Update();
+
+		//转向
+		if ((Input.GetKeyDown (KeyCode.D) && isMoveforward == false) ||(Input.GetKeyDown (KeyCode.A) && isMoveforward == true))
+			mTrans.Rotate (Vector3.up * 180);
+			
+		if (Input.GetKey (KeyCode.D)) {
+			attack.StopCurrent ();
+			MoveForward ();
+		} 
+
+		if (Input.GetKey (KeyCode.A)) 
+		{	
+			attack.StopCurrent ();
+			MoveBack ();
+		} 
+		if (Input.GetKeyDown (KeyCode.J))
+		{
+				state = UnitState.Fighting;
+
+		}
+		if (state == UnitState.Fighting && beAbleFight)
+		{
+			if (modifiedY != 0 || modifiedZ != 0)
+				mTrans.localPosition = Vector3.MoveTowards(mTrans.localPosition, new Vector3(mTrans.localPosition.x, modifiedY, modifiedZ), Const.MoveSpeed * Time.deltaTime);
+			if (TryAttack())
+				attack.DoAttack(targetUnit);
+			else
+			{
+				if(attack.currentSkill != null)
+					return;
+				if (targetUnit == null)
+					state = UnitState.Wait;
+				else
+					state = UnitState.MoveToTarget;
+			}
+		}       
     }
 }
