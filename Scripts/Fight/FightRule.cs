@@ -39,8 +39,10 @@ public class FightAttribute
     public float NormalAttackSpace { get { return (float)Const.CONST_ATTACK_INTERVAL / Mathf.Max(1,attackSpeed); } }//攻击间隔
 	public float MoveSpeed { get { return Const.MoveSpeed * Mathf.Max(0, 1 + moveSpeedBuff); } }
 	public float PursueSpeed { get { return Const.PursueSpeed * Mathf.Max(0, 1 + moveSpeedBuff); } }
+	public float GetBackSpeed { get { return Const.GetBackSpeed; } }
     public int Defence { get { return Mathf.RoundToInt((float)defence * Mathf.Max(0, 1 + defenceBuff)); } }
 	public float alarmRange = 400f;
+	public float escapeRange = 450f;
 
     /*只供buff改变*/
     public float criticalRateBuff;//暴击buff修正

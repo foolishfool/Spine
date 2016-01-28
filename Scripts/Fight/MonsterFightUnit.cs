@@ -31,25 +31,39 @@ public class MonsterFightUnit : FightUnit {
     public override void Update()
     {
 		base.Update ();
-		//根据玩家方向进行自我转向调整
-		if (this.targetUnit != null && mTrans.localPosition.x < this.targetUnit.mTrans.localPosition.x && isRotate == false )
+		//根据玩家方向或者出生点进行自我转向调整
+		ChangeOrientation();
+		//这部分要放在上面，否则引起一直原地
+		if (this.mTrans.localPosition  == this.birthPoint.localPosition)
 		{
-			mTrans.Rotate (Vector3.up * 180);
-			isRotate = true;
+			mTrans.localRotation = birthPoint.localRotation;
+			isRotate = false; //恢复初始设置
+			state = UnitState.Wait;
 		}
-
-		if (this.targetUnit != null && mTrans.localPosition.x > this.targetUnit.mTrans.localPosition.x && isRotate  == true)
+			
+		if (state == UnitState.Wait && (FightRule.GetAlarmedFightTarget (this, this.parentGroup.targetGroup) != null))
 		{
-			mTrans.Rotate (Vector3.up * 180);
-			isRotate = false;
-		}
-
-		if (state == UnitState.Wait && FightRule.GetAlarmedFightTarget (this, this.parentGroup.targetGroup))
 			state = UnitState.MoveToTarget;
 
+		}
 
-		if (state == UnitState.MoveToTarget && beAbleMove)
+		if (targetUnit != null && FightRule.Distance (this, targetUnit) > this.fightAttribute.alarmRange)
 		{
+			state = UnitState.LoseTarget;
+		}
+
+		//如果回到出生地，则恢复wait状态(待做)
+
+		
+		if (state == UnitState.LoseTarget)
+		{
+			targetUnit = null;
+			GetBack ();
+		}
+
+		else if (state == UnitState.MoveToTarget && beAbleMove)
+		{
+			ChangeOrientation();
 			if (TryAttack ())
 			{
 				anim.Play (Const.IdleAction, true); //调整动作

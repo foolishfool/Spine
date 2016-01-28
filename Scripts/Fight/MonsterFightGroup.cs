@@ -44,6 +44,16 @@ public class MonsterFightGroup : FightGroup
             fightUnits.Add(unit);
             unit.parentGroup = this;
             unit.orinPoint = battle_points[i];
+			unit.birthPoint = battle_points [i];
+			//父节点坐标不为0
+			float x = battle_points[i].localPosition.x + battle_points[i].parent.localPosition.x;
+			float y = battle_points[i].localPosition.y + battle_points[i].parent.localPosition.y;
+			float z = battle_points[i].localPosition.z + battle_points[i].parent.localPosition.z;
+
+			unit.birthPoint.localPosition = new Vector3 (x,y,z);
+			unit.birthPoint.localRotation = battle_points[i].localRotation;
+			unit.birthPoint.localScale =  Vector3.one;
+
             //赋值战斗属性
             unit.monsterData = monsterData;
             unit.InitFightAttribute();

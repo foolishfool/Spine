@@ -31,6 +31,7 @@ public class FightUnit : MonoBehaviour {
     [SerializeField]
     public FightUnit targetUnit;
     public Transform orinPoint;
+	public Transform birthPoint;
     public SkeletonAnimation anim;
     public Attack attack;
     public float modifiedY = 0;//Y轴修正，防止重叠
@@ -57,6 +58,7 @@ public class FightUnit : MonoBehaviour {
         Win,
         Dead,
 		GetBack, //get back to the original point
+		LoseTarget,
     }
 	public UnitState state = UnitState.Wait;
 
@@ -179,6 +181,8 @@ public class FightUnit : MonoBehaviour {
         attack = GetComponent<Attack>();
         _health = (int)fightAttribute.health;
         mana = (int)fightAttribute.mana;
+		// 出生点， 父节点不为0
+
         if (GetComponent<Animation>() == null)
         {
             anim = GetComponent<SkeletonAnimation>();
@@ -298,6 +302,13 @@ public class FightUnit : MonoBehaviour {
 		isMoveforward = false;
 		mTrans.localPosition += (parentGroup.group == FightGroup.GroupType.Mine ? 1 : -1) * (isEntice ? -1 : 1) * Vector3.left * fightAttribute.MoveSpeed * Time.deltaTime;
 		anim.Play(Const.RunAction, true);
+	}	
+	//返回出生地
+	public void GetBack()
+	{
+		
+		mTrans.localPosition = Vector3.MoveTowards(mTrans.localPosition, birthPoint.localPosition, fightAttribute.GetBackSpeed * Time.deltaTime);
+		anim.Play(Const.RunAction, true);
 	}
 	//追击目标
     public void MoveTowardsTarget()
@@ -306,6 +317,27 @@ public class FightUnit : MonoBehaviour {
 		mTrans.localPosition = Vector3.MoveTowards(mTrans.localPosition, new Vector3(x, modifiedY == 0 ? mTrans.localPosition.y : modifiedY, mTrans.localPosition.z), fightAttribute.PursueSpeed * Time.deltaTime);
         anim.Play(Const.RunAction, true);
     }
+
+
+	public void ChangeOrientation()
+	{
+		//如果在目标活着出生点右侧
+		if (((this.targetUnit != null && mTrans.localPosition.x < this.targetUnit.mTrans.localPosition.x ) || (this.targetUnit == null && mTrans.localPosition.x < this.birthPoint.localPosition.x)) && isRotate == false  )
+		{
+			mTrans.Rotate (Vector3.up * 180);
+			isRotate = true;
+
+		}
+
+		if (((this.targetUnit != null && mTrans.localPosition.x > this.targetUnit.mTrans.localPosition.x ) || (this.targetUnit == null && mTrans.localPosition.x > this.birthPoint.localPosition.x)) && isRotate == true  )
+		{
+			mTrans.Rotate (Vector3.up * 180);
+			isRotate = false;
+			Debug.Log ("@@@@@@@@@@@@@@"  );
+		}
+
+	}
+
 
     public Transform GetEffectPoint(EffectPoint point)
     {
