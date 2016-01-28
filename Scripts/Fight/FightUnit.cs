@@ -39,6 +39,7 @@ public class FightUnit : MonoBehaviour {
     public Transform mTrans;
 
 	public bool isMoveforward = true; //初始朝向
+	public bool isRotate = false;  //是否需要旋转
     /// <summary>
     /// 挂载点
     /// </summary>
@@ -204,6 +205,8 @@ public class FightUnit : MonoBehaviour {
 		{
 			anim.Play (Const.IdleAction, true);
 		}
+
+
 
 //        if (state == UnitState.MoveForward && beAbleMove)
 //        {

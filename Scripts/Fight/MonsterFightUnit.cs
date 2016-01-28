@@ -25,13 +25,29 @@ public class MonsterFightUnit : FightUnit {
     public override void Start()
     {
         base.Start();
+
     }
 
     public override void Update()
     {
 		base.Update ();
+		//根据玩家方向进行自我转向调整
+		if (this.targetUnit != null && mTrans.localPosition.x < this.targetUnit.mTrans.localPosition.x && isRotate == false )
+		{
+			mTrans.Rotate (Vector3.up * 180);
+			isRotate = true;
+		}
+
+		if (this.targetUnit != null && mTrans.localPosition.x > this.targetUnit.mTrans.localPosition.x && isRotate  == true)
+		{
+			mTrans.Rotate (Vector3.up * 180);
+			isRotate = false;
+		}
+
 		if (state == UnitState.Wait && FightRule.GetAlarmedFightTarget (this, this.parentGroup.targetGroup))
 			state = UnitState.MoveToTarget;
+
+
 		if (state == UnitState.MoveToTarget && beAbleMove)
 		{
 			if (TryAttack ())

@@ -36,26 +36,29 @@ public class HeroFightUnit : FightUnit {
 
 	public override void Update()
     {
-
+		base.Update ();
 		//转向
-		if ((Input.GetKeyDown (KeyCode.D) && isMoveforward == false) ||(Input.GetKeyDown (KeyCode.A) && isMoveforward == true))
+		if ((Input.GetKeyDown (KeyCode.D) && isMoveforward == false) || (Input.GetKeyDown (KeyCode.A) && isMoveforward == true))
 			mTrans.Rotate (Vector3.up * 180);
-			
-		if (Input.GetKey (KeyCode.D)) {
+		else if (Input.GetKey (KeyCode.D))
+		{
 			attack.StopCurrent ();
+			state = UnitState.MoveForward;
 			MoveForward ();
-		} 
-
-		if (Input.GetKey (KeyCode.A)) 
+		} else if (Input.GetKey (KeyCode.A))
 		{	
 			attack.StopCurrent ();
+			state = UnitState.MoveForward;
 			MoveBack ();
-		} 
-		if (Input.GetKeyDown (KeyCode.J))
+		} else if (Input.GetKeyDown (KeyCode.J))
 		{
-				state = UnitState.Fighting;
+			state = UnitState.Fighting;
 
+		} else if(targetUnit == null)
+		{	
+			state = UnitState.Wait;
 		}
+
 		if (state == UnitState.Fighting && beAbleFight)
 		{
 			if (modifiedY != 0 || modifiedZ != 0)
