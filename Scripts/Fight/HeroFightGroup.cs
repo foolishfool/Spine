@@ -8,6 +8,8 @@ public class HeroFightGroup : FightGroup {
     Dictionary<int, HeroData> heroDataDic = new Dictionary<int,HeroData>();
     Dictionary<int, HeroEvolution> heroEvolution = new Dictionary<int, HeroEvolution>();
 
+	public Transform middle_point;
+	public ScrollSceneManager scrollSceneManager;
     void Awake()
     {
         group = GroupType.Mine;
@@ -118,10 +120,17 @@ public class HeroFightGroup : FightGroup {
                 fightUnits[i].transform.position += Const.MoveToNextSpeed * Time.deltaTime * Vector3.left;
             }
             if (firstUnit.transform.position == firstEndPos)
-            {
+            {	
                 MovingToNext = false;
                 FightManager.GetInstance().EndMoveToNext();
             }
         }
-    }
+
+		if (this.FirstUnit.mTrans.localPosition.x > (this.middle_point.localPosition.x + this.middle_point.parent.localPosition.x) && Input.GetKey (KeyCode.D))
+			FightManager.GetInstance ().ScrollToRight ();
+		else if (this.FirstUnit.mTrans.localPosition.x < (this.middle_point.localPosition.x + this.middle_point.parent.localPosition.x) && Input.GetKey (KeyCode.A))
+			FightManager.GetInstance ().ScrollToLeft ();
+		else
+			FightManager.GetInstance ().StopScroll ();
+	}
 }

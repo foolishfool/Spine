@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class FightGroup : MonoBehaviour {
 	// when the unit come to the battle_point, they can begin to attack
-	public Transform[] battle_points;  
+	public Transform[] battle_points; 
 	[HideInInspector]
 	public List<FightUnit> fightUnits =  new List<FightUnit>(); 
 	[HideInInspector]

@@ -233,7 +233,7 @@ public class tmpPreload : MonoBehaviour {
          }
      }
 
-    string enemyIdstxt = "1,2";
+    string enemyIdstxt = "1,3";
     string heroIdstxt = "1,14,26,53";
     void OnGUI()
     {

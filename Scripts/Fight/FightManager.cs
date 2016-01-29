@@ -77,6 +77,21 @@ public class FightManager : MonoBehaviour{
             a.OnKillEnemy(d);
     }
 
+	public void ScrollToLeft()
+	{
+		StartCoroutine (SceneMoveToLeft());
+	}
+
+ 	public void ScrollToRight()
+	{
+		StartCoroutine (SceneMoveToRight());
+	}
+
+	public void StopScroll()
+	{
+		StartCoroutine (SceneMoveStop());
+	}
+
     IEnumerator DestroyUnit(FightUnit unit)
     {
         if (unit.state != FightUnit.UnitState.Dead)
@@ -110,10 +125,31 @@ public class FightManager : MonoBehaviour{
     IEnumerator StartMoveToNext()
     {
         yield return new WaitForSeconds(Const.DieTime);
-        ScrollSceneManager.instance.EnableScroll();
+		ScrollSceneManager.instance.EnableScrollToLeft();
         mineGroup.MoveToNext();       
  
     }
+
+	IEnumerator SceneMoveToLeft()
+	{
+		yield return new WaitForSeconds(0.2f);
+		ScrollSceneManager.instance.EnableScrollToLeft(); 
+
+	}
+
+	IEnumerator SceneMoveToRight()
+	{
+		yield return new WaitForSeconds(0.2f);
+		ScrollSceneManager.instance.EnableScrollToRight(); 
+
+	}
+
+	IEnumerator SceneMoveStop()
+	{
+		yield return new WaitForSeconds(0.2f);
+		ScrollSceneManager.instance.DisableScroll(); 
+
+	}
 
     public void EndMoveToNext()
     {

@@ -17,7 +17,7 @@ public class Const{
     public static string LoginLevel = "login";
     public static string HomeLevel = "home";
     public static string FightLevel = "fight";
-    public static float MoveSpeed = 200f;
+    public static float MoveSpeed = 180f;
 	public static float PursueSpeed = 150f;
 	public static float GetBackSpeed = 250f;
     public static float MoveToNextSpeed = 0.7f;

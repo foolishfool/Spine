@@ -212,6 +212,7 @@ public class FightUnit : MonoBehaviour {
 
 
 
+
 //        if (state == UnitState.MoveForward && beAbleMove)
 //        {
 //            if (TryAttack())

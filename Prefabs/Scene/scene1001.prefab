@@ -1717,6 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  heroFightGroup: {fileID: 0}
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1780,7 +1781,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3002
+  startingRenderQueue: 3003
   mAlpha: 1
   mClipping: 4
   mClipRange: {x: 0, y: 0, z: 1160.5894, w: 640}
@@ -1850,6 +1851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  heroFightGroup: {fileID: 0}
 --- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2199,7 +2201,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3003
+  startingRenderQueue: 3002
   mAlpha: 1
   mClipping: 4
   mClipRange: {x: 0, y: 0, z: 1160.5894, w: 640}
@@ -2219,6 +2221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  heroFightGroup: {fileID: 0}
 --- !u!114 &11400050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3103,7 +3106,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bedf7bccba54e9bb198e277ca3f391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollScenes: []
+  scrollScenes:
+  - {fileID: 11400028}
+  - {fileID: 11400048}
+  - {fileID: 11400020}
 --- !u!114 &11488272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3115,7 +3121,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840d3626327ee473c94f0751c95af620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingBaks: []
+  movingBaks:
+  - direct: 0
+    speed: 10
+    trans: {fileID: 400052}
+    leftBorder: -792
+    rightBorder: 692
+    endPos: {x: 0, y: 0, z: 0}
+    beginPos: {x: 0, y: 0, z: 0}
+  - direct: 0
+    speed: 20
+    trans: {fileID: 400032}
+    leftBorder: -816
+    rightBorder: 684
+    endPos: {x: 0, y: 0, z: 0}
+    beginPos: {x: 0, y: 0, z: 0}
+  - direct: 0
+    speed: 30
+    trans: {fileID: 400048}
+    leftBorder: -1097
+    rightBorder: 956
+    endPos: {x: 0, y: 0, z: 0}
+    beginPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

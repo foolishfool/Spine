@@ -498,6 +498,7 @@ GameObject:
   - 4: {fileID: 1013914940}
   - 114: {fileID: 1013914941}
   - 114: {fileID: 1013914942}
+  - 114: {fileID: 1013914943}
   m_Layer: 13
   m_Name: EnemyCube
   m_TagString: Untagged
@@ -568,6 +569,18 @@ MonoBehaviour:
   relativeOffset: {x: 0, y: 0}
   pixelOffset: {x: 0, y: -50}
   widgetContainer: {fileID: 0}
+--- !u!114 &1013914943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1013914939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a835aedb976b4393bc69f1dcee5fed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 80
 --- !u!1 &1089834814
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +635,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1013914940}
   m_RootOrder: 5
+--- !u!1 &1333352534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100040, guid: c76fc96e2c178ab4eb3cf486a692e7e0, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1333352535}
+  m_Layer: 13
+  m_Name: point_middle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1333352535
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400040, guid: c76fc96e2c178ab4eb3cf486a692e7e0, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1333352534}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+  m_LocalPosition: {x: 484, y: 45.070885, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1860272766}
+  m_RootOrder: 6
 --- !u!1 &1585418913
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +818,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bedf7bccba54e9bb198e277ca3f391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollScenes: []
+  scrollScenes:
+  - {fileID: 1013914943}
+  isMoveToRight: 0
 --- !u!114 &1653888958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,7 +912,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400040, guid: c76fc96e2c178ab4eb3cf486a692e7e0, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1808951375}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -0.00000016292068}
   m_LocalPosition: {x: 168.9, y: 45.070885, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1006,7 +1048,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1860272765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -479.90323, y: -87.09677, z: 0}
+  m_LocalPosition: {x: -480.2058, y: -68.30808, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1808951376}
@@ -1015,6 +1057,7 @@ Transform:
   - {fileID: 1089834815}
   - {fileID: 532893614}
   - {fileID: 431429200}
+  - {fileID: 1333352535}
   m_Father: {fileID: 1935363591}
   m_RootOrder: 0
 --- !u!114 &1860272767
@@ -1041,6 +1084,8 @@ MonoBehaviour:
   targetGroup: {fileID: 0}
   fightUnitsSortByPos: []
   fightUnitsSortByHP: []
+  middle_point: {fileID: 1333352535}
+  scrollSceneManager: {fileID: 0}
 --- !u!114 &1860272768
 MonoBehaviour:
   m_ObjectHideFlags: 0
