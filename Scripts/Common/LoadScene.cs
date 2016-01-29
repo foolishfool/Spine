@@ -5,7 +5,7 @@ using ProtoTblConfig;
 
 public class LoadScene : MonoBehaviour {
     static string SceneName;
-    static bool isAdditveLoad = false;
+	static bool isAdditiveLoad = false;
     AsyncOperation async;
     public UIProgressBar bar;
 
@@ -16,7 +16,7 @@ public class LoadScene : MonoBehaviour {
             Destroy(obj);
         obj = gameObject;        
         //AssetManager.UnloadAssets();
-        async = isAdditveLoad ? Application.LoadLevelAdditiveAsync(SceneName) : Application.LoadLevelAsync(SceneName);
+        async = isAdditiveLoad ? Application.LoadLevelAdditiveAsync(SceneName) : Application.LoadLevelAsync(SceneName);
     }
 
     void Update()
@@ -27,7 +27,7 @@ public class LoadScene : MonoBehaviour {
 
     public static void LoadDungeon(int id)
     {
-        isAdditveLoad = true;
+		isAdditiveLoad = true;
         SceneName = Const.FightLevel;
       //  SceneName = "test1";
         DungeonManager.SceneSetting = Util.GetDic<MsgDungeon, Dungeon>()[id];
@@ -36,7 +36,7 @@ public class LoadScene : MonoBehaviour {
 
     public static void ReturnMainmenu()
     {
-        isAdditveLoad = false;
+        isAdditiveLoad = false;
         SceneName = Const.LoginLevel;
         Application.LoadLevel("LoadScene");
     }

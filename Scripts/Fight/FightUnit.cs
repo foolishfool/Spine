@@ -333,7 +333,6 @@ public class FightUnit : MonoBehaviour {
 		{
 			mTrans.Rotate (Vector3.up * 180);
 			isRotate = false;
-			Debug.Log ("@@@@@@@@@@@@@@"  );
 		}
 
 	}
