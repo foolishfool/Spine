@@ -68,6 +68,11 @@ public class Util : MonoBehaviour {
         return Resource.LoadPrefab(path);
     }
 
+	public static AudioSource LoadAudio(string path)
+	{
+		return Resource.LoadAudioClip (path);
+	}
+
     public static string LoadText(string path)
     {
         return Util.LoadTextFile(path, ".txt");

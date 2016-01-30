@@ -8,7 +8,10 @@ public class LoginPanel : BaseView {
     public int sceneId = 10101;
 	public UIInput HeroidInput;
 	public UIInput MonsteridInput;
-
+	public GameObject character;
+	[HideInInspector]
+	public SkeletonAnimation anim;
+	public UIPlaySound audio;
 	public override void Regester()
 	{
 		ViewMapper<LoginPanel>.instance = this;
@@ -18,6 +21,8 @@ public class LoginPanel : BaseView {
     {
         LoadConfig();
 		InitInput ();
+		anim = this.character.GetComponent<SkeletonAnimation> ();
+		audio = this.character.GetComponent<UIPlaySound> ();
     }
 	
      void LoadConfig()

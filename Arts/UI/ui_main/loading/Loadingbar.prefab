@@ -41,9 +41,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 911942d839d834d13a103d20516a4e02, type: 2}
   mSprites:
+  - name: battle
+    x: 0
+    y: 551
+    width: 229
+    height: 231
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: loading_bar1
     x: 0
-    y: 441
+    y: 479
     width: 504
     height: 71
     borderLeft: 0
@@ -56,7 +69,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: loading_bar2
     x: 0
-    y: 359
+    y: 460
     width: 387
     height: 18
     borderLeft: 0
@@ -67,9 +80,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: login
+  - name: login_brade
     x: 0
-    y: 378
+    y: 783
+    width: 392
+    height: 241
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 2
+    paddingBottom: 0
+  - name: loginbutton
+    x: 230
+    y: 720
     width: 206
     height: 62
     borderLeft: 0

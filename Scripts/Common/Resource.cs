@@ -9,6 +9,7 @@ public class Resource {
     private static Hashtable texts = new Hashtable();
     private static Hashtable images = new Hashtable();
     private static Hashtable prefabs = new Hashtable();
+	private static Hashtable audio  = new Hashtable();
 
     public static string LoadTextFile(string path, string ext)
     {
@@ -50,7 +51,7 @@ public class Resource {
         object obj = Resource.prefabs[path];
         if (obj == null)
         {
-            Resource.prefabs.Remove(path);
+			Resource.audio.Remove(path);
             GameObject gameObject = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath(path, typeof(GameObject));
             Resource.prefabs.Add(path, gameObject);
             return gameObject;
@@ -58,4 +59,20 @@ public class Resource {
 
         return obj as GameObject;
     }
+
+
+	public static AudioSource LoadAudioClip(string path)
+	{
+		object obj = Resource.audio[path];
+		if (obj == null)
+		{
+			Resource.audio.Remove(path);
+			AudioSource audioclip = (AudioSource)UnityEditor.AssetDatabase.LoadAssetAtPath(path, typeof(AudioSource));
+			Resource.audio.Add(path, audioclip);
+			return audioclip;
+		}
+
+		return obj as AudioSource;
+		
+	}
 }

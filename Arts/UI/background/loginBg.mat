@@ -7,10 +7,10 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: loginBg
-  m_Shader: {fileID: 10703, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: GEOM_TYPE_BRANCH
+  m_Shader: {fileID: 104, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: GEOM_TYPE_BRANCH _SUNDISK_HIGH_QUALITY
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 1000
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -39,6 +39,13 @@ Material:
       data:
         first:
           name: _Tex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DecalTex
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -103,7 +110,7 @@ Material:
         first:
           name: _DetailTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 5adbfab6ab3cb419487a51a4575a8d08, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -117,42 +124,42 @@ Material:
         first:
           name: _FrontTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 5adbfab6ab3cb419487a51a4575a8d08, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BackTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 5adbfab6ab3cb419487a51a4575a8d08, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _LeftTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 5adbfab6ab3cb419487a51a4575a8d08, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _RightTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 5adbfab6ab3cb419487a51a4575a8d08, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _UpTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 5adbfab6ab3cb419487a51a4575a8d08, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _DownTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 5adbfab6ab3cb419487a51a4575a8d08, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -182,6 +189,34 @@ Material:
       data:
         first:
           name: _WindQuality
+        second: 0
+      data:
+        first:
+          name: _Stencil
+        second: 0
+      data:
+        first:
+          name: _StencilComp
+        second: 8
+      data:
+        first:
+          name: _StencilOp
+        second: 0
+      data:
+        first:
+          name: _StencilReadMask
+        second: 255
+      data:
+        first:
+          name: _StencilWriteMask
+        second: 255
+      data:
+        first:
+          name: _ColorMask
+        second: 15
+      data:
+        first:
+          name: _UseUIAlphaClip
         second: 0
       data:
         first:
@@ -225,6 +260,18 @@ Material:
         second: 1
       data:
         first:
+          name: _SunDisk
+        second: 2
+      data:
+        first:
+          name: _SunSize
+        second: 0.04
+      data:
+        first:
+          name: _AtmosphereThickness
+        second: 1
+      data:
+        first:
           name: _Cull
         second: 2
       data:
@@ -235,6 +282,10 @@ Material:
         first:
           name: _SquashAmount
         second: 1
+      data:
+        first:
+          name: _Strength
+        second: 0.2
     m_Colors:
       data:
         first:
@@ -248,6 +299,14 @@ Material:
         first:
           name: _SpecColor
         second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+      data:
+        first:
+          name: _GroundColor
+        second: {r: 0.369, g: 0.349, b: 0.341, a: 1}
+      data:
+        first:
+          name: _SkyTint
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
       data:
         first:
           name: _HueVariation
