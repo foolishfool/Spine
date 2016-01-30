@@ -4,11 +4,20 @@ using ProtoTblConfig;
 using System.Collections.Generic;
 using LitJson;
 
-public class tmpPreload : MonoBehaviour {
+public class LoginPanel : BaseView {
     public int sceneId = 10101;
+	public UIInput HeroidInput;
+	public UIInput MonsteridInput;
+
+	public override void Regester()
+	{
+		ViewMapper<LoginPanel>.instance = this;
+	}
+
     void Start()
     {
         LoadConfig();
+		InitInput ();
     }
 	
      void LoadConfig()
@@ -235,18 +244,24 @@ public class tmpPreload : MonoBehaviour {
 
     string enemyIdstxt = "1,3";
     string heroIdstxt = "1,14,26,53";
-    void OnGUI()
-    {
-        GUI.Label(new Rect(0,0,50,20),"怪物id");
-        GUI.Label(new Rect(0, 30, 50, 20), "英雄id");
-        enemyIdstxt = GUI.TextField(new Rect(50, 0, 200, 20), enemyIdstxt);
-        heroIdstxt = GUI.TextField(new Rect(50, 30, 200, 20), heroIdstxt);
+//    void OnGUI()
+//    {
+//        GUI.Label(new Rect(0,0,50,20),"怪物id");
+//        GUI.Label(new Rect(0, 30, 50, 20), "英雄id");
+//        enemyIdstxt = GUI.TextField(new Rect(50, 0, 200, 20), enemyIdstxt);
+//        heroIdstxt = GUI.TextField(new Rect(50, 30, 200, 20), heroIdstxt);
+//
+//        if (GUI.Button(new Rect(100, 100, 100, 100), "登录"))
+//            TurnTo();
+//    }
+	public void InitInput()
+	{
+		HeroidInput.value = heroIdstxt;
+		MonsteridInput.value = enemyIdstxt;
+	}
 
-        if (GUI.Button(new Rect(100, 100, 100, 100), "登录"))
-            TurnTo();
-    }
 
-    void TurnTo()
+	public void TurnTo()
     {
         if (!string.IsNullOrEmpty(enemyIdstxt))
         {

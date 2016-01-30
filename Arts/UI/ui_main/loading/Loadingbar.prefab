@@ -56,9 +56,22 @@ MonoBehaviour:
     paddingBottom: 0
   - name: loading_bar2
     x: 0
-    y: 422
+    y: 359
     width: 387
     height: 18
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: login
+    x: 0
+    y: 378
+    width: 206
+    height: 62
     borderLeft: 0
     borderRight: 0
     borderTop: 0
