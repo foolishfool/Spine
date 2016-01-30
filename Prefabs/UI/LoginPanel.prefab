@@ -113,6 +113,7 @@ GameObject:
   - 4: {fileID: 484396}
   - 114: {fileID: 11442310}
   - 111: {fileID: 11141934}
+  - 114: {fileID: 11480122}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -151,6 +152,23 @@ GameObject:
   - 111: {fileID: 11192742}
   m_Layer: 0
   m_Name: login_brade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &133410
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 405346}
+  - 114: {fileID: 11423430}
+  - 111: {fileID: 11143840}
+  m_Layer: 0
+  m_Name: battle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,6 +315,7 @@ GameObject:
   - 33: {fileID: 3348968}
   - 23: {fileID: 2337662}
   - 114: {fileID: 11460950}
+  - 114: {fileID: 11431762}
   m_Layer: 5
   m_Name: liandaonv
   m_TagString: Untagged
@@ -334,6 +353,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &405346
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133410}
+  m_LocalRotation: {x: 0, y: 0.08715013, z: 0, w: 0.9961952}
+  m_LocalPosition: {x: 3, y: -149, z: -54}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_Children: []
+  m_Father: {fileID: 486098}
+  m_RootOrder: 3
 --- !u!4 &411390
 Transform:
   m_ObjectHideFlags: 1
@@ -506,7 +537,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131692}
   m_LocalRotation: {x: 0, y: 0.08715013, z: 0, w: 0.9961952}
-  m_LocalPosition: {x: 24, y: 241, z: -54}
+  m_LocalPosition: {x: 24, y: 199, z: -54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486098}
@@ -519,7 +550,7 @@ Transform:
   m_GameObject: {fileID: 118448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.004672897, y: 0.004672897, z: 0.004672897}
+  m_LocalScale: {x: 0.003125, y: 0.003125, z: 0.003125}
   m_Children:
   - {fileID: 446284}
   - {fileID: 441636}
@@ -567,6 +598,7 @@ Transform:
   - {fileID: 465400}
   - {fileID: 499038}
   - {fileID: 484396}
+  - {fileID: 405346}
   m_Father: {fileID: 473736}
   m_RootOrder: 3
 --- !u!4 &490870
@@ -748,6 +780,21 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!111 &11143840
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133410}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 6aadb8a6949634cd9879edc89bb58f41, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 6aadb8a6949634cd9879edc89bb58f41, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!111 &11190672
 Animation:
   m_ObjectHideFlags: 1
@@ -884,6 +931,56 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
   mSpriteName: Highlight - Shadowed
   mFillCenter: 1
+--- !u!114 &11423430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: -101
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 101
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: -31
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 31
+  updateAnchors: 1
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mWidth: 212
+  mHeight: 226
+  mDepth: 5
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 0.9380531
+  mType: 2
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+  mFlip: 0
+  centerType: 1
+  leftType: 1
+  rightType: 1
+  bottomType: 1
+  topType: 1
+  mAtlas: {fileID: 11490378, guid: 9e09e4d37a9db4416a44cdbe6f09ffb4, type: 2}
+  mSpriteName: battle_letter
+  mFillCenter: 1
 --- !u!114 &11427244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -937,6 +1034,21 @@ MonoBehaviour:
     oneShot: 0
   onChange: []
   mValue: 
+--- !u!114 &11431762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 17fe9ad647fff43c29760ba185c9e1eb, type: 3}
+  trigger: 0
+  volume: 1
+  pitch: 1
 --- !u!114 &11433366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1048,7 +1160,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11490378, guid: 9e09e4d37a9db4416a44cdbe6f09ffb4, type: 2}
-  mSpriteName: login
+  mSpriteName: loginbutton
   mFillCenter: 1
 --- !u!114 &11442310
 MonoBehaviour:
@@ -1293,8 +1405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: b5083cfe83bb875479bd797c61594131, type: 3}
-  trigger: 0
+  audioClip: {fileID: 8300000, guid: fcd2a7306129a46278670e2a29c73b6f, type: 3}
+  trigger: 4
   volume: 1
   pitch: 1
 --- !u!114 &11476876
@@ -1363,7 +1475,10 @@ MonoBehaviour:
   HeroidInput: {fileID: 11428008}
   MonsteridInput: {fileID: 11467852}
   character: {fileID: 174678}
+  battle_letter: {fileID: 133410}
   anim: {fileID: 0}
+  anim_letter: {fileID: 0}
+  audio: {fileID: 0}
 --- !u!114 &11479330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1427,6 +1542,21 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &11480122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 684748a4bb8bf457fbe0aa2c72d3e422, type: 3}
+  trigger: 6
+  volume: 1
+  pitch: 1
 --- !u!114 &11484692
 MonoBehaviour:
   m_ObjectHideFlags: 1
