@@ -54,6 +54,19 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: battle_letter
+    x: 230
+    y: 558
+    width: 220
+    height: 224
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 9
+    paddingTop: 7
+    paddingBottom: 0
   - name: loading_bar1
     x: 0
     y: 479
@@ -69,7 +82,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: loading_bar2
     x: 0
-    y: 460
+    y: 397
     width: 387
     height: 18
     borderLeft: 0
@@ -94,8 +107,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: loginbutton
-    x: 230
-    y: 720
+    x: 0
+    y: 416
     width: 206
     height: 62
     borderLeft: 0
