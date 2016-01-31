@@ -169,6 +169,7 @@ public class HeroFightGroup : FightGroup {
 				FightManager.GetInstance ().cinema.transform.localPosition = new Vector3 (posX, posY, posZ);
 			}
 		}	
+
 		if (this.FirstUnit.mTrans.localPosition.x >= (this.heroRStopPos.localPosition.x + this.heroRStopPos.parent.localPosition.x))
 			this.FirstUnit.parentGroup.canMoveForward = false;
 		else
@@ -180,8 +181,4 @@ public class HeroFightGroup : FightGroup {
 	}
 
 
-	IEnumerator Wait(float time)
-	{
-		yield return new WaitForSeconds (time);
-	}
 }

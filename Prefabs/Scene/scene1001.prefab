@@ -220,8 +220,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 454324}
   - 114: {fileID: 11425808}
+  - 82: {fileID: 8269708}
   m_Layer: 13
-  m_Name: scene1002
+  m_Name: scene1001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1269,6 +1270,80 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &8269708
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116700}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2092e47022ca745a4870bdc9b9e1a4c1, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11400386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1364,7 +1439,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11406796
@@ -1414,7 +1489,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11408712
@@ -1464,7 +1539,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_001
   mFillCenter: 1
 --- !u!114 &11409138
@@ -1514,7 +1589,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_H_006
   mFillCenter: 1
 --- !u!114 &11411200
@@ -1564,7 +1639,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Q_001
   mFillCenter: 1
 --- !u!114 &11411290
@@ -1614,7 +1689,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11417214
@@ -1688,7 +1763,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_001
   mFillCenter: 1
 --- !u!114 &11422142
@@ -1738,7 +1813,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_001
   mFillCenter: 1
 --- !u!114 &11422372
@@ -1788,7 +1863,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_002
   mFillCenter: 1
 --- !u!114 &11425808
@@ -1854,7 +1929,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_H_004
   mFillCenter: 1
 --- !u!114 &11430806
@@ -1904,7 +1979,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11436954
@@ -1954,7 +2029,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_001
   mFillCenter: 1
 --- !u!114 &11440350
@@ -2054,7 +2129,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_H_004
   mFillCenter: 1
 --- !u!114 &11441714
@@ -2104,7 +2179,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11441798
@@ -2154,7 +2229,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11442704
@@ -2248,7 +2323,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_H_005
   mFillCenter: 1
 --- !u!114 &11450982
@@ -2313,7 +2388,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11452242
@@ -2363,7 +2438,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_H_002
   mFillCenter: 1
 --- !u!114 &11453344
@@ -2428,7 +2503,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11455228
@@ -2522,7 +2597,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11458140
@@ -2634,7 +2709,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_H_003
   mFillCenter: 1
 --- !u!114 &11466742
@@ -2684,7 +2759,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_001
   mFillCenter: 1
 --- !u!114 &11469986
@@ -2734,7 +2809,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_001
   mFillCenter: 1
 --- !u!114 &11470908
@@ -2784,7 +2859,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_H_003
   mFillCenter: 1
 --- !u!114 &11471064
@@ -2834,7 +2909,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_001
   mFillCenter: 1
 --- !u!114 &11471672
@@ -2982,7 +3057,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11475904
@@ -3032,7 +3107,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11482930
@@ -3082,7 +3157,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_004
   mFillCenter: 1
 --- !u!114 &11483558
@@ -3159,7 +3234,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_003
   mFillCenter: 1
 --- !u!114 &11491546
@@ -3209,7 +3284,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 227099feee7d68c46988737e273001e9, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: tg_Z_001
   mFillCenter: 1
 --- !u!1001 &100100000
@@ -3218,7 +3293,23 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2092e47022ca745a4870bdc9b9e1a4c1, type: 3}
+    - target: {fileID: 0}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 116700}
