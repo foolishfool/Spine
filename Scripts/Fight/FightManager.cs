@@ -8,6 +8,7 @@ using ProtoTblConfig;
 /// </summary>
 public class FightManager : MonoBehaviour{
     static FightManager instance;
+	public GameObject cinema;
     public static FightManager GetInstance()
     {
         return instance;
@@ -143,6 +144,7 @@ public class FightManager : MonoBehaviour{
 		ScrollSceneManager.instance.EnableScrollToRight(); 
 
 	}
+		
 
 	IEnumerator SceneMoveStop()
 	{
@@ -150,6 +152,7 @@ public class FightManager : MonoBehaviour{
 		ScrollSceneManager.instance.DisableScroll(); 
 
 	}
+		
 
     public void EndMoveToNext()
     {
@@ -208,4 +211,5 @@ public class FightManager : MonoBehaviour{
             heroAttacks[0].AutoUseUniqueSkill();
         }
     }
+		
 }

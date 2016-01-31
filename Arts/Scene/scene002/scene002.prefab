@@ -1,51 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &166082
+--- !u!1 &184378
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 446880}
-  - 114: {fileID: 11490378}
+  - 4: {fileID: 478826}
+  - 114: {fileID: 11456658}
   m_Layer: 0
-  m_Name: Loadingbar
+  m_Name: scene002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &446880
+--- !u!4 &478826
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 166082}
+  m_GameObject: {fileID: 184378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11490378
+--- !u!114 &11456658
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 166082}
+  m_GameObject: {fileID: 184378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 911942d839d834d13a103d20516a4e02, type: 2}
+  material: {fileID: 2100000, guid: 8ca07aa3c7a2048779036bfe7fb32e48, type: 2}
   mSprites:
-  - name: battle
+  - name: background_002
     x: 0
-    y: 551
-    width: 229
-    height: 231
+    y: 1707
+    width: 1024
+    height: 341
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -54,70 +54,18 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: battle_letter
-    x: 230
-    y: 558
-    width: 220
-    height: 224
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 9
-    paddingTop: 7
-    paddingBottom: 0
-  - name: loading_bar1
+  - name: fromground_002
     x: 0
-    y: 479
-    width: 504
-    height: 71
+    y: 1624
+    width: 1024
+    height: 82
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
     paddingLeft: 0
     paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: loading_bar2
-    x: 0
-    y: 397
-    width: 387
-    height: 18
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: login_brade
-    x: 0
-    y: 783
-    width: 392
-    height: 241
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 2
-    paddingBottom: 0
-  - name: loginbutton
-    x: 0
-    y: 416
-    width: 206
-    height: 62
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
+    paddingTop: 1
     paddingBottom: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
@@ -132,5 +80,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 166082}
+  m_RootGameObject: {fileID: 184378}
   m_IsPrefabParent: 1

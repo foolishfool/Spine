@@ -21,6 +21,8 @@ public class FightGroup : MonoBehaviour {
 	public GroupType group;
 	[HideInInspector]
 	public FightGroup targetGroup;
+	public bool canMoveForward = true;
+	public bool canMoveBack = true;
 	public FightUnit FirstUnit
 	{
 		get

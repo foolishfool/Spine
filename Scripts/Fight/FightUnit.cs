@@ -212,7 +212,7 @@ public class FightUnit : MonoBehaviour {
 
 
 
-
+//最初怪物的自动状态
 //        if (state == UnitState.MoveForward && beAbleMove)
 //        {
 //            if (TryAttack())

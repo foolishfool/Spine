@@ -9,7 +9,26 @@ public class HeroFightGroup : FightGroup {
     Dictionary<int, HeroEvolution> heroEvolution = new Dictionary<int, HeroEvolution>();
 
 	public Transform middle_point;
-	public ScrollSceneManager scrollSceneManager;
+	public Transform cinemaLEndPos;
+	public Transform cinemaREndPos;
+	public Transform heroLStopPos;
+	public Transform heroRStopPos;
+
+
+	bool MovingToNext = false;  
+	[HideInInspector]
+	bool isCinemaMoving = true; 
+	[HideInInspector]
+	Vector3 firstEndPos;
+	[HideInInspector]
+	Vector3 cinemaPos;
+	[HideInInspector]
+	Vector3 middlepointpos;
+	float distance;
+	FightUnit firstUnit;
+
+
+//	public ScrollSceneManager scrollSceneManager;
     void Awake()
     {
         group = GroupType.Mine;
@@ -72,9 +91,7 @@ public class HeroFightGroup : FightGroup {
     /// 恢复全体血和蓝
     /// 清除所有buff
     /// </summary>
-    bool MovingToNext = false;   
-    Vector3 firstEndPos;
-    FightUnit firstUnit;
+  
     public void MoveToNext()
     {
         firstUnit = FirstUnit;
@@ -126,11 +143,45 @@ public class HeroFightGroup : FightGroup {
             }
         }
 
-		if (this.FirstUnit.mTrans.localPosition.x > (this.middle_point.localPosition.x + this.middle_point.parent.localPosition.x) && Input.GetKey (KeyCode.D))
-			FightManager.GetInstance ().ScrollToRight ();
-		else if (this.FirstUnit.mTrans.localPosition.x < (this.middle_point.localPosition.x + this.middle_point.parent.localPosition.x) && Input.GetKey (KeyCode.A))
-			FightManager.GetInstance ().ScrollToLeft ();
+			distance = Util.Distance (this.FirstUnit.mTrans.localPosition, this.middle_point.parent.localPosition);
+			cinemaPos = FightManager.GetInstance ().cinema.transform.localPosition;
+
+
+		if ((this.FirstUnit.mTrans.localPosition.x >= (this.middle_point.localPosition.x + this.middle_point.parent.localPosition.x)) && Input.GetKey (KeyCode.D))
+		{
+			if (!(FightManager.GetInstance ().cinema.transform.localPosition.x > this.cinemaREndPos.localPosition.x))
+			{
+				cinemaPos.x += distance;
+				//平滑运动
+				float posX = Mathf.Lerp (FightManager.GetInstance ().cinema.transform.localPosition.x, cinemaPos.x, 0.05f);
+				float posY = FightManager.GetInstance ().cinema.transform.localPosition.y;
+				float posZ = FightManager.GetInstance ().cinema.transform.localPosition.z;
+				FightManager.GetInstance ().cinema.transform.localPosition = new Vector3 (posX, posY, posZ);
+			}
+		} else if ((this.FirstUnit.mTrans.localPosition.x < (this.middle_point.localPosition.x + this.middle_point.parent.localPosition.x)) && Input.GetKey (KeyCode.A))
+		{
+			if (!(FightManager.GetInstance ().cinema.transform.localPosition.x < this.cinemaLEndPos.localPosition.x))
+			{
+				cinemaPos.x -= distance;
+				float posX = Mathf.Lerp (FightManager.GetInstance ().cinema.transform.localPosition.x, cinemaPos.x, 0.05f);
+				float posY = FightManager.GetInstance ().cinema.transform.localPosition.y;
+				float posZ = FightManager.GetInstance ().cinema.transform.localPosition.z;
+				FightManager.GetInstance ().cinema.transform.localPosition = new Vector3 (posX, posY, posZ);
+			}
+		}	
+		if (this.FirstUnit.mTrans.localPosition.x >= (this.heroRStopPos.localPosition.x + this.heroRStopPos.parent.localPosition.x))
+			this.FirstUnit.parentGroup.canMoveForward = false;
 		else
-			FightManager.GetInstance ().StopScroll ();
+			this.FirstUnit.parentGroup.canMoveForward = true;
+		if (this.FirstUnit.mTrans.localPosition.x <= (this.heroLStopPos.localPosition.x + this.heroLStopPos.parent.localPosition.x))
+			this.FirstUnit.parentGroup.canMoveBack = false;
+		else
+			this.FirstUnit.parentGroup.canMoveBack = true;
+	}
+
+
+	IEnumerator Wait(float time)
+	{
+		yield return new WaitForSeconds (time);
 	}
 }
