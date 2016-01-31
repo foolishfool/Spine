@@ -68,7 +68,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4083cd422558e2540a62bbafb94f57b5, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -109,13 +109,12 @@ MonoBehaviour:
   zSpacing: 0
   renderMeshes: 1
   immutableTriangles: 0
-  frontFacing: 0
   logErrors: 0
-  submeshSeparators: []
+  mainColor: {r: 1, g: 1, b: 1, a: 1}
   isUsingSkill: 0
-  _animationName: walk
-  loop: 0
   timeScale: 1
+  loop: 0
+  _animationName: walk
   isLocked: 0
 --- !u!1001 &100100000
 Prefab:
