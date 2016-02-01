@@ -9,6 +9,11 @@ public class BaseButton : MonoBehaviour {
     {
        
     }
+
+	public void OnPressed()
+	{
+		
+	}
 	// Use this for initialization
 	void Start ()
     {

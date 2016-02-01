@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ButtonWidget : BaseWidget {
     public const string nameExtension = "_Button";
-
     public UILabel label;
 
     /// <summary>
@@ -27,7 +26,15 @@ public class ButtonWidget : BaseWidget {
 
     void OnClick()
     {
-        if (onClick != null)
+		if (onClick != null)
             onClick();
     }
+		
+
+		
+	void Update() 
+	{
+
+	}
+
 }

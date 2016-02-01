@@ -9,6 +9,9 @@ using ProtoTblConfig;
 public class FightManager : MonoBehaviour{
     static FightManager instance;
 	public GameObject cinema;
+	public float distance;
+	public Vector3 cinemaPos;
+
     public static FightManager GetInstance()
     {
         return instance;
@@ -77,21 +80,7 @@ public class FightManager : MonoBehaviour{
         if (a.OnKillEnemy != null)
             a.OnKillEnemy(d);
     }
-
-	public void ScrollToLeft()
-	{
-		StartCoroutine (SceneMoveToLeft());
-	}
-
- 	public void ScrollToRight()
-	{
-		StartCoroutine (SceneMoveToRight());
-	}
-
-	public void StopScroll()
-	{
-		StartCoroutine (SceneMoveStop());
-	}
+		
 
     IEnumerator DestroyUnit(FightUnit unit)
     {
@@ -130,30 +119,8 @@ public class FightManager : MonoBehaviour{
         mineGroup.MoveToNext();       
  
     }
-
-	IEnumerator SceneMoveToLeft()
-	{
-		yield return new WaitForSeconds(0.2f);
-		ScrollSceneManager.instance.EnableScrollToLeft(); 
-
-	}
-
-	IEnumerator SceneMoveToRight()
-	{
-		yield return new WaitForSeconds(0.2f);
-		ScrollSceneManager.instance.EnableScrollToRight(); 
-
-	}
 		
-
-	IEnumerator SceneMoveStop()
-	{
-		yield return new WaitForSeconds(0.2f);
-		ScrollSceneManager.instance.DisableScroll(); 
-
-	}
-		
-
+			
     public void EndMoveToNext()
     {
         ScrollSceneManager.instance.DisableScroll();
@@ -161,6 +128,63 @@ public class FightManager : MonoBehaviour{
         mineGroup.MoveForward();
         CEventDispatcher.GetInstance().DispatchEvent(new CBaseEvent(CEventType.NEXT_BATTALE_START, this));
     }
+
+
+	public void BeginToFight()
+	{	
+		for (int i = 0; i < mineGroup.fightUnits.Count; i++)
+		{
+			mineGroup.fightUnits [i].state = FightUnit.UnitState.Fighting;
+			mineGroup.fightUnits [i].isMoving = false; 
+		}
+
+	}
+		
+	public void MoveForward()
+	{	
+		for (int i = 0; i < mineGroup.fightUnits.Count; i++)
+		{
+			mineGroup.fightUnits[i].attack.StopCurrent ();
+			if (mineGroup.fightUnits[i].isMoveforward == false )
+			{
+				mineGroup.fightUnits[i].mTrans.Rotate (Vector3.up * 180);
+			}
+			if (mineGroup.canMoveForward)
+			{
+				mineGroup.fightUnits [i].MoveForward ();
+				mineGroup.fightUnits [i].state = FightUnit.UnitState.MoveForward;
+			}
+		}
+
+	}
+
+	public void MoveBack()
+	{	
+		for (int i = 0; i < mineGroup.fightUnits.Count; i++)
+		{
+			mineGroup.fightUnits[i].attack.StopCurrent ();
+			if (mineGroup.fightUnits[i].isMoveforward == true )
+			{
+				mineGroup.fightUnits[i].mTrans.Rotate (Vector3.up * 180);
+			}
+			if (mineGroup.canMoveBack)
+			{
+				mineGroup.fightUnits [i].MoveBack ();
+				mineGroup.fightUnits [i].state = FightUnit.UnitState.MoveBack;
+			}
+
+		}
+
+	}
+
+	public void Wait()
+	{
+		for (int i = 0; i < mineGroup.fightUnits.Count; i++)
+		{
+			mineGroup.fightUnits [i].state = FightUnit.UnitState.Wait;
+		}
+	}
+
 
     /// <summary>
     /// 激活自动战斗
@@ -211,5 +235,40 @@ public class FightManager : MonoBehaviour{
             heroAttacks[0].AutoUseUniqueSkill();
         }
     }
-		
+
+	public void CaculateCinemaParameter()
+	{
+		distance = Util.Distance (mineGroup.FirstUnit.mTrans.localPosition, mineGroup.middle_point.parent.localPosition);
+	    cinemaPos = FightManager.GetInstance ().cinema.transform.localPosition;
+	}
+
+	//摄像机如何运动	
+	public void CinemaMoveToward()
+	{
+		if ((mineGroup.FirstUnit.mTrans.localPosition.x >= (mineGroup.middle_point.localPosition.x + mineGroup.middle_point.parent.localPosition.x)&& !(cinema.transform.localPosition.x > mineGroup.cinemaREndPos.localPosition.x)))
+			{
+				cinemaPos.x += distance;
+				//平滑运动
+				float posX = Mathf.Lerp (cinema.transform.localPosition.x, cinemaPos.x, 0.05f);
+				float posY = cinema.transform.localPosition.y;
+				float posZ = cinema.transform.localPosition.z;
+				cinema.transform.localPosition = new Vector3 (posX, posY, posZ);			
+		}
+
+	}
+
+	public void CinemaMoveBack()
+		{
+			if ((mineGroup.FirstUnit.mTrans.localPosition.x < (mineGroup.middle_point.localPosition.x + mineGroup.middle_point.parent.localPosition.x)))
+			{
+				if (!(cinema.transform.localPosition.x < mineGroup.cinemaLEndPos.localPosition.x))
+					{
+			cinemaPos.x -= distance;
+			float posX = Mathf.Lerp (cinema.transform.localPosition.x, cinemaPos.x, 0.05f);
+			float posY = cinema.transform.localPosition.y;
+			float posZ = cinema.transform.localPosition.z;
+			cinema.transform.localPosition = new Vector3 (posX, posY, posZ);
+					}
+			}	
+		}
 }

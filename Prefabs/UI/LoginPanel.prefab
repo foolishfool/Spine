@@ -75,8 +75,6 @@ GameObject:
   - 4: {fileID: 446284}
   - 65: {fileID: 6550254}
   - 114: {fileID: 11476372}
-  - 114: {fileID: 11427244}
-  - 114: {fileID: 11484692}
   - 114: {fileID: 11494110}
   - 114: {fileID: 11464284}
   - 111: {fileID: 11190672}
@@ -981,29 +979,6 @@ MonoBehaviour:
   mAtlas: {fileID: 11490378, guid: 9e09e4d37a9db4416a44cdbe6f09ffb4, type: 2}
   mSpriteName: battle_letter
   mFillCenter: 1
---- !u!114 &11427244
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaee0fa3c7a782f43ac65b3fea68c1d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 109830}
-  tweenGroup: 0
-  trigger: 0
-  playDirection: 1
-  resetOnPlay: 0
-  resetIfDisabled: 0
-  ifDisabledOnPlay: 0
-  disableWhenFinished: 0
-  includeChildren: 0
-  onFinished: []
-  eventReceiver: {fileID: 0}
-  callWhenFinished: 
 --- !u!114 &11428008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1557,29 +1532,6 @@ MonoBehaviour:
   trigger: 6
   volume: 1
   pitch: 1
---- !u!114 &11484692
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaee0fa3c7a782f43ac65b3fea68c1d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 109830}
-  tweenGroup: 0
-  trigger: 0
-  playDirection: 1
-  resetOnPlay: 0
-  resetIfDisabled: 0
-  ifDisabledOnPlay: 0
-  disableWhenFinished: 0
-  includeChildren: 0
-  onFinished: []
-  eventReceiver: {fileID: 0}
-  callWhenFinished: 
 --- !u!114 &11494110
 MonoBehaviour:
   m_ObjectHideFlags: 1

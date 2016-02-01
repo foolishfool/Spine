@@ -42,6 +42,7 @@ public class FightAttribute
 	public float GetBackSpeed { get { return Const.GetBackSpeed; } }
     public int Defence { get { return Mathf.RoundToInt((float)defence * Mathf.Max(0, 1 + defenceBuff)); } }
 	public float alarmRange = 400f;
+	public float attackRange = 300f;
 	public float escapeRange = 450f;
 
     /*只供buff改变*/
@@ -1160,19 +1161,21 @@ public static class FightRule
     public static FightUnit GetFightTarget(FightUnit self, FightGroup targetGroup )
     {
         FightUnit target = null;
-        for (int i = 0; i < targetGroup.fightUnits.Count; i++)
-        {
-            if (targetGroup.fightUnits[i] == self)
-                continue; // does not find self
-			if (target == null  ) 
-            {
-                target = targetGroup.fightUnits[i];
-                continue;
-            }
-            if (Distance(self, targetGroup.fightUnits[i]) < Distance(self, target)) // if already has a target change the target 
-                target = targetGroup.fightUnits[i];
-        }
-        return target;
+		for (int i = 0; i < targetGroup.fightUnits.Count; i++)
+		{
+			if (targetGroup.fightUnits[i] == self)
+				continue; // does not find self
+			//在攻击距离内的才进入目标列表
+			if (target == null &&  Distance (self, targetGroup.fightUnits [i]) <= self.fightAttribute.range  ) 
+			{
+				target = targetGroup.fightUnits[i];
+				continue;
+			}
+			//更换目标
+			if (target != null && Distance(self, targetGroup.fightUnits[i]) < Distance(self, target))
+				target = targetGroup.fightUnits[i];
+		}
+		return target;
     }
 
 	public static FightUnit GetAlarmedFightTarget(FightUnit self, FightGroup targetGroup )

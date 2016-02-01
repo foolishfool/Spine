@@ -14,16 +14,30 @@ public class FightPanel: BaseView {
     void Start()
     {
         BindAutoFight();
+		BindBeginFight();
+		GameObject button_forward = GameObject.Find ("FightPanel/Forward_Button");	
+		GameObject button_backward = GameObject.Find ("FightPanel/Backward_Button");	
+		UIEventListener.Get(button_forward).onPress = OnPress_MoveForward;
+		UIEventListener.Get(button_backward).onPress = OnPress_MoveBackward;
+
     }
 
-    void Update()
-    {
-        UpdateHeadShot();
-        UpdateEnergy();
-    }
+
 
 #region 头像
+
+
     public Dictionary<HeroFightUnit, HeadShotWidget> HeadShotMapper = new Dictionary<HeroFightUnit, HeadShotWidget>();
+
+	public Animation button_click_fight;
+	public Animation button_click_forward;
+	public Animation button_click_backward;
+	public Animation button_click_autofight;
+
+
+	public bool isRPress = false;
+	public bool isLPress = false;
+
     /// <summary>
     /// 绑定英雄头像控件
     /// </summary>
@@ -144,4 +158,74 @@ public class FightPanel: BaseView {
     }
 
 #endregion
+
+	/// <summary>
+	/// 绑定开始战斗按钮的事件
+	/// </summary>
+	void BindBeginFight()
+	{
+		ButtonWidget button_fight = (ButtonWidget)widgetsMap["Attack_button"];
+		button_click_fight = button_fight.GetComponent<Animation> ();
+		button_fight.onClick = OnClick_BeginFight;
+	}
+
+	void OnClick_BeginFight(params object[] objs)
+	{
+		FightManager.GetInstance ().BeginToFight ();
+		button_click_fight.Play ();
+	}
+
+
+	void OnPress_MoveForward(GameObject button_forward,bool isPressed)
+	{
+		if (isPressed)
+		{
+			button_forward.transform.localScale = new Vector3 (1.5f, 1.5f, 1.5f);
+			isRPress = true;
+		} else
+		
+		{
+			button_forward.transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
+			isRPress = false;
+		}
+	}
+
+
+	void OnPress_MoveBackward(GameObject button_backward,bool isPressed)
+	{
+		if (isPressed)
+		{
+			button_backward.transform.localScale = new Vector3 (1.5f, 1.5f, 1.5f);
+			isLPress = true;
+		} else
+		{
+			button_backward.transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
+			isLPress = false;
+		}
+	}
+
+	void Update()
+	{
+		UpdateHeadShot();
+		UpdateEnergy();
+		//按左走或者 按右走
+		if (isLPress)
+		{
+			FightManager.GetInstance ().MoveBack ();
+		} else if (isRPress)
+		{
+			FightManager.GetInstance ().MoveForward ();
+		} 
+
+
+		//摄像机运动
+		FightManager.GetInstance ().CaculateCinemaParameter ();
+		FightManager.GetInstance ().CinemaMoveBack ();
+		FightManager.GetInstance ().CinemaMoveToward ();
+
+
+
+	}
+		
+
 }

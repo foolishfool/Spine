@@ -39,6 +39,9 @@ public class FightUnit : MonoBehaviour {
     [HideInInspector]
     public Transform mTrans;
 
+	[HideInInspector]
+	public bool isMoving = false;
+
 	public bool isMoveforward = true; //初始朝向
 	public bool isRotate = false;  //是否需要旋转
     /// <summary>
@@ -208,6 +211,7 @@ public class FightUnit : MonoBehaviour {
 		if (state == UnitState.Wait && beAbleMove)
 		{
 			anim.Play (Const.IdleAction, true);
+			isMoving = false;
 		}
 
 
@@ -294,6 +298,7 @@ public class FightUnit : MonoBehaviour {
     public void MoveForward()
     {
 		isMoveforward = true;
+		isMoving = true;
 		mTrans.localPosition += (parentGroup.group == FightGroup.GroupType.Mine ? 1 : -1) * (isEntice ? -1 : 1) * Vector3.right * fightAttribute.MoveSpeed * Time.deltaTime;
         anim.Play(Const.RunAction, true);
     }	
@@ -301,6 +306,7 @@ public class FightUnit : MonoBehaviour {
 	public void MoveBack()
 	{
 		isMoveforward = false;
+		isMoving = true;
 		mTrans.localPosition += (parentGroup.group == FightGroup.GroupType.Mine ? 1 : -1) * (isEntice ? -1 : 1) * Vector3.left * fightAttribute.MoveSpeed * Time.deltaTime;
 		anim.Play(Const.RunAction, true);
 	}	

@@ -21,6 +21,7 @@ public class FightGroup : MonoBehaviour {
 	public GroupType group;
 	[HideInInspector]
 	public FightGroup targetGroup;
+	//用来测试角色移动边界
 	public bool canMoveForward = true;
 	public bool canMoveBack = true;
 	public FightUnit FirstUnit

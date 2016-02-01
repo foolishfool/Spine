@@ -16,15 +16,13 @@ public class HeroFightGroup : FightGroup {
 
 
 	bool MovingToNext = false;  
-	[HideInInspector]
-	bool isCinemaMoving = true; 
+
 	[HideInInspector]
 	Vector3 firstEndPos;
-	[HideInInspector]
-	Vector3 cinemaPos;
+
 	[HideInInspector]
 	Vector3 middlepointpos;
-	float distance;
+
 	FightUnit firstUnit;
 
 
@@ -142,33 +140,6 @@ public class HeroFightGroup : FightGroup {
                 FightManager.GetInstance().EndMoveToNext();
             }
         }
-
-			distance = Util.Distance (this.FirstUnit.mTrans.localPosition, this.middle_point.parent.localPosition);
-			cinemaPos = FightManager.GetInstance ().cinema.transform.localPosition;
-
-
-		if ((this.FirstUnit.mTrans.localPosition.x >= (this.middle_point.localPosition.x + this.middle_point.parent.localPosition.x)) && Input.GetKey (KeyCode.D))
-		{
-			if (!(FightManager.GetInstance ().cinema.transform.localPosition.x > this.cinemaREndPos.localPosition.x))
-			{
-				cinemaPos.x += distance;
-				//平滑运动
-				float posX = Mathf.Lerp (FightManager.GetInstance ().cinema.transform.localPosition.x, cinemaPos.x, 0.05f);
-				float posY = FightManager.GetInstance ().cinema.transform.localPosition.y;
-				float posZ = FightManager.GetInstance ().cinema.transform.localPosition.z;
-				FightManager.GetInstance ().cinema.transform.localPosition = new Vector3 (posX, posY, posZ);
-			}
-		} else if ((this.FirstUnit.mTrans.localPosition.x < (this.middle_point.localPosition.x + this.middle_point.parent.localPosition.x)) && Input.GetKey (KeyCode.A))
-		{
-			if (!(FightManager.GetInstance ().cinema.transform.localPosition.x < this.cinemaLEndPos.localPosition.x))
-			{
-				cinemaPos.x -= distance;
-				float posX = Mathf.Lerp (FightManager.GetInstance ().cinema.transform.localPosition.x, cinemaPos.x, 0.05f);
-				float posY = FightManager.GetInstance ().cinema.transform.localPosition.y;
-				float posZ = FightManager.GetInstance ().cinema.transform.localPosition.z;
-				FightManager.GetInstance ().cinema.transform.localPosition = new Vector3 (posX, posY, posZ);
-			}
-		}	
 
 		if (this.FirstUnit.mTrans.localPosition.x >= (this.heroRStopPos.localPosition.x + this.heroRStopPos.parent.localPosition.x))
 			this.FirstUnit.parentGroup.canMoveForward = false;

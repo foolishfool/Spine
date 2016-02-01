@@ -232,8 +232,7 @@ MonoBehaviour:
 --- !u!114 &292634558
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11484692, guid: 899ca24d1a2f547c58b03608a598f183,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 292634553}
   m_Enabled: 1
@@ -256,8 +255,7 @@ MonoBehaviour:
 --- !u!114 &292634559
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11427244, guid: 899ca24d1a2f547c58b03608a598f183,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 292634553}
   m_Enabled: 1

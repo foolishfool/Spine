@@ -51,17 +51,24 @@ public class HeroFightUnit : FightUnit {
 					return;
 				if (targetUnit == null)
 					state = UnitState.Wait;
-				else
-					state = UnitState.MoveToTarget;
 			}
 				
 		}
+
+		//状态转换为wait
+
+		else if ((state == UnitState.MoveForward || state == UnitState.MoveBack) && !isMoving)
+		{
+			state = UnitState.Wait;
+		}
+
+
 		//转向
 		if (((Input.GetKeyDown (KeyCode.D) && isMoveforward == false) && !Input.GetKeyDown (KeyCode.A) || ((Input.GetKeyDown (KeyCode.A) && isMoveforward == true) && !Input.GetKeyDown(KeyCode.D))))
 		{
 			mTrans.Rotate (Vector3.up * 180);
 		}
-		//不用else if 如果转向了 这真就不走了
+		//不用else if 如果转向了 就真就不走了
 		if (Input.GetKey (KeyCode.D) && this.parentGroup.canMoveForward)
 		{
 			attack.StopCurrent ();
@@ -91,15 +98,11 @@ public class HeroFightUnit : FightUnit {
 		if (Input.GetKeyDown (KeyCode.J))
 		{
 			state = UnitState.Fighting;
+			isMoving = false;
+		} else if (!Input.GetKey (KeyCode.A) || !Input.GetKey (KeyCode.D))
+			isMoving = false;
 
-		} 
-
-		if(targetUnit == null && !(Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.J)))
-		{	
-			state = UnitState.Wait;
-			anim.Play (Const.IdleAction, true);
-		}
-
+		Debug.Log (state + "@@@@@@@@@@@@@@@@@@@@");
 			
     }
 		
