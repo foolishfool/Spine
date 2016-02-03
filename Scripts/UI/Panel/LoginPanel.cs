@@ -31,7 +31,8 @@ public class LoginPanel : BaseView {
 		anim_letter = this.battle_letter.GetComponent<Animation> ();
 		audio = this.character.GetComponent<UIPlaySound> ();
     }
-	
+
+
      void LoadConfig()
     {
         Util.Load<MsgAttackData, AttackData>();
@@ -297,4 +298,11 @@ public class LoginPanel : BaseView {
         }
         LoadScene.LoadDungeon(sceneId);
     }
+
+	void Update()
+	{
+		heroIdstxt = HeroidInput.value;
+		enemyIdstxt = MonsteridInput.value;
+		
+	}
 }
