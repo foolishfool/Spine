@@ -101,8 +101,6 @@ public class HeroFightUnit : FightUnit {
 			isMoving = false;
 		} else if (!Input.GetKey (KeyCode.A) || !Input.GetKey (KeyCode.D))
 			isMoving = false;
-
-		Debug.Log (state + "@@@@@@@@@@@@@@@@@@@@");
 			
     }
 		

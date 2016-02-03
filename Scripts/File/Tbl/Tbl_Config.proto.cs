@@ -1036,69 +1036,6 @@ namespace ProtoTblConfig
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"EvaluateData")]
-  public partial class EvaluateData : global::ProtoBuf.IExtensible
-  {
-    public EvaluateData() {}
-    
-
-    private uint _id = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
-    public uint id
-    {
-      get { return _id; }
-      set { _id = value; }
-    }
-
-    private uint _evaluation = default(uint);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"evaluation", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
-    public uint evaluation
-    {
-      get { return _evaluation; }
-      set { _evaluation = value; }
-    }
-
-    private uint _minPoint = default(uint);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"minPoint", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
-    public uint minPoint
-    {
-      get { return _minPoint; }
-      set { _minPoint = value; }
-    }
-
-    private float _bonusFactor = default(float);
-    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"bonusFactor", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
-    public float bonusFactor
-    {
-      get { return _bonusFactor; }
-      set { _bonusFactor = value; }
-    }
-    private global::ProtoBuf.IExtension extensionObject;
-    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
-      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
-  }
-  
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MsgEvaluateData")]
-  public partial class MsgEvaluateData : global::ProtoBuf.IExtensible
-  {
-    public MsgEvaluateData() {}
-    
-    private readonly global::System.Collections.Generic.List<ProtoTblConfig.EvaluateData> _struct_data = new global::System.Collections.Generic.List<ProtoTblConfig.EvaluateData>();
-    [global::ProtoBuf.ProtoMember(1, Name=@"struct_data", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    public global::System.Collections.Generic.List<ProtoTblConfig.EvaluateData> struct_data
-    {
-      get { return _struct_data; }
-    }
-  
-    private global::ProtoBuf.IExtension extensionObject;
-    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
-      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
-  }
-  
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"EnemyData")]
   public partial class EnemyData : global::ProtoBuf.IExtensible
   {
@@ -2979,7 +2916,7 @@ namespace ProtoTblConfig
 
     private byte[] _des = null;
     [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"des", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
+    [global::System.ComponentModel.DefaultValue		(null)]
     public byte[] des
     {
       get { return _des; }
@@ -3183,6 +3120,24 @@ namespace ProtoTblConfig
       get { return _name; }
       set { _name = value; }
     }
+
+    private byte[] _audio = null;
+    [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name=@"audio", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue(null)]
+    public byte[] audio
+    {
+      get { return _audio; }
+      set { _audio = value; }
+    }
+
+    private float _audioDelay = default(float);
+    [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name=@"audioDelay", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
+    [global::System.ComponentModel.DefaultValue(default(float))]
+    public float audioDelay
+    {
+      get { return _audioDelay; }
+      set { _audioDelay = value; }
+    }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
@@ -3263,6 +3218,24 @@ namespace ProtoTblConfig
     {
       get { return _bone; }
       set { _bone = value; }
+    }
+
+    private byte[] _audio = null;
+    [global::ProtoBuf.ProtoMember(7, IsRequired = false, Name=@"audio", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue(null)]
+    public byte[] audio
+    {
+      get { return _audio; }
+      set { _audio = value; }
+    }
+
+    private float _audioDelay = default(float);
+    [global::ProtoBuf.ProtoMember(8, IsRequired = false, Name=@"audioDelay", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
+    [global::System.ComponentModel.DefaultValue(default(float))]
+    public float audioDelay
+    {
+      get { return _audioDelay; }
+      set { _audioDelay = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
@@ -3724,8 +3697,8 @@ namespace ProtoTblConfig
       set { _icon = value; }
     }
 
-    private byte[] _des = null;
-    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"des", DataFormat = global::ProtoBuf.DataFormat.Default)]
+	private byte[] _des = null;
+	[global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"des", DataFormat = global::ProtoBuf.DataFormat.Default)]
     [global::System.ComponentModel.DefaultValue(null)]
     public byte[] des
     {
