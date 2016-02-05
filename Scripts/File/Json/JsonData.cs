@@ -15,7 +15,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
-
+using UnityEngine;
 
 namespace LitJson
 {
@@ -81,12 +81,14 @@ namespace LitJson
 
         bool ICollection.IsSynchronized {
             get {
+                Debug.Log(type + "666666666666666666666666666");
                 return EnsureCollection ().IsSynchronized;
             }
         }
 
         object ICollection.SyncRoot {
             get {
+                Debug.Log(type + "777777777777777777777777777777777");
                 return EnsureCollection ().SyncRoot;
             }
         }
@@ -273,6 +275,7 @@ namespace LitJson
 
         public JsonData this[int index] {
             get {
+                Debug.Log(type + "11111111111111111111111111");
                 EnsureCollection ();
 
                 if (type == JsonType.Array)
@@ -282,6 +285,7 @@ namespace LitJson
             }
 
             set {
+                Debug.Log(type + "22222222222222222222222222222222");
                 EnsureCollection ();
 
                 if (type == JsonType.Array)
@@ -453,6 +457,7 @@ namespace LitJson
         #region ICollection Methods
         void ICollection.CopyTo (Array array, int index)
         {
+            Debug.Log(type + "444444444444444444444444444444");
             EnsureCollection ().CopyTo (array, index);
         }
         #endregion
@@ -508,6 +513,7 @@ namespace LitJson
         #region IEnumerable Methods
         IEnumerator IEnumerable.GetEnumerator ()
         {
+             Debug.Log(type + "5555555555555555555555555");
             return EnsureCollection ().GetEnumerator ();
         }
         #endregion
@@ -683,7 +689,9 @@ namespace LitJson
         #region Private Methods
         private ICollection EnsureCollection ()
         {
+            Debug.Log(type + "!!!!!!!!!!!!!!!!!!!!!!!!");
             if (type == JsonType.Array)
+                
                 return (ICollection) inst_array;
 
             if (type == JsonType.Object)
@@ -711,6 +719,7 @@ namespace LitJson
 
         private IList EnsureList ()
         {
+  
             if (type == JsonType.Array)
                 return (IList) inst_array;
 

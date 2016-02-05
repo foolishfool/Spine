@@ -64,6 +64,7 @@ public class HeroAttack : Attack {
         normalAttack.Init();
         /*主动技能初始化*/
         normalSkill = NGUITools.AddChild<ActiveSkill>(gameObject);
+		Debug.Log (normalSkillId + "&&&&&&&&&&&&&&&&&&&&");
         normalSkill.normalSkill = Util.GetDic<MsgNormalSkill, NormalSkill>()[normalSkillId];
         int LvUpId = normalSkillId * 100 + normalSkillLv;
         normalSkill.normalSkillLvUp = Util.GetDic<MsgNormalSkillLvUp, NormalSkillLvUp>()[LvUpId];

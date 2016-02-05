@@ -69,6 +69,7 @@ public class Skill : MonoBehaviour {
 		Dictionary<int,SpecialEffect> effectDic = Util.GetDic<MsgSpecialEffect,SpecialEffect> ();
 		if (dmgEffectId != 0) 
 		{
+			Debug.Log(dmgEffectId + "@@@@@@@@@@@@@@");
 			dmgEffect = effectDic[dmgEffectId];
 			dmgEffectName  = Util.GetConfigString(dmgEffect.name);	
 		}

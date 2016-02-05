@@ -94,8 +94,14 @@ public class AssetManager{
                 
 //#if NO_STREAMINGASSETS 
 #if UNITY_EDITOR
-
-                Object asset = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/" + subPath + assetName + ".prefab", typeof(GameObject));
+				Object asset;
+				if(type == AssetType.Audio)
+				{ asset = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/Sound/" + subPath + assetName + ".mp3", typeof(GameObject));
+					if(asset == null)
+				 asset = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/Sound/" + subPath + assetName + ".wav", typeof(GameObject));
+					}
+                else 
+					 asset = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/" + subPath + assetName + ".prefab", typeof(GameObject));
                 AssetData assetData = new AssetData();
                 assetData.asset = asset;
                 assetData.isKeep = isKeep;

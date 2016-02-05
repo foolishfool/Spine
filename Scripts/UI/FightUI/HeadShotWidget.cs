@@ -44,6 +44,7 @@ public class HeadShotWidget : BaseWidget {
         manaBar.value = hero.manaValue;
         if (hero.attack != null)
         {
+            Debug.Log(hero.attack + "#######################22222222222222222");
             HeroAttack attack = (HeroAttack)hero.attack;
             if (attack.normalSkill.time != 0)
                 cdlabel.text = Mathf.RoundToInt(attack.normalSkill.time).ToString();

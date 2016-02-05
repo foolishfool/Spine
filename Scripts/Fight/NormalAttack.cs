@@ -66,10 +66,11 @@ public class NormalAttack : Skill {
         base.Init();
         //初始化技能动作
         string actionConifg = Util.GetConfigString(attack.attackAction);
+		Debug.Log(Util.GetConfigString(attack.attackAction) +"@@@@@@@@@@");
         JsonData dtList = JsonMapper.ToObject(actionConifg);
         for (int i = 0; i < dtList.Count; i++)
         {
-            JsonData dt = dtList[i];
+            JsonData dt = dtList[i];//有几个动作
             string skillAction = dt["action"].ToString();
             skillActionList.Add(skillAction);
             int ic = dt["time"].Count;
