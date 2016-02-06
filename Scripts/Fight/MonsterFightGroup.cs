@@ -37,7 +37,9 @@ public class MonsterFightGroup : FightGroup
             string modelName = Util.GetConfigString(monsterData.model);
             GameObject child = AssetManager.GetGameObject(modelName,battle_points[i]);
 			if (monsterData.direction == 1)
-                child.transform.Rotate(new Vector3(0,180,0));
+			{
+				child.transform.Rotate (new Vector3 (0, 180, 0));
+			}
             child.layer = gameObject.layer;
             child.transform.parent = transform.parent;
             MonsterFightUnit unit = child.AddComponent<MonsterFightUnit>();

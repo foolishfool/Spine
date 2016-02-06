@@ -81,14 +81,12 @@ namespace LitJson
 
         bool ICollection.IsSynchronized {
             get {
-                Debug.Log(type + "666666666666666666666666666");
                 return EnsureCollection ().IsSynchronized;
             }
         }
 
         object ICollection.SyncRoot {
             get {
-                Debug.Log(type + "777777777777777777777777777777777");
                 return EnsureCollection ().SyncRoot;
             }
         }
@@ -455,7 +453,6 @@ namespace LitJson
         #region ICollection Methods
         void ICollection.CopyTo (Array array, int index)
         {
-            Debug.Log(type + "444444444444444444444444444444");
             EnsureCollection ().CopyTo (array, index);
         }
         #endregion
@@ -511,7 +508,6 @@ namespace LitJson
         #region IEnumerable Methods
         IEnumerator IEnumerable.GetEnumerator ()
         {
-             Debug.Log(type + "5555555555555555555555555");
             return EnsureCollection ().GetEnumerator ();
         }
         #endregion

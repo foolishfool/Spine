@@ -66,7 +66,6 @@ public class NormalAttack : Skill {
         base.Init();
         //初始化技能动作
         string actionConifg = Util.GetConfigString(attack.attackAction);
-		Debug.Log(Util.GetConfigString(attack.attackAction) +"@@@@@@@@@@");
         JsonData dtList = JsonMapper.ToObject(actionConifg);
         for (int i = 0; i < dtList.Count; i++)
         {
