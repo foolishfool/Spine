@@ -36,7 +36,7 @@ public class MonsterFightGroup : FightGroup
             MonsterData monsterData = monsterDataDic[ids[i]];
             string modelName = Util.GetConfigString(monsterData.model);
             GameObject child = AssetManager.GetGameObject(modelName,battle_points[i]);
-            if (monsterData.direction == 1)
+			if (monsterData.direction == 1)
                 child.transform.Rotate(new Vector3(0,180,0));
             child.layer = gameObject.layer;
             child.transform.parent = transform.parent;
@@ -62,7 +62,6 @@ public class MonsterFightGroup : FightGroup
             monsterAttack.normalAttackId = (int)monsterData.attackID;
             JsonData data = JsonMapper.ToObject(Util.GetConfigString(monsterData.skill));
             monsterAttack.autoSkillsId = new int[data.Count];
-			Debug.Log(monsterAttack.autoSkillsId + "11111111111");
             for (int num = 0; num < monsterAttack.autoSkillsId.Length; num++)
             {
                 int id;

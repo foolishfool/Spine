@@ -275,7 +275,6 @@ namespace LitJson
 
         public JsonData this[int index] {
             get {
-                Debug.Log(type + "11111111111111111111111111");
                 EnsureCollection ();
 
                 if (type == JsonType.Array)
@@ -285,7 +284,6 @@ namespace LitJson
             }
 
             set {
-                Debug.Log(type + "22222222222222222222222222222222");
                 EnsureCollection ();
 
                 if (type == JsonType.Array)
@@ -689,7 +687,6 @@ namespace LitJson
         #region Private Methods
         private ICollection EnsureCollection ()
         {
-            Debug.Log(type + "!!!!!!!!!!!!!!!!!!!!!!!!");
             if (type == JsonType.Array)
                 
                 return (ICollection) inst_array;
