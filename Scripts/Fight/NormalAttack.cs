@@ -91,6 +91,7 @@ public class NormalAttack : Skill {
             else
                 castEffectList.Add(effectDic[castEffectIds[i]]);
         }
+		Debug.Log(castEffectList + "@@@@@@@@@@@@@");
         for (int i = 0; i < flyEffectIds.Count; i++)
         {
             if (flyEffectIds[i] == 0)

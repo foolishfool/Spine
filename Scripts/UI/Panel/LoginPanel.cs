@@ -15,7 +15,6 @@ public class LoginPanel : BaseView {
 	public SkeletonAnimation anim;
 	[HideInInspector]
 	public Animation anim_letter;
-	[HideInInspector]
 	public UIPlaySound audio;
 
 	public override void Regester()
@@ -255,8 +254,8 @@ public class LoginPanel : BaseView {
          }
      }
 
-    string enemyIdstxt = "1,3";
-    string heroIdstxt = "1,14,26,53";
+    string enemyIdstxt = "1";
+    string heroIdstxt = "1";
 //    void OnGUI()
 //    {
 //        GUI.Label(new Rect(0,0,50,20),"怪物id");
