@@ -91,7 +91,6 @@ public class NormalAttack : Skill {
             else
                 castEffectList.Add(effectDic[castEffectIds[i]]);
         }
-		Debug.Log(castEffectList + "@@@@@@@@@@@@@");
         for (int i = 0; i < flyEffectIds.Count; i++)
         {
             if (flyEffectIds[i] == 0)
@@ -211,13 +210,23 @@ public class NormalAttack : Skill {
             else if (effectTarget == EffectTarget.Screen)
                 castEffectTrans = FightEffectManager.instance.transform;
             castEffectName = Util.GetConfigString(curCastEffect.name);
+			castEffectAudioName = Util.GetConfigString (curCastEffect.audio);
+			castEffectAudioDelay = curCastEffect.audioDelay;
             if (!string.IsNullOrEmpty(castEffectName))
             {
                 yield return StartCoroutine(AssetManager.LoadAsset(castEffectName, AssetManager.AssetType.Effect, false));
-                GameObject obj = AssetManager.GetGameObject(castEffectName, castEffectTrans);
+				GameObject obj = AssetManager.GetGameObject(castEffectName, castEffectTrans);
+				yield return StartCoroutine(AssetManager.LoadAsset(castEffectAudioName, AssetManager.AssetType.Audio, false));
+				AudioClip audio = AssetManager.GetAudio (castEffectAudioName);
+				AudioSource audiosource =  obj.AddComponent<AudioSource> ();
+				audiosource.clip = audio; 
+				StartCoroutine (WaitAudioDelay (castEffectAudioDelay));
+				obj.GetComponent<AudioSource> ().Play();
             }
         }
     }
+		
+
 
     /// <summary>
     /// 展现飞行特效(挂接到飞行物下)
@@ -227,12 +236,19 @@ public class NormalAttack : Skill {
         if (curFlyEffect != null)
         {
             flyEffectName = Util.GetConfigString(curFlyEffect.name);
+			flyEffectAudioName = Util.GetConfigString(curFlyEffect.audio);
+			flyEffectAudioDelay = curFlyEffect.audioDelay;
             if (!string.IsNullOrEmpty(flyEffectName))
             {
                 yield return StartCoroutine(AssetManager.LoadAsset(flyEffectName, AssetManager.AssetType.Effect, false));
+				yield return StartCoroutine(AssetManager.LoadAsset(flyEffectAudioName, AssetManager.AssetType.Audio, false));
                 if (point != null)
                 {
                     GameObject obj = AssetManager.GetGameObject(flyEffectName, point);
+					AudioClip audio = AssetManager.GetAsset<AudioClip> (flyEffectAudioName);
+					obj.AddComponent<AudioSource> ().clip = audio;
+					StartCoroutine (WaitAudioDelay (flyEffectAudioDelay));
+					obj.GetComponent<AudioSource> ().Play();
                 }
             }
         }
@@ -248,14 +264,23 @@ public class NormalAttack : Skill {
             Transform hitEffectTrans = tg.GetEffectPoint((EffectPoint)fx.bone);
             Vector3 pos = hitEffectTrans.position;
             hitEffectName = Util.GetConfigString(fx.name);
+			hitEffectAudioName = Util.GetConfigString (fx.audio);
+			hitEffectAudioDelay = fx.audioDelay;
             if (!string.IsNullOrEmpty(hitEffectName))
             {
                 yield return StartCoroutine(AssetManager.LoadAsset(hitEffectName, AssetManager.AssetType.Effect, false));
+				yield return StartCoroutine(AssetManager.LoadAsset(hitEffectAudioName, AssetManager.AssetType.Audio, false));
                 GameObject obj = AssetManager.GetGameObject(hitEffectName);
                 obj.transform.parent = mineUnit.mTrans.parent;
                 obj.transform.localScale = Vector3.one;
                 obj.transform.position = pos;
+				AudioClip audio = AssetManager.GetAsset <AudioClip>(hitEffectAudioName);
+				AudioSource audiosouce = obj.AddComponent<AudioSource> ();
+				audiosouce.clip = audio;
+				StartCoroutine ( WaitAudioDelay(hitEffectAudioDelay));
+				audiosouce.Play();
             }
         }
     }
+
 }

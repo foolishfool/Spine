@@ -11,6 +11,7 @@ public class AssetManager{
     public struct AssetData
     {
         public Object asset;
+		public AudioClip audio;
         public bool isKeep;//是否常驻内存
     }
 
@@ -95,15 +96,20 @@ public class AssetManager{
 //#if NO_STREAMINGASSETS 
 #if UNITY_EDITOR
 				Object asset;
+				AudioClip audio;
+				AssetData assetData = new AssetData();
 				if(type == AssetType.Audio)
-				{ asset = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/Sound/" + subPath + assetName + ".mp3", typeof(GameObject));
-					if(asset == null)
-				 asset = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/Sound/" + subPath + assetName + ".wav", typeof(GameObject));
-					}
+				{ 
+					audio = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/Sound/"  + assetName + ".mp3", typeof(AudioClip)) as AudioClip;
+					if(audio == null)
+					audio = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Resources/Sound/"  + assetName + ".wav", typeof(AudioClip))as AudioClip;
+					assetData.audio = audio;
+				}
                 else 
-					 asset = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/" + subPath + assetName + ".prefab", typeof(GameObject));
-                AssetData assetData = new AssetData();
-                assetData.asset = asset;
+				{
+					asset = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/" + subPath + assetName + ".prefab", typeof(GameObject));
+   					 assetData.asset = asset;
+				}
                 assetData.isKeep = isKeep;
                 CachedAsset.Add(assetName,assetData);
 #else
@@ -161,4 +167,17 @@ public class AssetManager{
         Debug.LogError("Not Find Asset " + assetName + ",Ensure LoadAsset first");
         return null;
     }
+
+	public static AudioClip GetAudio(string assetName)
+	{
+		if (CachedAsset.ContainsKey(assetName) && CachedAsset[assetName].audio != null)
+		{
+			AudioClip audio = CachedAsset[assetName].audio;
+			return audio;
+		}
+		Debug.LogError("Not Find Audio Asset " + assetName + ",Ensure LoadAsset first");
+		return null;
+	}
+
+
 }

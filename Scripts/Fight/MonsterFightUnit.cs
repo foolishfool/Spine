@@ -43,7 +43,6 @@ public class MonsterFightUnit : FightUnit {
 			
 		if (state == UnitState.Wait && (FightRule.GetAlarmedFightTarget (this, this.parentGroup.targetGroup) != null))
 		{
-			Debug.Log (FightRule.GetAlarmedFightTarget (this, this.parentGroup.targetGroup) + "!!!!!!!!!!!!!!!!!!");
 			state = UnitState.MoveToTarget;
 
 		}

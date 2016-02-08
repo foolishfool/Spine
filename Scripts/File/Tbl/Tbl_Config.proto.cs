@@ -2916,7 +2916,7 @@ namespace ProtoTblConfig
 
     private byte[] _des = null;
     [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"des", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue		(null)]
+    [global::System.ComponentModel.DefaultValue(null)]
     public byte[] des
     {
       get { return _des; }
@@ -3697,8 +3697,8 @@ namespace ProtoTblConfig
       set { _icon = value; }
     }
 
-	private byte[] _des = null;
-	[global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"des", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    private byte[] _des = null;
+    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"des", DataFormat = global::ProtoBuf.DataFormat.Default)]
     [global::System.ComponentModel.DefaultValue(null)]
     public byte[] des
     {

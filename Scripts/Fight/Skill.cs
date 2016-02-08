@@ -32,15 +32,23 @@ public class Skill : MonoBehaviour {
 	public int dmgEffectId; //magic effect id
 	public SpecialEffect dmgEffect;
 	public string dmgEffectName;
+	public string dmgEffectAudioName;
+	public float dmgEffectAudioDelay;
 
 	public int castEffectId;
 	public SpecialEffect castEffect;
 	public string castEffectName;
+	public string castEffectAudioName;
+	public float castEffectAudioDelay;
+
 	public Transform castEffectTrans;
+
 
 	public int flyEffectId;
 	public FlyingEffect flyEffect;
 	public string flyEffectName;
+	public string flyEffectAudioName;
+	public float flyEffectAudioDelay;
 	public Transform flyEffectTrans;
 	public Vector3 flyEffectFromPos
 	{
@@ -60,6 +68,8 @@ public class Skill : MonoBehaviour {
 	public int hitEffectId;
 	public SpecialEffect hitEffect;
 	public string hitEffectName;
+	public string hitEffectAudioName;
+	public float hitEffectAudioDelay;
 	public Transform hitEffectTrans;
 
 	public virtual void Init()
@@ -69,18 +79,24 @@ public class Skill : MonoBehaviour {
 		Dictionary<int,SpecialEffect> effectDic = Util.GetDic<MsgSpecialEffect,SpecialEffect> ();
 		if (dmgEffectId != 0) 
 		{
-			dmgEffect = effectDic[dmgEffectId];
-			dmgEffectName  = Util.GetConfigString(dmgEffect.name);	
+				dmgEffect = effectDic[dmgEffectId];
+				dmgEffectName = Util.GetConfigString (dmgEffect.name);	
+				dmgEffectAudioName = Util.GetConfigString (dmgEffect.audio);
+				dmgEffectAudioDelay = effectDic [dmgEffectId].audioDelay;
 		}
 		if (castEffectId != 0) 
 		{
 			castEffect = effectDic[castEffectId];
 			castEffectName = Util.GetConfigString(castEffect.name);
+			castEffectAudioName = Util.GetConfigString (castEffect.audio);
+			castEffectAudioDelay = effectDic [castEffectId].audioDelay;
 		}
 		if (flyEffectId != 0) 
-		{
+		{	
 			flyEffect = Util.GetDic<MsgFlyingEffect,FlyingEffect>()[flyEffectId];
 			flyEffectName = Util.GetConfigString(flyEffect.name);
+			flyEffectAudioName = Util.GetConfigString(flyEffect.audio);
+			flyEffectAudioDelay = effectDic [flyEffectId].audioDelay;
 			flyEffectTrans = mineUnit.GetEffectPoint((EffectPoint)flyEffect.bone);
 		}
 
@@ -88,10 +104,13 @@ public class Skill : MonoBehaviour {
 		{
 			hitEffect = effectDic[hitEffectId];
 			hitEffectName = Util.GetConfigString(hitEffect.name);
+			hitEffectAudioName = Util.GetConfigString(hitEffect.audio);
+			hitEffectAudioDelay = effectDic [hitEffectId].audioDelay;
 			
 		}
 
 		StartCoroutine (LoadEffect ());
+		StartCoroutine (LoadEffectAudio ());
 	}
 
 	IEnumerator LoadEffect()
@@ -104,7 +123,19 @@ public class Skill : MonoBehaviour {
 			yield return StartCoroutine (AssetManager.LoadAsset (flyEffectName, AssetManager.AssetType.Effect, false));
 		if (!string.IsNullOrEmpty (hitEffectName))
 			yield return StartCoroutine (AssetManager.LoadAsset (hitEffectName, AssetManager.AssetType.Effect, false));
+	}
 
+	IEnumerator LoadEffectAudio()
+	{
+		if (!string.IsNullOrEmpty (dmgEffectAudioName))
+			yield return StartCoroutine (AssetManager.LoadAsset (dmgEffectAudioName, AssetManager.AssetType.Audio, false));
+		if (!string.IsNullOrEmpty (castEffectAudioName))
+			yield return StartCoroutine (AssetManager.LoadAsset (castEffectAudioName, AssetManager.AssetType.Audio, false));
+		if (!string.IsNullOrEmpty (flyEffectAudioName))
+			yield return StartCoroutine (AssetManager.LoadAsset (flyEffectAudioName, AssetManager.AssetType.Audio, false));
+		if (!string.IsNullOrEmpty (hitEffectAudioName))
+			yield return StartCoroutine (AssetManager.LoadAsset (hitEffectAudioName, AssetManager.AssetType.Audio, false));
+		
 	}
 
 	public void Use(FightUnit target)
@@ -161,8 +192,17 @@ public class Skill : MonoBehaviour {
 			yield return StartCoroutine(AssetManager.LoadAsset(dmgEffectName,AssetManager.AssetType.Effect,false));
 			GameObject obj = AssetManager.GetGameObject(dmgEffectName,dmgEffectTrans);
 			obj.transform.localPosition = effectLocalPos; 
+
+			yield return StartCoroutine(AssetManager.LoadAsset(dmgEffectAudioName,AssetManager.AssetType.Audio,false));
+			AudioClip audio = AssetManager.GetAudio(dmgEffectAudioName);
+			AudioSource audiosouce =obj.AddComponent<AudioSource> ();
+			audiosouce.clip = audio;
+			StartCoroutine (WaitAudioDelay (dmgEffectAudioDelay));
+			audiosouce.Play();
+
 		}
 	}
+
 
 	public virtual IEnumerator DisplayPreEffect()
 	{
@@ -179,10 +219,16 @@ public class Skill : MonoBehaviour {
 			{
 				yield return StartCoroutine(AssetManager.LoadAsset(castEffectName,AssetManager.AssetType.Effect,false));
 				GameObject obj = AssetManager.GetGameObject(castEffectName,castEffectTrans);
+				yield return StartCoroutine (AssetManager.LoadAsset (castEffectAudioName, AssetManager.AssetType.Audio, false));
+				AudioClip audio = AssetManager.GetAudio(castEffectAudioName);
+				obj.AddComponent<AudioSource> ().clip = audio;
+				StartCoroutine (WaitAudioDelay (castEffectAudioDelay));
+				obj.GetComponent<AudioSource> ().Play();
 			}
 
 		}
 	}
+
 
 	public virtual IEnumerator DisplayFlyEffect(Transform point)
 	{
@@ -191,10 +237,16 @@ public class Skill : MonoBehaviour {
 			if(!string.IsNullOrEmpty(flyEffectName))
 			{
 				yield return StartCoroutine(AssetManager.LoadAsset(flyEffectName,AssetManager.AssetType.Effect,false));
+				yield return StartCoroutine (AssetManager.LoadAsset (flyEffectAudioName, AssetManager.AssetType.Audio, false));
 				if(point!= null)
 				{
-					GameObject obj = AssetManager.GetGameObject(flyEffectName,point);
+					GameObject obj = AssetManager.GetGameObject(flyEffectName,point);				
+					AudioClip audio = AssetManager.GetAudio (flyEffectAudioName);
+					obj.AddComponent<AudioSource> ().clip = audio;
+					StartCoroutine (WaitAudioDelay (flyEffectAudioDelay));
+					obj.GetComponent<AudioSource> ().Play();
 				}
+
 			}
 		}
 	}
@@ -208,16 +260,26 @@ public class Skill : MonoBehaviour {
 			if(!string.IsNullOrEmpty(hitEffectName))
 			{
 				yield return StartCoroutine(AssetManager.LoadAsset(hitEffectName,AssetManager.AssetType.Effect,false));
+				yield return StartCoroutine(AssetManager.LoadAsset(hitEffectAudioName,AssetManager.AssetType.Audio,false));
 				GameObject obj = AssetManager.GetGameObject(hitEffectName);
 				obj.transform.parent = mineUnit.mTrans.parent;
 				obj.transform.localScale = Vector3.one;
 				obj.transform.position = pos;
+				AudioClip audio = AssetManager.GetAudio (hitEffectAudioName);
+				obj.AddComponent<AudioSource> ().clip = audio;
+				StartCoroutine (WaitAudioDelay (hitEffectAudioDelay));
+				obj.GetComponent<AudioSource> ().Play();
+
 			}
 		}
 	}
 
 
 
+	public virtual IEnumerator WaitAudioDelay(float  time)
+	{
+		yield return new WaitForSeconds (time);
+	}
 
 
 
