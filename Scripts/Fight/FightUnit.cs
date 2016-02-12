@@ -213,6 +213,11 @@ public class FightUnit : MonoBehaviour {
 			anim.Play (Const.IdleAction, true);
 			isMoving = false;
 		}
+		if (state == UnitState.Win)
+		{
+			anim.Play (Const.WinAction, false);
+			isMoving = false;
+		}
 
 
 

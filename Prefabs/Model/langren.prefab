@@ -311,13 +311,12 @@ MonoBehaviour:
   zSpacing: 0
   renderMeshes: 1
   immutableTriangles: 0
-  frontFacing: 0
   logErrors: 0
-  submeshSeparators: []
+  mainColor: {r: 1, g: 1, b: 1, a: 1}
   isUsingSkill: 0
-  _animationName: 
-  loop: 0
   timeScale: 1
+  loop: 0
+  _animationName: 
   isLocked: 0
 --- !u!114 &11400002
 MonoBehaviour:
@@ -330,6 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fd8daaed7b64148a34acb96ba14ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
   skeletonRenderer: {fileID: 11400000}
   followZPosition: 1
   followBoneRotation: 1
@@ -346,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fd8daaed7b64148a34acb96ba14ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
   skeletonRenderer: {fileID: 11400000}
   followZPosition: 1
   followBoneRotation: 1
@@ -362,6 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fd8daaed7b64148a34acb96ba14ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
   skeletonRenderer: {fileID: 11400000}
   followZPosition: 1
   followBoneRotation: 1
@@ -378,6 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fd8daaed7b64148a34acb96ba14ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
   skeletonRenderer: {fileID: 11400000}
   followZPosition: 1
   followBoneRotation: 1
@@ -394,6 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fd8daaed7b64148a34acb96ba14ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
   skeletonRenderer: {fileID: 11400000}
   followZPosition: 1
   followBoneRotation: 1
@@ -410,6 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fd8daaed7b64148a34acb96ba14ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
   skeletonRenderer: {fileID: 11400000}
   followZPosition: 1
   followBoneRotation: 1

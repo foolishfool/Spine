@@ -1,0 +1,300 @@
+
+sword_girl_01.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Weapon
+  rotate: false
+  xy: 2, 154
+  size: 191, 100
+  orig: 192, 121
+  offset: 0, 8
+  index: -1
+Weapon2
+  rotate: false
+  xy: 672, 180
+  size: 135, 74
+  orig: 192, 121
+  offset: 56, 34
+  index: -1
+body_Abdomen
+  rotate: false
+  xy: 490, 68
+  size: 28, 26
+  orig: 28, 26
+  offset: 0, 0
+  index: -1
+body_Abdomen2
+  rotate: false
+  xy: 490, 68
+  size: 28, 26
+  orig: 28, 26
+  offset: 0, 0
+  index: -1
+body_Bust
+  rotate: false
+  xy: 929, 131
+  size: 34, 23
+  orig: 34, 23
+  offset: 0, 0
+  index: -1
+body_Bust2
+  rotate: false
+  xy: 929, 131
+  size: 34, 23
+  orig: 34, 23
+  offset: 0, 0
+  index: -1
+body_Chest
+  rotate: false
+  xy: 152, 2
+  size: 39, 46
+  orig: 39, 46
+  offset: 0, 0
+  index: -1
+body_Eye1
+  rotate: true
+  xy: 346, 160
+  size: 18, 11
+  orig: 18, 11
+  offset: 0, 0
+  index: -1
+body_Eye2
+  rotate: false
+  xy: 435, 137
+  size: 16, 7
+  orig: 16, 7
+  offset: 0, 0
+  index: -1
+body_FootB
+  rotate: false
+  xy: 195, 155
+  size: 48, 23
+  orig: 48, 23
+  offset: 0, 0
+  index: -1
+body_FootF2
+  rotate: false
+  xy: 195, 155
+  size: 48, 23
+  orig: 48, 23
+  offset: 0, 0
+  index: -1
+body_FootF
+  rotate: true
+  xy: 965, 132
+  size: 22, 33
+  orig: 22, 33
+  offset: 0, 0
+  index: -1
+body_HandF1
+  rotate: false
+  xy: 1000, 139
+  size: 15, 15
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
+body_HandF2
+  rotate: true
+  xy: 234, 26
+  size: 22, 19
+  orig: 22, 19
+  offset: 0, 0
+  index: -1
+body_Head
+  rotate: true
+  xy: 601, 137
+  size: 55, 59
+  orig: 56, 70
+  offset: 0, 0
+  index: -1
+body_LowerArmB
+  rotate: true
+  xy: 273, 7
+  size: 15, 26
+  orig: 15, 27
+  offset: 0, 0
+  index: -1
+body_LowerArmB2
+  rotate: false
+  xy: 301, 7
+  size: 13, 15
+  orig: 13, 15
+  offset: 0, 0
+  index: -1
+body_LowerArmF
+  rotate: false
+  xy: 490, 96
+  size: 27, 38
+  orig: 27, 38
+  offset: 0, 0
+  index: -1
+body_LowerLegB
+  rotate: true
+  xy: 739, 140
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: -1
+body_LowerLegF2
+  rotate: true
+  xy: 739, 140
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: -1
+body_LowerLegF
+  rotate: true
+  xy: 453, 136
+  size: 57, 72
+  orig: 57, 72
+  offset: 0, 0
+  index: -1
+body_Mouse
+  rotate: true
+  xy: 662, 183
+  size: 9, 7
+  orig: 9, 7
+  offset: 0, 0
+  index: -1
+body_SkirtB
+  rotate: true
+  xy: 255, 24
+  size: 63, 95
+  orig: 63, 96
+  offset: 0, 1
+  index: -1
+body_SkirtB2
+  rotate: true
+  xy: 360, 146
+  size: 47, 91
+  orig: 47, 91
+  offset: 0, 0
+  index: -1
+body_SkirtC2
+  rotate: false
+  xy: 533, 194
+  size: 137, 60
+  orig: 137, 60
+  offset: 0, 0
+  index: -1
+body_SkirtF
+  rotate: true
+  xy: 809, 142
+  size: 112, 118
+  orig: 115, 126
+  offset: 0, 8
+  index: -1
+body_SkirtF2
+  rotate: false
+  xy: 929, 156
+  size: 89, 98
+  orig: 89, 98
+  offset: 0, 0
+  index: -1
+body_UpperArmB
+  rotate: true
+  xy: 234, 2
+  size: 20, 37
+  orig: 20, 37
+  offset: 0, 0
+  index: -1
+body_UpperArmF
+  rotate: false
+  xy: 401, 100
+  size: 32, 44
+  orig: 32, 44
+  offset: 0, 0
+  index: -1
+body_UpperLegB
+  rotate: true
+  xy: 662, 137
+  size: 41, 75
+  orig: 41, 75
+  offset: 0, 0
+  index: -1
+body_UpperLegF2
+  rotate: true
+  xy: 662, 137
+  size: 41, 75
+  orig: 41, 75
+  offset: 0, 0
+  index: -1
+body_UpperLegF
+  rotate: true
+  xy: 527, 140
+  size: 52, 72
+  orig: 52, 72
+  offset: 0, 0
+  index: -1
+body_Waist
+  rotate: false
+  xy: 193, 5
+  size: 39, 43
+  orig: 39, 43
+  offset: 0, 0
+  index: -1
+body_WaistArmor
+  rotate: false
+  xy: 195, 180
+  size: 163, 74
+  orig: 163, 74
+  offset: 0, 0
+  index: -1
+body_WaistArmor2
+  rotate: false
+  xy: 316, 9
+  size: 15, 13
+  orig: 15, 13
+  offset: 0, 0
+  index: -1
+body_WaistSashB
+  rotate: false
+  xy: 352, 23
+  size: 37, 64
+  orig: 37, 64
+  offset: 0, 0
+  index: -1
+body_WaistSashF
+  rotate: false
+  xy: 346, 89
+  size: 53, 55
+  orig: 53, 55
+  offset: 0, 0
+  index: -1
+body_ring
+  rotate: false
+  xy: 2, 9
+  size: 148, 143
+  orig: 152, 150
+  offset: 4, 0
+  index: -1
+eff_Flash1
+  rotate: true
+  xy: 435, 82
+  size: 52, 53
+  orig: 52, 53
+  offset: 0, 0
+  index: -1
+eff_Flash2
+  rotate: false
+  xy: 255, 89
+  size: 89, 89
+  orig: 89, 89
+  offset: 0, 0
+  index: -1
+eff_Flash3
+  rotate: false
+  xy: 152, 50
+  size: 101, 102
+  orig: 101, 102
+  offset: 0, 0
+  index: -1
+eff_Slash
+  rotate: true
+  xy: 360, 195
+  size: 59, 171
+  orig: 59, 171
+  offset: 0, 0
+  index: -1

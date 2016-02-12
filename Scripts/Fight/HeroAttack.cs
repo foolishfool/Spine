@@ -107,7 +107,7 @@ public class HeroAttack : Attack {
     {
         if (target != t)
             target = t;
-        if (currentSkill != null)
+        if (currentSkill != null)//如果正在释放技能
             return;
         if (isAutoUseSkill)
         {
@@ -144,6 +144,8 @@ public class HeroAttack : Attack {
     {
         StopCurrent();
         enabled = false;
+		self.anim.Play (Const.IdleAction, true);
+		Debug.Log ("@@@@@@@@@@@@@@@");
     }
 
     /// <summary>
