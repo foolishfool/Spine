@@ -188,7 +188,7 @@ public class NormalAttack : Skill {
             if (state.GetCurrent(trackIndex).animation.name.Equals(curSkillAction))
             {
                 OnNone();
-                //当普通攻击结束时
+				//当普通攻击结束时，尝试运用技能 OnNoramlAttackFinish()  是thinkuseskill
                 if (mineUnit.OnNoramlAttackFinish != null)
                    mineUnit.OnNoramlAttackFinish();
             }

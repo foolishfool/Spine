@@ -511,6 +511,80 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &839659644
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 425610, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 425610, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425610, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425610, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425610, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425610, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425610, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 425610, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390610, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365388, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450478, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: renderMeshes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450478, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: immutableTriangles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450478, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: frontFacing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450478, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: calculateNormals
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450478, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: calculateTangents
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365388, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d6b72963d3764d11b320e2533f0f592, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ef7ed5330afb442e6b050d1dfbac8484, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &900334442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1094,7 @@ Transform:
   m_GameObject: {fileID: 1262640788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.003125, y: 0.003125, z: 0.003125}
+  m_LocalScale: {x: 0.0028328612, y: 0.0028328612, z: 0.0028328612}
   m_Children:
   - {fileID: 292634554}
   - {fileID: 1000122842}
@@ -1157,12 +1231,13 @@ MonoBehaviour:
   zSpacing: 0
   renderMeshes: 1
   immutableTriangles: 0
+  frontFacing: 0
   logErrors: 0
-  mainColor: {r: 1, g: 1, b: 1, a: 1}
+  submeshSeparators: []
   isUsingSkill: 0
-  timeScale: 1
-  loop: 1
   _animationName: ValkyrieD_Standby
+  loop: 1
+  timeScale: 1
   isLocked: 0
 --- !u!23 &1671721680
 MeshRenderer:
@@ -1175,7 +1250,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 66134fb763b724a09aab1be03122f13f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1885,8 +1960,7 @@ MonoBehaviour:
   aspectRatio: 4.9
   keepCrispWhenShrunk: 1
   isNeedChange: 0
-  mTrueTypeFont: {fileID: -2914059783256359354, guid: 0000000000000000d000000000000000,
-    type: 0}
+  mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 0}
   mText: MonsterID
   mFontSize: 20
@@ -1978,7 +2052,7 @@ MonoBehaviour:
   aspectRatio: 3.2
   keepCrispWhenShrunk: 1
   isNeedChange: 0
-  mTrueTypeFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 0}
   mText: HeroID
   mFontSize: 20

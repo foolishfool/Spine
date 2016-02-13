@@ -305,14 +305,17 @@ public class Skill : MonoBehaviour {
 	{
 		state = SkillState.None;
 		if (mineUnit.attack.currentSkill == this)
+		{
 			mineUnit.anim.Play (Const.IdleAction, true);
+		}
 	}
 	
 
 	public virtual void OnAfter() 
 	{ 
 		if (state == SkillState.Ing) 
-			state = SkillState.After; 
+			state = SkillState.After;
+			mineUnit.anim.Play (Const.IdleAction, true);
 	}
 
 }

@@ -162,8 +162,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172638}
-  m_LocalRotation: {x: 0, y: 0, z: 0.6433222, w: -0.76559556}
-  m_LocalPosition: {x: -4.1080923, y: 70.42613, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7911701, w: -0.6115961}
+  m_LocalPosition: {x: -3.7480726, y: 70.53999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 425610}
@@ -218,8 +218,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184540}
-  m_LocalRotation: {x: 0, y: 0, z: 0.71830845, w: 0.6957248}
-  m_LocalPosition: {x: 24.442001, y: 35.256252, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.95437074, w: 0.29862443}
+  m_LocalPosition: {x: -11.414748, y: 69.83287, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 425610}
@@ -307,7 +307,7 @@ MonoBehaviour:
   skeletonRenderer: {fileID: 11450478}
   followZPosition: 1
   followBoneRotation: 1
-  boneName: body_HandF2
+  boneName: body_HandF1
   resetOnAwake: 1
 --- !u!114 &11411654
 MonoBehaviour:
@@ -397,7 +397,7 @@ MonoBehaviour:
   skeletonRenderer: {fileID: 11450478}
   followZPosition: 1
   followBoneRotation: 1
-  boneName: 
+  boneName: Weapon
   resetOnAwake: 1
 --- !u!114 &11499216
 MonoBehaviour:
