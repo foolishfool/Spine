@@ -107,6 +107,7 @@ public class ActiveSkill : Skill {
 		for (int i=0; i<skillTime.Length; i++) 
 		{
 			yield return new WaitForSeconds(skillTime[i]);
+			OnIng();
 		}
 		yield return 1;
 		OnAfter ();
@@ -115,8 +116,8 @@ public class ActiveSkill : Skill {
 	public override void OnBefore()
 	{
 		base.OnBefore ();
-		mineUnit.anim.Play (skillAction, false);
 		StartCoroutine (DisplayPreEffect ());
+		mineUnit.anim.Play (skillAction, false);
 	}
 
 	public override void OnIng()

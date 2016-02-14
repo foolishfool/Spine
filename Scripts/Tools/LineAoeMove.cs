@@ -20,7 +20,8 @@ public class LineAoeMove : MonoBehaviour {
     /// </summary>
     public List<FightUnit> ToHitUnits = new List<FightUnit>();
 
-    public float detectRange = 100f;
+    //察觉范围
+	public float detectRange = 100f;
 
     public delegate void HitHandler(FightUnit unit);
     public HitHandler OnHit;
@@ -55,6 +56,7 @@ public class LineAoeMove : MonoBehaviour {
     public static GameObject CreateLineAoe(string goName, Transform parent, Vector3 goPos, float xSpeed, bool isRight, HitHandler callBack)
     {
         GameObject obj = new GameObject(goName);
+		Debug.Log (goName + "&&&&&&&&&&&&&&" +  parent);
         obj.transform.parent = parent;
         obj.transform.localScale = Vector3.one;
         obj.transform.localPosition = goPos;

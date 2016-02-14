@@ -584,13 +584,13 @@ public static class FightRule
                 else
                     ActiveSkillSelect(attacker, target, skill);
                 break;
-            case SkillCurve.LineAoe:
-                bool isRight = (attacker.parentGroup.group == FightGroup.GroupType.Mine && !attacker.isConfused) ||
-                    (attacker.parentGroup.group == FightGroup.GroupType.Enemy && attacker.isConfused);
-                GameObject obj_2 = LineAoeMove.CreateLineAoe(skill.name + "_" + attacker.mTrans.name, attacker.mTrans.parent, skill.flyEffectFromPos, skill.flyEffect.speed, isRight, delegate(FightUnit unit)
-                {
-                    ActiveSkillDamage(attacker,unit,skill);
-                });
+		case SkillCurve.LineAoe:
+			bool isRight = (attacker.parentGroup.group == FightGroup.GroupType.Mine && !attacker.isConfused) ||
+			                            (attacker.parentGroup.group == FightGroup.GroupType.Enemy && attacker.isConfused);
+			GameObject obj_2 = LineAoeMove.CreateLineAoe (skill.name + "_" + attacker.mTrans.name, attacker.mTrans.parent, skill.flyEffectFromPos, skill.flyEffect.speed, isRight, delegate(FightUnit unit)
+			{
+				ActiveSkillDamage (attacker, unit, skill);
+			});
                 skill.StartCoroutine(skill.DisplayFlyEffect(obj_2.transform));
                 break;
         }

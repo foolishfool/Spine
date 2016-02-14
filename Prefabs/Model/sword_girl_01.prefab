@@ -8,7 +8,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 467426}
-  - 114: {fileID: 11486576}
   m_Layer: 0
   m_Name: Foot
   m_TagString: Untagged
@@ -230,8 +229,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150480}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9422622, w: 0.33487615}
-  m_LocalPosition: {x: -25.999872, y: 10.657501, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.1, y: 3.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 425610}
@@ -367,22 +366,6 @@ MonoBehaviour:
   loop: 0
   timeScale: 1
   isLocked: 0
---- !u!114 &11486576
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1fd8daaed7b64148a34acb96ba14ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonRenderer: {fileID: 11450478}
-  followZPosition: 1
-  followBoneRotation: 1
-  boneName: body_FootB
-  resetOnAwake: 1
 --- !u!114 &11487322
 MonoBehaviour:
   m_ObjectHideFlags: 1
