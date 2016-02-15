@@ -89,7 +89,7 @@ public class Buff : MonoBehaviour {
             endEffectName = Util.GetConfigString(endEffectConfig.name);
         }
 
-        startTime = Time.time;
+        startTime = Time.time; 
         StartCoroutine(DisplayEffect(startEffectName, startEffectConfig, EffectId.StartEffect)); 
         StartCoroutine(DisplayEffect(processEffectName, processEffectConfig, EffectId.ProcessEffect));
 
@@ -140,9 +140,9 @@ public class Buff : MonoBehaviour {
         }
         else
         {
-            if(startTime + lastTime < Time.time)
+			if ( startTime + lastTime < Time.time)
                 Clear();
-        }
+        }			
     }
 
     IEnumerator StartBuffProcess(float interval)
@@ -181,7 +181,8 @@ public class Buff : MonoBehaviour {
         enabled = false;
         target.LogoffBuff(this);
         if (processEffect) Destroy(processEffect);
-        Invoke("ToDestroySelf",5f);
+        //0.5秒内销毁buff
+		Invoke("ToDestroySelf",0.5f);
     }
 
     void ToDestroySelf()

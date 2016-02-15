@@ -120,7 +120,6 @@ public class MonsterAttack : Attack
             return;
         if (selectedSkill != null)
         {
-			Debug.Log (selectedSkill.flyEffectName + "!!!!!!!!!!!!");
 			UseActiveSkill(selectedSkill);
             selectedSkill = null;
         }

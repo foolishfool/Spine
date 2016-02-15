@@ -116,8 +116,8 @@ public class ActiveSkill : Skill {
 	public override void OnBefore()
 	{
 		base.OnBefore ();
-		StartCoroutine (DisplayPreEffect ());
 		mineUnit.anim.Play (skillAction, false);
+		StartCoroutine (DisplayPreEffect ());
 	}
 
 	public override void OnIng()

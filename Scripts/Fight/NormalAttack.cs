@@ -231,10 +231,11 @@ public class NormalAttack : Skill {
     /// <summary>
     /// 展现飞行特效(挂接到飞行物下)
     /// </summary>
-    public override IEnumerator DisplayFlyEffect(Transform point)
+	public override IEnumerator DisplayFlyEffect(Transform point, bool isRotate)
     {
         if (curFlyEffect != null)
         {
+			GameObject obj;
             flyEffectName = Util.GetConfigString(curFlyEffect.name);
 			flyEffectAudioName = Util.GetConfigString(curFlyEffect.audio);
 			flyEffectAudioDelay = curFlyEffect.audioDelay;
@@ -244,7 +245,13 @@ public class NormalAttack : Skill {
 				yield return StartCoroutine(AssetManager.LoadAsset(flyEffectAudioName, AssetManager.AssetType.Audio, false));
                 if (point != null)
                 {
-                    GameObject obj = AssetManager.GetGameObject(flyEffectName, point);
+					if (isRotate)
+					{
+						point.Rotate (Vector3.up * 180);
+					 obj = AssetManager.GetGameObject(flyEffectName, point);
+					}
+					else
+					 obj = AssetManager.GetGameObject (flyEffectName, point);
 					AudioClip audio = AssetManager.GetAsset<AudioClip> (flyEffectAudioName);
 					obj.AddComponent<AudioSource> ().clip = audio;
 					StartCoroutine (WaitAudioDelay (flyEffectAudioDelay));

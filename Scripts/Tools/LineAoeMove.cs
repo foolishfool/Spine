@@ -53,32 +53,31 @@ public class LineAoeMove : MonoBehaviour {
             Destroy(gameObject);
     }
 
-    public static GameObject CreateLineAoe(string goName, Transform parent, Vector3 goPos, float xSpeed, bool isRight, HitHandler callBack)
+	public static GameObject CreateLineAoe(string goName, Transform parent, float goScale, Vector3 goPos, float xSpeed, bool isRotate, bool isRight, HitHandler callBack)
     {
         GameObject obj = new GameObject(goName);
-		Debug.Log (goName + "&&&&&&&&&&&&&&" +  parent);
         obj.transform.parent = parent;
-        obj.transform.localScale = Vector3.one;
+		obj.transform.localScale = Vector3.one * goScale;
         obj.transform.localPosition = goPos;
         LineAoeMove move = obj.AddComponent<LineAoeMove>();
         move.xSpeed = xSpeed;
-        move.direct = isRight ? Vector3.right : -Vector3.right;
-        FightGroup targetGroup = isRight ? (FightGroup)FightManager.GetInstance().enemyGroup : FightManager.GetInstance().mineGroup;
+        move.direct = isRotate ? Vector3.right : -Vector3.right; //飞行方向
+        FightGroup targetGroup = isRight ? (FightGroup)FightManager.GetInstance().enemyGroup : FightManager.GetInstance().mineGroup; //阵营选择
         move.ToHitUnits = new List<FightUnit>(targetGroup.fightUnits);
         move.OnHit = callBack;
         return obj;
     }
 
 
-    public static GameObject CreateLineAoe(string goName, Transform parent, Vector3 goPos, float xSpeed,float maxLength, bool isRight, HitHandler callBack)
+	public static GameObject CreateLineAoe(string goName, Transform parent, Vector3 goPos, float xSpeed,float maxLength, bool isRotate, bool isRight, HitHandler callBack)
     {
         GameObject obj = new GameObject(goName);
         obj.transform.parent = parent;
-        obj.transform.localScale = Vector3.one;
+		obj.transform.localScale = Vector3.one ;
         obj.transform.localPosition = goPos;
         LineAoeMove move = obj.AddComponent<LineAoeMove>();
         move.xSpeed = xSpeed;
-        move.direct = isRight ? Vector3.right : -Vector3.right;
+		move.direct = isRotate ? Vector3.right : -Vector3.right;
         FightGroup targetGroup = isRight ? (FightGroup)FightManager.GetInstance().enemyGroup : FightManager.GetInstance().mineGroup;
         move.ToHitUnits = new List<FightUnit>(targetGroup.fightUnits);
         move.OnHit = callBack;

@@ -355,7 +355,7 @@ public class FightUnit : MonoBehaviour {
         switch (point)
         {
             case EffectPoint.Body:
-                return Body;
+                return Body;	
             case EffectPoint.Foot:
                 return Foot;
             case EffectPoint.Head:

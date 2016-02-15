@@ -145,7 +145,6 @@ public class HeroAttack : Attack {
         StopCurrent();
         enabled = false;
 		self.anim.Play (Const.IdleAction, true);
-		Debug.Log ("@@@@@@@@@@@@@@@");
     }
 
     /// <summary>

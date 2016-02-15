@@ -3138,6 +3138,15 @@ namespace ProtoTblConfig
       get { return _audioDelay; }
       set { _audioDelay = value; }
     }
+
+    private float _scale = default(float);
+    [global::ProtoBuf.ProtoMember(7, IsRequired = false, Name=@"scale", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
+    [global::System.ComponentModel.DefaultValue(default(float))]
+    public float scale
+    {
+      get { return _scale; }
+      set { _scale = value; }
+    }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
@@ -3236,6 +3245,15 @@ namespace ProtoTblConfig
     {
       get { return _audioDelay; }
       set { _audioDelay = value; }
+    }
+
+    private float _scale = default(float);
+    [global::ProtoBuf.ProtoMember(9, IsRequired = false, Name=@"scale", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
+    [global::System.ComponentModel.DefaultValue(default(float))]
+    public float scale
+    {
+      get { return _scale; }
+      set { _scale = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)

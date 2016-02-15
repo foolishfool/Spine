@@ -58,10 +58,8 @@ public class Skill : MonoBehaviour {
 			if(mineUnit.mTrans.localRotation.eulerAngles.y != 0 )
 			{
 				offset.x *= -1;
-				return mineUnit.mTrans.localPosition + offset;
 			}
-			else
-				return offset;
+			return mineUnit.mTrans.localPosition + offset;
 		}
 	}
 
@@ -230,17 +228,24 @@ public class Skill : MonoBehaviour {
 	}
 
 
-	public virtual IEnumerator DisplayFlyEffect(Transform point)
+	public virtual IEnumerator DisplayFlyEffect(Transform point, bool isRotate)
 	{
 		if (flyEffect != null) 
 		{
+			GameObject obj;
 			if(!string.IsNullOrEmpty(flyEffectName))
 			{
 				yield return StartCoroutine(AssetManager.LoadAsset(flyEffectName,AssetManager.AssetType.Effect,false));
 				yield return StartCoroutine (AssetManager.LoadAsset (flyEffectAudioName, AssetManager.AssetType.Audio, false));
 				if(point!= null)
 				{
-					GameObject obj = AssetManager.GetGameObject(flyEffectName,point);				
+					if (isRotate == true)
+					{
+						point.Rotate (Vector3.up * 180);
+						obj = AssetManager.GetGameObject (flyEffectName, point);
+					}
+					else
+						 obj = AssetManager.GetGameObject (flyEffectName, point);
 					AudioClip audio = AssetManager.GetAudio (flyEffectAudioName);
 					obj.AddComponent<AudioSource> ().clip = audio;
 					StartCoroutine (WaitAudioDelay (flyEffectAudioDelay));

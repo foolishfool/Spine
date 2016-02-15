@@ -180,6 +180,7 @@ public static class FightRule
     {
         if (target == null || attacker == null || target.isInvincible)
             return;
+
         //判断命中
         if (IsMiss(attacker, target))
         {
@@ -483,6 +484,7 @@ public static class FightRule
         //护盾计算
         hurtNum = CaculateHudun(hurtNum, target, hurtType);
         //伤血
+
         HealthUIManager.instance.DisplayHurtNum(target, hurtNum.ToString(), true, false);
         target.health -= hurtNum;
         if (target.health == 0)
@@ -548,6 +550,9 @@ public static class FightRule
     /// </summary>
     public static void ActiveSkillWork(FightUnit attacker, FightUnit target, ActiveSkill skill)
     {
+		//特效是否向后飞行
+		bool isRotate = ( attacker.mTrans.localRotation.y == 1 );
+
         switch ((SkillCurve)skill.normalSkill.curve)
         {
             case SkillCurve.None:
@@ -559,7 +564,7 @@ public static class FightRule
                 {
                     ActiveSkillSelect(attacker, target, skill);
                 });
-                skill.StartCoroutine(skill.DisplayFlyEffect(obj.transform));
+			skill.StartCoroutine(skill.DisplayFlyEffect(obj.transform, isRotate));
                 break;
             case SkillCurve.Parabola:
                 Vector3 targetPos;
@@ -574,7 +579,7 @@ public static class FightRule
                 });
                 if(!isHeroSkill)
                     obj_1.AddComponent<DragRecord>();
-                skill.StartCoroutine(skill.DisplayFlyEffect(obj_1.transform));
+			skill.StartCoroutine(skill.DisplayFlyEffect(obj_1.transform, isRotate));
                 break;
             case SkillCurve.Magica:
                 if (skill.dmgEffect == null)
@@ -585,13 +590,16 @@ public static class FightRule
                     ActiveSkillSelect(attacker, target, skill);
                 break;
 		case SkillCurve.LineAoe:
+			//判定是否叛变
 			bool isRight = (attacker.parentGroup.group == FightGroup.GroupType.Mine && !attacker.isConfused) ||
 			                            (attacker.parentGroup.group == FightGroup.GroupType.Enemy && attacker.isConfused);
-			GameObject obj_2 = LineAoeMove.CreateLineAoe (skill.name + "_" + attacker.mTrans.name, attacker.mTrans.parent, skill.flyEffectFromPos, skill.flyEffect.speed, isRight, delegate(FightUnit unit)
+			//通过委托 打到谁，谁成为目标。
+			GameObject obj_2 = LineAoeMove.CreateLineAoe (skill.name + "_" + attacker.mTrans.name, attacker.mTrans.parent, skill.flyEffect.scale, skill.flyEffectFromPos, skill.flyEffect.speed, isRotate, isRight, delegate(FightUnit unit)
 			{
 				ActiveSkillDamage (attacker, unit, skill);
 			});
-                skill.StartCoroutine(skill.DisplayFlyEffect(obj_2.transform));
+				
+			skill.StartCoroutine(skill.DisplayFlyEffect(obj_2.transform, isRotate));
                 break;
         }
     }
@@ -746,9 +754,11 @@ public static class FightRule
     /// 绝技的入口函数，涉及到有弹道，回调
     /// </summary>
     public static void UniqueSkillWork(FightUnit attacker, FightUnit target, UniqueSkill skill)
-    {
+	{	
+		bool isRotate = (attacker.mTrans.localRotation.y == 1);
         switch ((SkillCurve)skill.specialSkill.curve)
-        {
+		{	
+
             case SkillCurve.None:
             case SkillCurve.Melee:
                 UniqueSkillSelect(attacker, target, skill);
@@ -758,7 +768,7 @@ public static class FightRule
                 {
                     UniqueSkillSelect(attacker, target, skill);
                 });
-                skill.StartCoroutine(skill.DisplayFlyEffect(obj.transform));
+			skill.StartCoroutine(skill.DisplayFlyEffect(obj.transform,isRotate));
                 break;
             case SkillCurve.Parabola:
                 Vector3 targetPos;
@@ -773,7 +783,7 @@ public static class FightRule
                 });
                 if (!isHeroSkill)
                     obj_1.AddComponent<DragRecord>();
-                skill.StartCoroutine(skill.DisplayFlyEffect(obj_1.transform));
+			skill.StartCoroutine(skill.DisplayFlyEffect(obj_1.transform,isRotate));
                 break;
             case SkillCurve.Magica:
                 if (skill.dmgEffect == null)
@@ -786,11 +796,11 @@ public static class FightRule
             case SkillCurve.LineAoe:
                 bool isRight = (attacker.parentGroup.group == FightGroup.GroupType.Mine && !attacker.isConfused) ||
                     (attacker.parentGroup.group == FightGroup.GroupType.Enemy && attacker.isConfused);
-                GameObject obj_2 = LineAoeMove.CreateLineAoe(skill.name + "_" + attacker.mTrans.name, attacker.mTrans.parent, skill.flyEffectFromPos, skill.flyEffect.speed, isRight, delegate(FightUnit unit)
+			GameObject obj_2 = LineAoeMove.CreateLineAoe(skill.name + "_" + attacker.mTrans.name, attacker.mTrans.parent,skill.flyEffect.scale, skill.flyEffectFromPos, skill.flyEffect.speed,isRotate, isRight, delegate(FightUnit unit)
                 {
                     UniqueSkillDamage(attacker,unit,skill);
                 });
-                skill.StartCoroutine(skill.DisplayFlyEffect(obj_2.transform));
+			skill.StartCoroutine(skill.DisplayFlyEffect(obj_2.transform,isRotate));
                 break;
         }
     }
@@ -946,6 +956,7 @@ public static class FightRule
     /// </summary>
     public static void NormalAttackWork(FightUnit attacker, FightUnit target, NormalAttack skill)
     {
+		bool isRotate = (attacker.mTrans.localRotation.y == 1);
         if (target == null || target.health == 0 || attacker == null || attacker.health == 0)
             return;
         switch ((SkillCurve)skill.attack.curve)
@@ -961,7 +972,7 @@ public static class FightRule
                         NormalAttackDamage(attacker, target, skill,fx);
                 });
                 obj.GetComponent<ProjectileMove>().hitEffect = skill.curHitEffect;
-                skill.StartCoroutine(skill.DisplayFlyEffect(obj.transform));
+			skill.StartCoroutine(skill.DisplayFlyEffect(obj.transform,isRotate));
                 break;
             case SkillCurve.Parabola:
                 Vector3 targetPos;
@@ -1187,7 +1198,6 @@ public static class FightRule
 				continue; // does not find self
 			if (target == null &&  Distance (self, targetGroup.fightUnits [i]) <= self.fightAttribute.alarmRange  ) 
 			{
-//				Debug.Log (Distance (self, targetGroup.fightUnits [i]) + "###############");
 				target = targetGroup.fightUnits[i];
 				continue;
 			}
