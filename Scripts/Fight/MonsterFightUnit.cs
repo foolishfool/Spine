@@ -34,7 +34,7 @@ public class MonsterFightUnit : FightUnit {
 		//根据玩家方向或者出生点进行自我转向调整
 		ChangeOrientation();
 		//这部分要放在上面，否则引起一直原地
-		if (this.mTrans.localPosition  == this.birthPoint.localPosition)
+		if (this.mTrans.localPosition  == this.birthPoint.localPosition && targetUnit == null)
 		{
 			mTrans.localRotation = birthPoint.localRotation;
 			isRotate = false; //恢复初始设置
@@ -43,6 +43,7 @@ public class MonsterFightUnit : FightUnit {
 			
 		if (state == UnitState.Wait && (FightRule.GetAlarmedFightTarget (this, this.parentGroup.targetGroup) != null))
 		{
+			targetUnit = FightRule.GetAlarmedFightTarget (this, this.parentGroup.targetGroup);
 			state = UnitState.MoveToTarget;
 
 		}
@@ -74,6 +75,7 @@ public class MonsterFightUnit : FightUnit {
 					return;
 				else
 					MoveTowardsTarget ();
+
 			}
 		} else if (state == UnitState.Fighting && beAbleFight)
 		{

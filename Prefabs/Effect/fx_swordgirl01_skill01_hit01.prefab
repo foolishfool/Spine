@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   m_Layer: 13
-  m_Name: dekula_attackhit01
+  m_Name: fx_swordgirl01_skill01_hit01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -75,16 +75,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b58d29fd84aabd4689c7805dc87111d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: .400000006
+  delay: 0
   X: 6
   Y: 1
   frameCount: 0
   width: 0
   height: 0
   center: {x: 0, y: 0, z: 0}
-  frameSpeed: 6
-  isLoop: 1
-  isKeepRotation: 1
+  frameSpeed: 18
+  isLoop: 0
+  isKeepRotation: 0
   frame: 0
 --- !u!114 &11400002
 MonoBehaviour:
@@ -104,7 +104,27 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: delay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Name
+      value: fx_swordgirl01_skill01_hit01
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: isLoop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: isKeepRotation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: frameSpeed
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

@@ -29,7 +29,7 @@ GameObject:
   - 4: {fileID: 450346}
   - 114: {fileID: 11415332}
   m_Layer: 13
-  m_Name: fx_blade_01
+  m_Name: fx_swordgirl01_skill01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,6 +351,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: delay
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Name
+      value: fx_swordgirl01_skill01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
