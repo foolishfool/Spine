@@ -248,13 +248,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 70
-  mHeight: 12
+  mWidth: 90
+  mHeight: 14
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.8333335
+  aspectRatio: 6.428571
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -265,8 +265,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 9bf2d031ec2b99e4bb84384b9f1ea374, type: 2}
-  mSpriteName: tiao_3
+  mAtlas: {fileID: 11432128, guid: 6a3cb2649f4214be6a243d3472e33073, type: 2}
+  mSpriteName: life_bar
   mFillCenter: 1
 --- !u!1 &342692499
 GameObject:
@@ -428,7 +428,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 409073473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0000038146973, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 234914648}
@@ -447,29 +447,29 @@ MonoBehaviour:
   leftAnchor:
     target: {fileID: 234914648}
     relative: 0
-    absolute: 4
+    absolute: 0
   rightAnchor:
     target: {fileID: 234914648}
     relative: 1
-    absolute: -4
+    absolute: 0
   bottomAnchor:
     target: {fileID: 234914648}
     relative: 0
-    absolute: 3
+    absolute: 0
   topAnchor:
     target: {fileID: 234914648}
     relative: 1
-    absolute: -3
+    absolute: 0
   updateAnchors: 2
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 62
-  mHeight: 6
+  mWidth: 90
+  mHeight: 14
   mDepth: 5
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 10.333333
+  aspectRatio: 6.428571
   mType: 1
   mFillDirection: 0
   mFillAmount: 1
@@ -480,8 +480,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 9bf2d031ec2b99e4bb84384b9f1ea374, type: 2}
-  mSpriteName: xuetiao.PNG
+  mAtlas: {fileID: 11432128, guid: 6a3cb2649f4214be6a243d3472e33073, type: 2}
+  mSpriteName: life_g
   mFillCenter: 1
 --- !u!1 &431429199
 GameObject:
@@ -709,13 +709,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 70
-  mHeight: 12
+  mWidth: 90
+  mHeight: 14
   mDepth: 4
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.8333335
+  aspectRatio: 6.428571
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -726,8 +726,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 9bf2d031ec2b99e4bb84384b9f1ea374, type: 2}
-  mSpriteName: tiao_3
+  mAtlas: {fileID: 11432128, guid: 6a3cb2649f4214be6a243d3472e33073, type: 2}
+  mSpriteName: life_bar
   mFillCenter: 1
 --- !u!1 &714562883
 GameObject:
@@ -1186,7 +1186,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1239194915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0000038146973, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 685115551}
@@ -1205,41 +1205,41 @@ MonoBehaviour:
   leftAnchor:
     target: {fileID: 685115551}
     relative: 0
-    absolute: 4
+    absolute: 0
   rightAnchor:
     target: {fileID: 685115551}
     relative: 1
-    absolute: -4
+    absolute: 0
   bottomAnchor:
     target: {fileID: 685115551}
     relative: 0
-    absolute: 3
+    absolute: 0
   topAnchor:
     target: {fileID: 685115551}
     relative: 1
-    absolute: -3
+    absolute: 0
   updateAnchors: 2
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 62
-  mHeight: 6
+  mWidth: 90
+  mHeight: 14
   mDepth: 5
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 6.888889
+  aspectRatio: 6.428571
   mType: 1
   mFillDirection: 0
   mFillAmount: 1
   mInvert: 0
-  mFlip: 1
+  mFlip: 0
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 9bf2d031ec2b99e4bb84384b9f1ea374, type: 2}
-  mSpriteName: xuetiao.PNG
+  mAtlas: {fileID: 11432128, guid: 6a3cb2649f4214be6a243d3472e33073, type: 2}
+  mSpriteName: life_g
   mFillCenter: 1
 --- !u!1 &1331396070
 GameObject:

@@ -47,7 +47,6 @@ public class ScrollSceneManager : MonoBehaviour {
 	void Update()
 	{
 		UISprite background = instance.transform.GetChild(0).GetComponent<UISprite>();
-		Debug.Log ("!!!!!!!!!!!!!!" + background.depth);
 	}
 	//计算当前位置差距
 //	public void CaculateBackgroundParameter()

@@ -8,6 +8,8 @@ public class HealthUIManager : MonoBehaviour {
     public GameObject myHealthBarObj;
     public GameObject enHealthBarObj;
     public GameObject hurtNumEmitter;
+
+
     public struct HealthUI
     {
         public UISlider slider;
@@ -75,12 +77,18 @@ public class HealthUIManager : MonoBehaviour {
 
     void Update()
     {
-        foreach (FightUnit unit in HealthUIList.Keys)
-        {
-            HealthUI value = HealthUIList[unit];
-            value.barTrans.position = value.point.position;
-            value.slider.value = unit.healthValue;
-            value.emitter.transform.position = value.point.position;
-        }
+		foreach (FightUnit unit in HealthUIList.Keys)
+		{
+			HealthUI value = HealthUIList [unit];
+			value.barTrans.position = value.point.position;
+			value.slider.value = unit.healthValue;
+			value.emitter.transform.position = value.point.position;
+			if (value.slider.value <= 0.2)
+				value.slider.foregroundWidget.color = Color.red;
+			else if (0.2 < value.slider.value && value.slider.value <= 0.5)
+				value.slider.foregroundWidget.color = new Color(1f,0.28f,0f,1f);
+			else
+				value.slider.foregroundWidget.color = new Color(1f,1f,1f,1f);
+		}
     }
 }
