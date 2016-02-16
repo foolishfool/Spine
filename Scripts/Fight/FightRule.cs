@@ -1198,7 +1198,6 @@ public static class FightRule
 				continue; // does not find self
 			if (target == null &&  Distance (self, targetGroup.fightUnits [i]) <= self.fightAttribute.alarmRange  ) 
 			{
-				Debug.Log(Distance (self, targetGroup.fightUnits [i])+ "@@@@@@@@@@@@@@@@@@");
 				target = targetGroup.fightUnits[i];
 				continue;
 			}

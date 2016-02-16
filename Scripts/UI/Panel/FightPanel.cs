@@ -223,6 +223,10 @@ public class FightPanel: BaseView {
 		FightManager.GetInstance ().CinemaMoveBack ();
 		FightManager.GetInstance ().CinemaMoveToward ();
 
+		//战斗背景移动
+//		ScrollSceneManager.instance.CaculateBackgroundParameter ();
+//		ScrollSceneManager.instance.BackGroundMoveBack ();
+//		ScrollSceneManager.instance.BackGroundMoveToward ();
 
 
 	}

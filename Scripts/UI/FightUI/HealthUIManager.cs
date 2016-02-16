@@ -41,8 +41,9 @@ public class HealthUIManager : MonoBehaviour {
         healthUI.displayHealthBar = obj.GetComponent<DisplayHealthBar>();
         UISprite background = obj.transform.GetChild(0).GetComponent<UISprite>();
         UISprite foreground = obj.transform.GetChild(0).GetChild(0).GetComponent<UISprite>();
-        background.depth = depth++;
-        foreground.depth = depth++;
+        //写死
+		background.depth = 4;
+        foreground.depth = 5;
         GameObject obj2 = Util.AddChild(hurtNumEmitter, mTrans);
         obj2.SetActive(true);
         healthUI.barTrans = obj.transform;

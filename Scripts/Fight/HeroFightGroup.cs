@@ -13,6 +13,9 @@ public class HeroFightGroup : FightGroup {
 	public Transform cinemaREndPos;
 	public Transform heroLStopPos;
 	public Transform heroRStopPos;
+	public Transform backGroundLEndPos;
+	public Transform backGroundREndPos;
+
 
 
 	bool MovingToNext = false;  

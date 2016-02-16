@@ -102,7 +102,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2928c4f72a4e2434da1cb2c2f29983a8, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.08
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2928c4f72a4e2434da1cb2c2f29983a8, type: 2}
       propertyPath: m_LocalRotation.x
@@ -152,6 +152,18 @@ Prefab:
       propertyPath: loginPanel
       value: 
       objectReference: {fileID: 118448, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
+    - target: {fileID: 11400004, guid: 2928c4f72a4e2434da1cb2c2f29983a8, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 2928c4f72a4e2434da1cb2c2f29983a8, type: 2}
+      propertyPath: fitWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 2928c4f72a4e2434da1cb2c2f29983a8, type: 2}
+      propertyPath: fitHeight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2928c4f72a4e2434da1cb2c2f29983a8, type: 2}
   m_IsPrefabParent: 0
@@ -194,14 +206,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 118448, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
-      propertyPath: m_Name
-      value: UI Root
-      objectReference: {fileID: 0}
     - target: {fileID: 3348968, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 118448, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
+      propertyPath: m_Name
+      value: UI Root
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473046, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
+      propertyPath: aspectRatio
+      value: 4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11495044, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
+      propertyPath: mTrueTypeFont
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 11473046, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
+      propertyPath: mWidth
+      value: 94
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473046, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
+      propertyPath: mTrueTypeFont
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
   m_IsPrefabParent: 0

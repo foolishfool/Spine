@@ -1882,6 +1882,9 @@ MonoBehaviour:
   - {fileID: 11458140}
   - {fileID: 11419002}
   isMoveToRight: 0
+  BackGround: {fileID: 151180}
+  distance: 0
+  backgroundPos: {x: 0, y: 0, z: 0}
 --- !u!114 &11428004
 MonoBehaviour:
   m_ObjectHideFlags: 1
