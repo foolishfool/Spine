@@ -25,6 +25,7 @@ public class HeroFightUnit : FightUnit {
         fightAttribute.dodge = (int)heroData.dodge;
         fightAttribute.toughness = (int)heroData.toughness;
         fightAttribute.elementType = (HurtType)heroData.element;  
+		fightAttribute.dieSound = Util.GetConfigString(heroData.diesound);
     }
 
     public override void Start()

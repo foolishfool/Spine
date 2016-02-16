@@ -45,6 +45,8 @@ public class FightAttribute
 	public float attackRange = 300f;
 	public float escapeRange = 450f;
 
+	public string dieSound; //死亡音效
+
     /*只供buff改变*/
     public float criticalRateBuff;//暴击buff修正
     public float dodgeRateBuff;//闪避buff修正

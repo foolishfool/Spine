@@ -216,7 +216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11473046, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
       propertyPath: aspectRatio
-      value: 4.9
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 11495044, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
       propertyPath: mTrueTypeFont

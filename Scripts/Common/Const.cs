@@ -29,6 +29,7 @@ public class Const{
     public static string IdleAction = "idle01";
     public static string RunAction = "run01";
     public static string WinAction = "win01";
+	public static string DieAction = "die01";
     public static string FightPanel = "FightPanel";//战斗界面主UI
     public static string EvaluatePanel = "EvaluatePanel";//通关结算界面UI
 

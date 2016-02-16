@@ -1500,6 +1500,15 @@ namespace ProtoTblConfig
       get { return _material; }
       set { _material = value; }
     }
+
+    private byte[] _diesound = null;
+    [global::ProtoBuf.ProtoMember(34, IsRequired = false, Name=@"diesound", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue(null)]
+    public byte[] diesound
+    {
+      get { return _diesound; }
+      set { _diesound = value; }
+    }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
@@ -2219,6 +2228,15 @@ namespace ProtoTblConfig
     {
       get { return _skill; }
       set { _skill = value; }
+    }
+
+    private byte[] _diesound = null;
+    [global::ProtoBuf.ProtoMember(24, IsRequired = false, Name=@"diesound", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue(null)]
+    public byte[] diesound
+    {
+      get { return _diesound; }
+      set { _diesound = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)

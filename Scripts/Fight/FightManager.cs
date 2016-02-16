@@ -69,10 +69,9 @@ public class FightManager : MonoBehaviour{
                 else
                     MoveToNext();
             }
-        }     
-        GameObject obj = Instantiate(dieEffect) as GameObject;
-        obj.transform.position = d.transform.position;
-        obj.transform.parent = a.mTrans.parent;
+        }  
+
+
         HealthUIManager.instance.RemoveHealthBar(d);
         StartCoroutine(DestroyUnit(d));
         if (d.OnDead != null)
@@ -89,11 +88,24 @@ public class FightManager : MonoBehaviour{
             if (unit.parentGroup.group == FightGroup.GroupType.Mine)
                 DungeonRecord.heroDieCount++;
             unit.state = FightUnit.UnitState.Dead;  
-            unit.anim.Play(Const.IdleAction, true);
-            yield return new WaitForSeconds(0.2f);
-            Destroy(unit.gameObject);
+			unit.anim.Play(Const.DieAction, false);
+			yield return StartCoroutine(AssetManager.LoadAsset(unit.fightAttribute.dieSound ,AssetManager.AssetType.Audio,false));
+			AudioClip audio = AssetManager.GetAudio (unit.fightAttribute.dieSound);
+			AudioSource audiosource =  unit.gameObject.AddComponent<AudioSource> ();
+			audiosource.clip = audio; 
+			unit.gameObject.GetComponent<AudioSource> ().Play();
+			yield return new WaitForSeconds(1.5f);
+			MeshRenderer rend = unit.gameObject.GetComponent<MeshRenderer> ();
+			Shader dieShader = Shader.Find("FX/Flare");
+			rend.material.shader = dieShader;
+
         }
     }
+
+	IEnumerator WaitDie(float time)
+	{
+		yield return new WaitForSeconds (time);
+	}
 
     public void GameOver()
     {

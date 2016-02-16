@@ -20,6 +20,7 @@ public class MonsterFightUnit : FightUnit {
         fightAttribute.dodge = (int)monsterData.dodge;
         fightAttribute.toughness = (int)monsterData.toughness;
         fightAttribute.elementType = (HurtType)monsterData.element;
+		fightAttribute.dieSound = Util.GetConfigString(monsterData.diesound);
     }
 
     public override void Start()
