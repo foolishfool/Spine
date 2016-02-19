@@ -42,8 +42,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: bfe68045d30d24124b15605ab263a2e1, type: 2}
   mSprites:
   - name: attack_button
-    x: 196
-    y: 130
+    x: 0
+    y: 277
     width: 124
     height: 126
     borderLeft: 0
@@ -54,9 +54,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: forward1
+  - name: bloodbar
     x: 0
-    y: 132
+    y: 768
+    width: 240
+    height: 256
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: forward1
+    x: 222
+    y: 643
     width: 195
     height: 124
     borderLeft: 0
@@ -69,7 +82,7 @@ MonoBehaviour:
     paddingBottom: 1
   - name: forward2
     x: 0
-    y: 7
+    y: 404
     width: 195
     height: 124
     borderLeft: 0
@@ -80,9 +93,22 @@ MonoBehaviour:
     paddingRight: 2
     paddingTop: 1
     paddingBottom: 1
+  - name: life_b
+    x: 418
+    y: 744
+    width: 85
+    height: 9
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 2
   - name: life_bar
-    x: 196
-    y: 116
+    x: 418
+    y: 754
     width: 89
     height: 13
     borderLeft: 0
@@ -94,8 +120,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: life_g
-    x: 196
-    y: 106
+    x: 418
+    y: 734
     width: 85
     height: 9
     borderLeft: 0
@@ -107,8 +133,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 2
   - name: life_r
-    x: 196
-    y: 96
+    x: 418
+    y: 724
     width: 85
     height: 9
     borderLeft: 0
@@ -119,6 +145,32 @@ MonoBehaviour:
     paddingRight: 2
     paddingTop: 2
     paddingBottom: 2
+  - name: mana_bar
+    x: 0
+    y: 529
+    width: 221
+    height: 238
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 6
+    paddingTop: 0
+    paddingBottom: 18
+  - name: sword_gril_headshot
+    x: 241
+    y: 775
+    width: 224
+    height: 249
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 22
+    paddingRight: 10
+    paddingTop: 7
+    paddingBottom: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0
@@ -129,7 +181,55 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[4].borderLeft
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[4].borderRight
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[4].borderBottom
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[4].borderTop
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[5].borderLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[5].borderRight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[5].borderBottom
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[5].borderTop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[6].borderLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[6].borderBottom
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[6].borderRight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[6].borderTop
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 122854}

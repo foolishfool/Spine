@@ -22,12 +22,13 @@ public class HeroFightGroup : FightGroup {
 
 	[HideInInspector]
 	Vector3 firstEndPos;
-
+	[HideInInspector]
+	Animation anim;
 	[HideInInspector]
 	Vector3 middlepointpos;
-
+	Color headcolor;
 	FightUnit firstUnit;
-
+	HeroFightUnit unit;
 
 //	public ScrollSceneManager scrollSceneManager;
     void Awake()
@@ -60,7 +61,7 @@ public class HeroFightGroup : FightGroup {
                 child.transform.Rotate(new Vector3(0,180,0));
             child.transform.parent = transform.parent;
             child.layer = gameObject.layer;
-            HeroFightUnit unit = child.AddComponent<HeroFightUnit>();
+            unit = child.AddComponent<HeroFightUnit>();
             fightUnits.Add(unit);
             unit.parentGroup = this;
             unit.orinPoint = battle_points[i];
@@ -79,7 +80,9 @@ public class HeroFightGroup : FightGroup {
             HealthUIManager.instance.AddNewHealthBar(fightUnits[i],healthBarPos,group == GroupType.Enemy);
             //绑定人物头像
             ViewMapper<FightPanel>.instance.RegesterHeadShot(unit,i);
-
+			unit.OnGotHit += OnHeadPicShake;
+			anim = ViewMapper<FightPanel>.instance.HeadShotMapper[unit].anim_headpic;
+			headcolor = ViewMapper<FightPanel>.instance.HeadShotMapper [unit].headcolor;
             //记录初始数值
             DungeonRecord.totalHp += unit.fightAttribute.health;
         }
@@ -152,6 +155,12 @@ public class HeroFightGroup : FightGroup {
 			this.FirstUnit.parentGroup.canMoveBack = false;
 		else
 			this.FirstUnit.parentGroup.canMoveBack = true;
+	}
+	// 头像变红摇晃
+	 void OnHeadPicShake(params object[] objs)
+	{
+		ViewMapper<FightPanel>.instance.HeadShotMapper [unit].HeadshotIcon.color = Color.red;
+		anim.Play();
 	}
 
 

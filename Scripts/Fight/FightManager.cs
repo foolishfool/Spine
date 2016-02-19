@@ -70,8 +70,7 @@ public class FightManager : MonoBehaviour{
                     MoveToNext();
             }
         }  
-
-
+			
         HealthUIManager.instance.RemoveHealthBar(d);
         StartCoroutine(DestroyUnit(d));
         if (d.OnDead != null)
@@ -98,6 +97,7 @@ public class FightManager : MonoBehaviour{
 			MeshRenderer rend = unit.gameObject.GetComponent<MeshRenderer> ();
 			Shader dieShader = Shader.Find("FX/Flare");
 			rend.material.shader = dieShader;
+			Destroy(unit.gameObject);
 
         }
     }

@@ -142,7 +142,6 @@ public class MonsterAttack : Attack
     /// </summary>
     public override void EndAttack()
     {
-
     }
     /// <summary>
     /// 尝试普通攻击
@@ -254,4 +253,5 @@ public class MonsterAttack : Attack
         base.Update();
         time += Time.deltaTime;
     }
+
 }

@@ -40,7 +40,8 @@ public abstract class Attack : MonoBehaviour{
     /// <summary>
     /// 结束战斗
     /// </summary>
-    public abstract void EndAttack();
+	public abstract void EndAttack();
+
 
     public virtual void Update()
     {

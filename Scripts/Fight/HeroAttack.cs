@@ -314,4 +314,7 @@ public class HeroAttack : Attack {
     {
         isAutoUseUniqueSkill = true;
     }
+
+
 }
+	

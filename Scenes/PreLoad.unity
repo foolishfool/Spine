@@ -85,6 +85,178 @@ NavMeshSettings:
     cellSize: 0.16666666
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &297960777
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400136, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400136, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400136, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400136, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400136, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400136, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400136, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400136, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400282, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 780
+      objectReference: {fileID: 0}
+    - target: {fileID: 400284, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -780
+      objectReference: {fileID: 0}
+    - target: {fileID: 400296, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -569
+      objectReference: {fileID: 0}
+    - target: {fileID: 436170, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -337
+      objectReference: {fileID: 0}
+    - target: {fileID: 400134, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -447.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: 406236, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 499.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 445234, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 368.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 446748, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 237.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400726, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 101.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 464894, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 496.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11476160, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 11407766, guid: 5ab34b7c43d464fafaf8c49f706e52d2,
+        type: 2}
+    - target: {fileID: 11476160, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: mSpriteName
+      value: sword_girl01_skill01
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417918, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 11407766, guid: 5ab34b7c43d464fafaf8c49f706e52d2,
+        type: 2}
+    - target: {fileID: 11417918, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: mSpriteName
+      value: sword_girl01_skill02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581178, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_Size.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11476160, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: mWidth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11476160, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: aspectRatio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581178, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_Size.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11476160, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: mHeight
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541756, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_Size.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417918, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: mWidth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417918, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: aspectRatio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541756, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_Size.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417918, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: mHeight
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525618, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_Size.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473648, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: mWidth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473648, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: aspectRatio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525618, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_Size.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473648, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: mHeight
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 152502, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 187672, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 104600, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c9833c5b74af0b1429c1088ba26037da, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &721135865
 Prefab:
   m_ObjectHideFlags: 0
@@ -230,6 +402,18 @@ Prefab:
       propertyPath: mTrueTypeFont
       value: 
       objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 473736, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.0028328612
+      objectReference: {fileID: 0}
+    - target: {fileID: 473736, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.0028328612
+      objectReference: {fileID: 0}
+    - target: {fileID: 473736, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.0028328612
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 899ca24d1a2f547c58b03608a598f183, type: 2}
   m_IsPrefabParent: 0

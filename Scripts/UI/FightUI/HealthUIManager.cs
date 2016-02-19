@@ -85,8 +85,6 @@ public class HealthUIManager : MonoBehaviour {
 			value.emitter.transform.position = value.point.position;
 			if (value.slider.value <= 0.2)
 				value.slider.foregroundWidget.color = Color.red;
-			else if (0.2 < value.slider.value && value.slider.value <= 0.5)
-				value.slider.foregroundWidget.color = new Color(1f,0.28f,0f,1f);
 			else
 				value.slider.foregroundWidget.color = new Color(1f,1f,1f,1f);
 		}

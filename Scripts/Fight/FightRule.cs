@@ -263,7 +263,9 @@ public static class FightRule
         HealthUIManager.instance.DisplayHurtNum(target, hurtNum.ToString(), true, isCrit);
         target.health -= hurtNum;
         if (target.health == 0)
-            FightManager.GetInstance().UnitDead(attacker, target);        
+            FightManager.GetInstance().UnitDead(attacker, target);
+		if (target.OnGotHit != null)
+			target.OnGotHit ();
     }
 
 
@@ -350,6 +352,8 @@ public static class FightRule
             return;
         HealthUIManager.instance.DisplayHurtNum(target, hurtNum.ToString(), true, isCrit);
         target.health -= hurtNum;
+		if (target.OnGotHit != null)
+			target.OnGotHit ();
         if (target.health == 0)
             FightManager.GetInstance().UnitDead(attacker, target);
     }
@@ -446,6 +450,9 @@ public static class FightRule
         target.health -= hurtNum;
         if (target.health == 0)
             FightManager.GetInstance().UnitDead(attacker, target);
+		if (target.OnGotHit != null)
+			target.OnGotHit ();
+			
     }
 
     /// <summary>
@@ -604,6 +611,7 @@ public static class FightRule
 			skill.StartCoroutine(skill.DisplayFlyEffect(obj_2.transform, isRotate));
                 break;
         }
+
     }
 
     /// <summary>
@@ -1218,6 +1226,7 @@ public static class FightRule
         //float factor = 1;
         return Util.Distance(from.transform.localPosition, to.transform.localPosition) * factor;
     }
+
 
     #endregion
 

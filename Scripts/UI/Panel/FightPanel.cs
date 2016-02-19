@@ -54,6 +54,7 @@ public class FightPanel: BaseView {
         headShot.onClick = attack.UI_UseActiveSkill;
         headShot.onDrag = attack.UI_UseUniqueSkill;
         headShot.gameObject.SetActive(true);
+
     }
     /// <summary>
     /// 替换头像控件绑定
@@ -227,9 +228,6 @@ public class FightPanel: BaseView {
 //		ScrollSceneManager.instance.CaculateBackgroundParameter ();
 //		ScrollSceneManager.instance.BackGroundMoveBack ();
 //		ScrollSceneManager.instance.BackGroundMoveToward ();
-
-
 	}
-		
 
 }
