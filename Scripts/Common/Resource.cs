@@ -51,8 +51,8 @@ public class Resource {
         object obj = Resource.prefabs[path];
         if (obj == null)
         {
-			Resource.audio.Remove(path);
-            GameObject gameObject = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath(path, typeof(GameObject));
+            Resource.prefabs.Remove(path);
+            GameObject gameObject = (GameObject)Resources.Load(path, typeof(GameObject));
             Resource.prefabs.Add(path, gameObject);
             return gameObject;
         }
@@ -67,9 +67,9 @@ public class Resource {
 		if (obj == null)
 		{
 			Resource.audio.Remove(path);
-			AudioSource audioclip = (AudioSource)UnityEditor.AssetDatabase.LoadAssetAtPath(path, typeof(AudioSource));
+            AudioSource audioclip = (AudioSource)Resources.Load(path, typeof(AudioSource));
 			Resource.audio.Add(path, audioclip);
-			return audioclip;
+            return audioclip;
 		}
 
 		return obj as AudioSource;
