@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- number为有几个execl文件 -->
+<!--
+{			"string" : "optional string",
+            "WORD"   : "optional int32",
+            "DWORD"  : "optional uint32",
+            "QWORD"  : "optional uint64",
+            "float"  : "optional float"}
+			 -->
+<database>
+<!--**********************************************************************************************-->
+	<!-- number为有几个sheet -->
+
+	<table name="airRaid.xls">
+		<SHEET name="空袭" filename="AirRaidData.bytes" struct="AirRaidData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="表现" type="string" code="icon"/>
+			<FIELD name="飞行方向和目标" type="DWORD" code="flyingDirect"/>
+			<FIELD name="飞行速度下限" type="DWORD" code="minSpeed"/>
+			<FIELD name="飞行速度上限" type="DWORD" code="maxSpeed"/>
+			<FIELD name="效果" type="string" code="effect"/>
+		</SHEET>
+	</table>
+	
+	<table name="attack.xls">
+		<SHEET name="普通攻击" filename="AttackData.bytes" struct="AttackData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="作用次数" type="DWORD" code="takeTime"/>			
+			<FIELD name="动作" type="string" code="attackAction"/>	
+			<FIELD name="伤害属性" type="DWORD" code="damageType"/>		
+			<FIELD name="弹道" type="DWORD" code="curve"/>					
+			<FIELD name="施法特效" type="string" code="castEffect"/>
+			<FIELD name="飞行特效" type="string" code="flyEffect"/>
+			<FIELD name="命中特效" type="string" code="hitEffect"/>	
+		</SHEET>
+	</table>
+
+	<table name="awakeningSkill.xls">
+		<SHEET name="觉醒技能配置" filename="AwakeningSkill.bytes" struct="AwakeningSkill" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="名字" type="string" code="name"/>			
+			<FIELD name="描述" type="string" code="skillDes"/>
+			<FIELD name="图标" type="string" code="icon"/>
+			<FIELD name="条件类型" type="DWORD" code="conditionType"/>
+			<FIELD name="效果类型" type="DWORD" code="effectType"/>
+			<FIELD name="游戏币消耗" type="DWORD" code="coinCost"/>			
+			<FIELD name="材料消耗" type="string" code="material"/>
+		</SHEET>
+		<SHEET name="觉醒技能等级配置" filename="AwakeningSkillLevel.bytes" struct="AwakeningSkillLevel" index="ID">
+			<FIELD name="流水号" type="DWORD" code="id"/>		
+			<FIELD name="觉醒技能id" type="DWORD" code="skillID"/>
+			<FIELD name="技能等级" type="DWORD" code="level"/>
+			<FIELD name="条件值" type="DWORD" code="conditionVal"/>
+			<FIELD name="效果值" type="DWORD" code="effectVal"/>	
+			<FIELD name="权重" type="DWORD" code="weight"/>		
+			<FIELD name="权重步长" type="DWORD" code="weightAdd"/>				
+		</SHEET>
+	</table>
+
+	<table name="battle.xls">
+		<SHEET name="距离修正系数" filename="DistanceFactor.bytes" struct="DistanceFactor" index="ID">
+			<FIELD name="属性" type="DWORD" code="id"/>
+			<FIELD name="系数" type="float" code="factor"/>
+		</SHEET>
+		<SHEET name="属性相克系数" filename="ElementFactor.bytes" struct="ElementFactor" index="ID">
+			<FIELD name="属性" type="DWORD" code="id"/>
+			<FIELD name="系数" type="float" code="factor"/>
+		</SHEET>
+	</table>
+	
+	<table name="buff.xls">
+		<SHEET name="buff配置" filename="BuffData.bytes" struct="BuffData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="buff名" type="string" code="name"/>
+			<FIELD name="buff描述" type="string" code="buffDes"/>
+			<FIELD name="图标" type="string" code="icon"/>
+			<FIELD name="效果类型" type="DWORD" code="effectType"/>	
+			<FIELD name="增益/减益" type="DWORD" code="buffType"/>
+			<FIELD name="是否为控制类" type="DWORD" code="controlDebuff"/>				
+			<FIELD name="是否可以被驱散" type="DWORD" code="dispel"/>
+			<FIELD name="作用间隔" type="float" code="interval"/>
+			<FIELD name="共存规则" type="DWORD" code="mutexType"/>
+			<FIELD name="起始特效" type="DWORD" code="startEffect"/>
+			<FIELD name="持续特效" type="DWORD" code="processEffect"/>
+			<FIELD name="结束特效" type="DWORD" code="endEffect"/>			
+		</SHEET>
+	</table>
+	
+	<table name="combination.xls">
+		<SHEET name="缘分配置" filename="CombinationData.bytes" struct="CombinationData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="名字" type="string" code="name"/>
+			<FIELD name="描述" type="string" code="combiDes"/>
+			<FIELD name="需求英雄" type="string" code="hero"/>
+			<FIELD name="效果" type="string" code="effect"/>			
+		</SHEET>
+	</table>
+		
+	<table name="const.xls">
+		<SHEET name="常量配置" filename="ConstData.bytes" struct="ConstData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="字段" type="string" code="name"/>
+			<FIELD name="值" type="string" code="value"/>
+		</SHEET>
+	</table>
+	
+	<table name="currency.xls">
+		<SHEET name="货币" filename="Currency.bytes" struct="Currency" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="货币编号" type="string" code="currencyType"/>
+			<FIELD name="货币名字" type="string" code="name"/>
+			<FIELD name="图标" type="string" code="icon"/>			
+		</SHEET>
+	</table>
+
+	<table name="dungeon.xls">
+		<SHEET name="副本配置" filename="Dungeon.bytes" struct="Dungeon" index="ID">
+			<FIELD name="副本id" type="DWORD" code="id"/>		
+			<FIELD name="副本名" type="string" code="name"/>			
+			<FIELD name="副本类型" type="DWORD" code="dungeonType"/>
+			<FIELD name="需求等级" type="DWORD" code="levelLimit"/>			
+			<FIELD name="需求任务" type="DWORD" code="needTask"/>
+			<FIELD name="前置副本" type="string" code="preDungeon"/>
+			<FIELD name="后续副本" type="string" code="succDungeon"/>
+			<FIELD name="是否计算评价" type="DWORD" code="evaluation"/>
+			<FIELD name="时间基准" type="DWORD" code="standardTime"/>
+			<FIELD name="玩家经验基准值" type="DWORD" code="roleExp"/>
+			<FIELD name="游戏币基准值" type="DWORD" code="coin"/>			
+			<FIELD name="英雄经验基准值" type="DWORD" code="heroExp"/>
+			<FIELD name="扫荡前置" type="DWORD" code="mopUp"/>
+			<FIELD name="副本场景" type="string" code="scene"/>			
+			<FIELD name="体力消耗" type="DWORD" code="staminaCost"/>
+			<FIELD name="时间限制" type="DWORD" code="timeLimit"/>	
+			<FIELD name="剧情对话" type="string" code="story"/>
+			<FIELD name="刷怪配置" type="string" code="enemy"/>	
+			<FIELD name="翻牌奖励" type="string" code="bonus"/>	
+			<FIELD name="怪物显示" type="string" code="monsterInfo"/>
+			<FIELD name="场地效果" type="string" code="fieldEffect"/>	
+			<FIELD name="战斗间回复比例" type="float" code="recover"/>
+			<FIELD name="空袭" type="string" code="airRaid"/>
+		</SHEET>
+	</table>
+	
+	<table name="enemy.xls">
+		<SHEET name="刷怪配置" filename="EnemyData.bytes" struct="EnemyData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>	
+			<FIELD name="怪物配置" type="string" code="lineup"/>				
+		</SHEET>
+	</table>
+	
+	<table name="evaluateBonus.xls">
+		<SHEET name="翻牌配置" filename="EvaluateBonus.bytes" struct="EvaluateBonus" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="奖励" type="string" code="bonus"/>				
+		</SHEET>
+	</table>
+	
+	<table name="field.xls">
+		<SHEET name="场地效果配置" filename="FieldEffect.bytes" struct="FieldEffect" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="名字" type="string" code="name"/>
+			<FIELD name="效果描述" type="string" code="des"/>			
+			<FIELD name="图标" type="string" code="icon"/>
+			<FIELD name="效果" type="string" code="effect"/>			
+		</SHEET>	
+	</table>
+	
+	<table name="hero.xls">
+		<SHEET name="英雄配置" filename="HeroData.bytes" struct="HeroData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="名字" type="string" code="name"/>
+			<FIELD name="描述" type="string" code="des"/>
+			<FIELD name="头像" type="string" code="icon"/>
+			<FIELD name="模型" type="string" code="model"/>
+
+			<FIELD name="方向" type="DWORD" code="direction"/>
+			<FIELD name="属性" type="DWORD" code="element"/>
+			<FIELD name="职业" type="DWORD" code="heroClass"/>	
+			<FIELD name="领导力" type="DWORD" code="leadership"/>
+			<FIELD name="经验系数" type="float" code="expFactor"/>
+			<FIELD name="初始潜力值" type="DWORD" code="potential"/>	
+			<FIELD name="初始品质" type="DWORD" code="rarity"/>
+			<FIELD name="攻击距离" type="DWORD" code="range"/>			
+			<FIELD name="初始攻击" type="DWORD" code="attackBasic"/>			
+			<FIELD name="初始防御" type="DWORD" code="defenceBasic"/>			
+			<FIELD name="初始生命" type="DWORD" code="healthBasic"/>
+			<FIELD name="攻击成长" type="float" code="attackGrowth"/>			
+			<FIELD name="防御成长" type="float" code="defenceGrowth"/>			
+			<FIELD name="生命成长" type="float" code="healthGrowth"/>			
+			<FIELD name="初始法力" type="DWORD" code="mana"/>			
+			<FIELD name="初始攻击速度" type="DWORD" code="attackSpeed"/>	
+			<FIELD name="初始暴击" type="DWORD" code="critical"/>
+			<FIELD name="初始命中" type="DWORD" code="hit"/>			
+			<FIELD name="初始闪避" type="DWORD" code="dodge"/>			
+			<FIELD name="初始韧性" type="DWORD" code="toughness"/>			
+			<FIELD name="普通攻击" type="DWORD" code="attackID"/>
+			<FIELD name="普通技能" type="DWORD" code="normalSkill"/>
+			<FIELD name="绝技" type="DWORD" code="specialSkill"/>			
+			<FIELD name="队长技能" type="DWORD" code="leaderSkill"/>
+			<FIELD name="觉醒技能" type="string" code="awakeningSkill"/>
+			<FIELD name="缘分" type="string" code="combination"/>
+			<FIELD name="每级提供的英雄经验" type="DWORD" code="expPerLv"/>
+			<FIELD name="特殊分解材料" type="DWORD" code="material"/>
+            <FIELD name="死亡声音" type="string" code="diesound"/>
+		</SHEET>	
+		<SHEET name="英雄升级经验" filename="HeroLvData.bytes" struct="HeroLvData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="等级" type="DWORD" code="level"/>
+			<FIELD name="升级基础经验值" type="DWORD" code="exp"/>			
+		</SHEET>
+		<SHEET name="品质星级" filename="HeroEvolution.bytes" struct="HeroEvolution" index="ID">
+			<FIELD name="流水号" type="DWORD" code="id"/>
+			<FIELD name="品质" type="DWORD" code="rarity"/>			
+			<FIELD name="星级" type="DWORD" code="star"/>	
+			<FIELD name="进化成功率" type="string" code="successRate"/>
+			<FIELD name="进化材料" type="string" code="evolutionMaterial"/>			
+			<FIELD name="进化游戏币消耗" type="DWORD" code="coinCost"/>			
+			<FIELD name="进化潜力值消耗" type="DWORD" code="potentialCost"/>		
+			<FIELD name="属性系数" type="float" code="propFactor"/>			
+			<FIELD name="暴击附加值" type="DWORD" code="addCritical"/>
+			<FIELD name="暴击伤害附加值" type="DWORD" code="addCritDmg"/>
+			<FIELD name="韧性附加值" type="DWORD" code="addToughness"/>
+			<FIELD name="命中附加值" type="DWORD" code="addHit"/>
+			<FIELD name="闪避附加值" type="DWORD" code="addDodge"/>	
+			<FIELD name="领导力附加值" type="DWORD" code="addLeadership"/>		
+			<FIELD name="等级上限" type="DWORD" code="maxLevel"/>			
+			<FIELD name="分解材料" type="string" code="disenchant"/>
+			<FIELD name="强化银币消耗系数" type="float" code="coinFactor"/>
+			<FIELD name="强化提供经验系数" type="float" code="expFactor"/>
+		</SHEET>
+		<SHEET name="提升潜力" filename="PotentialData.bytes" struct="PotentialData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="英雄属性" type="DWORD" code="element"/>
+			<FIELD name="消耗材料" type="string" code="material"/>
+		</SHEET>
+	</table>
+	
+	<table name="item.xls">
+		<SHEET name="物品配置" filename="ItemData.bytes" struct="ItemData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="名字" type="string" code="name"/>
+			<FIELD name="描述" type="string" code="des"/>			
+			<FIELD name="图标" type="string" code="icon"/>			
+			<FIELD name="类别" type="DWORD" code="itemType"/>			
+			<FIELD name="品质" type="DWORD" code="rarity"/>	
+			<FIELD name="堆叠上限" type="DWORD" code="pile"/>
+			<FIELD name="出售单价" type="DWORD" code="price"/>		
+			<FIELD name="等级限制" type="DWORD" code="levelLimit"/>
+			<FIELD name="使用效果" type="string" code="effect"/>			
+		</SHEET>
+	</table>
+	
+	<table name="leaderSkill.xls">
+		<SHEET name="队长技能" filename="LeaderSkill.bytes" struct="LeaderSkill" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="名字" type="string" code="name"/>
+			<FIELD name="描述" type="string" code="des"/>			
+			<FIELD name="图标" type="string" code="icon"/>			
+			<FIELD name="技能效果" type="string" code="effect"/>			
+		</SHEET>
+	</table>
+	
+	<table name="monster.xls">
+		<SHEET name="怪物配置" filename="MonsterData.bytes" struct="MonsterData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="名字" type="string" code="name"/>
+			<FIELD name="描述" type="string" code="des"/>			
+			<FIELD name="头像" type="string" code="icon"/>
+			<FIELD name="属性" type="DWORD" code="element"/>
+			<FIELD name="职业" type="DWORD" code="monsterClass"/>
+			<FIELD name="等级" type="DWORD" code="level"/>			
+			<FIELD name="模型" type="string" code="model"/>
+			<FIELD name="方向" type="DWORD" code="direction"/>
+			<FIELD name="掉落金币" type="DWORD" code="dropCoin"/>			
+			<FIELD name="掉落内容" type="string" code="lootData"/>
+			<FIELD name="掉落几率" type="DWORD" code="lootRate"/>			
+			<FIELD name="攻击距离" type="DWORD" code="range"/>	
+			<FIELD name="攻击速度" type="DWORD" code="attackSpeed"/>	
+			<FIELD name="生命值" type="DWORD" code="health"/>	
+			<FIELD name="攻击" type="DWORD" code="attack"/>
+			<FIELD name="防御" type="DWORD" code="defence"/>
+			<FIELD name="暴击" type="DWORD" code="critical"/>	
+			<FIELD name="命中" type="DWORD" code="hit"/>
+			<FIELD name="闪避" type="DWORD" code="dodge"/>			
+			<FIELD name="韧性" type="DWORD" code="toughness"/>
+			<FIELD name="普通攻击" type="DWORD" code="attackID"/>
+			<FIELD name="技能AI" type="string" code="skill"/>
+            <FIELD name="死亡声音" type="string" code="diesound"/>
+		</SHEET>
+	</table>
+	
+	<table name="monsterSkill.xls">
+		<SHEET name="怪物技能" filename="MonsterSkill.bytes" struct="MonsterSkill" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="施放条件" type="string" code="condition"/>
+			<FIELD name="解锁时间" type="DWORD" code="unlockTime"/>
+			<FIELD name="间隔时间" type="string" code="interval"/>
+			<FIELD name="决策权重" type="DWORD" code="weight"/>
+		</SHEET>	
+	</table>
+	
+	<table name="normalSkill.xls">
+		<SHEET name="技能配置" filename="NormalSkill.bytes" struct="NormalSkill" index="ID">
+			<FIELD name="技能id" type="DWORD" code="id"/>
+			<FIELD name="技能名" type="string" code="name"/>
+			<FIELD name="技能说明" type="string" code="skillDes"/>
+			<FIELD name="图标" type="string" code="icon"/>
+			<FIELD name="最大等级" type="DWORD" code="maxLv"/>
+			<FIELD name="攻击型/辅助型" type="DWORD" code="skillType"/>
+			<FIELD name="决策几率" type="DWORD" code="weight"/>
+			<FIELD name="效果类型" type="WORD" code="attackType"/>
+			<FIELD name="效果属性" type="WORD" code="attackAttribute"/>
+			<FIELD name="目标选取规则" type="DWORD" code="selectRule"/>
+			<FIELD name="目标数量" type="DWORD" code="targetNum"/>
+			<FIELD name="弹道" type="DWORD" code="curve"/>
+			<FIELD name="范围大小" type="DWORD" code="aoeRadius"/>
+			<FIELD name="作用次数" type="DWORD" code="takeTime"/>
+			<FIELD name="伤害延迟时间" type="string" code="delay"/>
+			<FIELD name="技能动作" type="string" code="skillAction"/>
+			<FIELD name="伤害特效" type="DWORD" code="dmgEffect"/>
+            <FIELD name="施法特效" type="DWORD" code="castEffect"/>
+			<FIELD name="飞行特效" type="DWORD" code="flyEffect"/>
+			<FIELD name="命中特效" type="DWORD" code="hitEffect"/>
+			<FIELD name="屏幕特效" type="DWORD" code="screenEffect"/>
+		</SHEET>
+		<SHEET name="技能升级配置" filename="NormalSkillLvUp.bytes" struct="NormalSkillLvUp" index="ID">
+			<FIELD name="流水号" type="DWORD" code="id"/>
+			<FIELD name="技能id" type="DWORD" code="skillid"/>
+			<FIELD name="技能等级" type="DWORD" code="level"/>
+			<FIELD name="百分比加成" type="float" code="percent"/>
+			<FIELD name="附加值" type="DWORD" code="additional"/>
+			<FIELD name="冷却时间" type="float" code="cooldown"/>
+			<FIELD name="MP消耗" type="DWORD" code="MPCost"/>
+			<FIELD name="HP消耗" type="float" code="HPCost"/>
+			<FIELD name="buff" type="string" code="buff"/>
+			<FIELD name="升级材料" type="string" code="material"/>		
+			<FIELD name="附加效果" type="DWORD" code="addEffect"/>
+			<FIELD name="附加效果参数" type="string" code="addEffectVal"/>
+			<FIELD name="金币消耗" type="DWORD" code="coinCost"/>
+		</SHEET>
+	</table>
+
+	<table name="role.xls">
+		<SHEET name="角色配置" filename="RoleData.bytes" struct="RoleData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="角色等级" type="DWORD" code="level"/>
+			<FIELD name="升级经验" type="DWORD" code="exp"/>
+			<FIELD name="领导力" type="DWORD" code="leadership"/>	
+			<FIELD name="体力上限" type="DWORD" code="maxStamina"/>	
+			<FIELD name="升级可获得体力值" type="DWORD" code="getStamina"/>
+			<FIELD name="好友数量上限" type="DWORD" code="friendNum"/>			
+		</SHEET>
+	</table>
+	
+	<table name="rune.xls">
+		<SHEET name="符文配置" filename="RuneData.bytes" struct="RuneData" index="ID">
+			<FIELD name="符文id" type="DWORD" code="id"/>
+			<FIELD name="符文名" type="string" code="name"/>	
+			<FIELD name="品质" type="DWORD" code="rarity"/>		
+			<FIELD name="图标" type="string" code="icon"/>
+			<FIELD name="类型编号" type="DWORD" code="typeCode"/>
+			<FIELD name="基础属性" type="string" code="basicProp"/>			
+			<FIELD name="随机属性" type="string" code="randomProp"/>			
+			<FIELD name="扩展属性" type="string" code="expandProp"/>	
+			<FIELD name="费用系数" type="float" code="costFactor"/>			
+			<FIELD name="套装id" type="DWORD" code="setID"/>			
+		</SHEET>
+		<SHEET name="套装" filename="RuneSet.bytes" struct="RuneSet" index="ID">
+			<FIELD name="套装id" type="DWORD" code="id"/>
+			<FIELD name="套装名" type="string" code="name"/>
+			<FIELD name="套装效果" type="string" code="effect"/>			
+			<FIELD name="套装效果描述" type="string" code="des"/>			
+		</SHEET>
+		<SHEET name="符文强化" filename="RuneEnhance.bytes" struct="RuneEnhance" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="强化等级" type="DWORD" code="level"/>		
+			<FIELD name="基础强化价格" type="DWORD" code="enhanceCost"/>
+			<FIELD name="强化成功率" type="DWORD" code="successRate"/>			
+			<FIELD name="基础出售价格" type="DWORD" code="price"/>
+			<FIELD name="基础拆卸价格" type="DWORD" code="removeCost"/>			
+		</SHEET>
+		<SHEET name="符文共鸣" filename="RuneSynchro.bytes" struct="RuneSynchro" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="共鸣组合" type="string" code="combination"/>			
+			<FIELD name="共鸣效果" type="string" code="effect"/>			
+		</SHEET>
+	</table>
+	
+	<table name="specialEffect.xls">
+		<SHEET name="特效配置" filename="SpecialEffect.bytes" struct="SpecialEffect" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="播放目标" type="DWORD" code="target"/>
+			<FIELD name="播放挂点" type="DWORD" code="bone"/>
+			<FIELD name="特效名" type="string" code="name"/>
+           		 <FIELD name="音效" type="string" code="audio"/>
+           		 <FIELD name="音效延迟" type="float" code="audioDelay"/>
+                 <FIELD name="缩放倍数" type="float" code="scale"/>
+
+		</SHEET>
+		<SHEET name="飞行特效" filename="FlyingEffect.bytes" struct="FlyingEffect" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="特效名" type="string" code="name"/>
+			<FIELD name="飞行高度" type="DWORD" code="height"/>
+			<FIELD name="飞行距离" type="DWORD" code="distance"/>
+			<FIELD name="飞行速度" type="DWORD" code="speed"/>
+			<FIELD name="起始挂点" type="DWORD" code="bone"/>
+                       <FIELD name="音效" type="string" code="audio"/>
+                       <FIELD name="音效延迟" type="float" code="audioDelay"/>
+                       <FIELD name="缩放倍数" type="float" code="scale"/>
+		</SHEET>
+	</table>
+	
+	<table name="specialSkill.xls">
+		<SHEET name="绝技配置" filename="SpecialSkill.bytes" struct="SpecialSkill" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="绝技名" type="string" code="name"/>
+			<FIELD name="绝技说明" type="string" code="skillDes"/>
+			<FIELD name="图标" type="string" code="icon"/>
+			<FIELD name="最大等级" type="DWORD" code="maxLv"/>
+			<FIELD name="攻击型/辅助型" type="DWORD" code="skillType"/>
+			<FIELD name="决策几率" type="DWORD" code="weight"/>
+			<FIELD name="效果类型" type="WORD" code="attackType"/>
+			<FIELD name="效果属性" type="WORD" code="attackAttribute"/>
+			<FIELD name="目标选取规则" type="DWORD" code="selectRule"/>
+			<FIELD name="目标数量" type="DWORD" code="targetNum"/>
+			<FIELD name="弹道" type="DWORD" code="curve"/>			
+			<FIELD name="范围大小" type="DWORD" code="aoeRadius"/>
+			<FIELD name="伤害延迟时间" type="string" code="delay"/>
+			<FIELD name="技能动作" type="string" code="preAction"/>
+			<FIELD name="持续动作" type="string" code="skillAction"/>
+			<FIELD name="是否限制行为" type="DWORD" code="actionLimit"/>			
+			<FIELD name="伤害特效" type="DWORD" code="dmgEffect"/>
+            <FIELD name="施法特效" type="DWORD" code="castEffect"/>
+			<FIELD name="飞行特效" type="DWORD" code="flyEffect"/>
+			<FIELD name="命中特效" type="DWORD" code="hitEffect"/>
+			<FIELD name="屏幕特效" type="DWORD" code="screenEffect"/>
+		</SHEET>
+		<SHEET name="绝技升级配置" filename="SpecialSkillLvUp.bytes" struct="SpecialSkillLvUp" index="ID">
+			<FIELD name="流水号" type="DWORD" code="id"/>
+			<FIELD name="技能id" type="DWORD" code="skillid"/>
+			<FIELD name="技能等级" type="DWORD" code="level"/>
+			<FIELD name="百分比加成" type="float" code="percent"/>
+			<FIELD name="附加值" type="DWORD" code="additional"/>
+			<FIELD name="能量消耗" type="DWORD" code="EnergyCost"/>
+			<FIELD name="buff" type="string" code="buff"/>
+			<FIELD name="升级材料" type="string" code="material"/>		
+			<FIELD name="附加效果" type="DWORD" code="addEffect"/>
+			<FIELD name="附加效果参数" type="string" code="addEffectVal"/>	
+			<FIELD name="金币消耗" type="DWORD" code="coinCost"/>			
+		</SHEET>
+		<SHEET name="决策系数" filename="DecisionFactor.bytes" struct="DecisionFactor" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="已决定施放的绝技数" type="DWORD" code="decidedNum"/>
+			<FIELD name="修正系数" type="float" code="factor"/>		
+		</SHEET>
+	</table>	
+
+	<table name="summon.xls">
+		<SHEET name="召唤配置" filename="SummonData.bytes" struct="SummonData" index="ID">
+			<FIELD name="召唤id" type="DWORD" code="id"/>
+			<FIELD name="名字" type="string" code="name"/>
+			<FIELD name="图标" type="string" code="icon"/>
+			<FIELD name="描述" type="string" code="des"/>
+			<FIELD name="消耗货币" type="DWORD" code="currency"/>
+			<FIELD name="算法类型" type="DWORD" code="randomType"/>
+			<FIELD name="单次价格" type="DWORD" code="priceOnce"/>
+			<FIELD name="10连抽价格" type="DWORD" code="priceTen"/>
+			<FIELD name="普通奖池id" type="DWORD" code="normalPrize"/>
+			<FIELD name="稀有奖池id" type="DWORD" code="rarePrize"/>
+			<FIELD name="首抽" type="string" code="firstSummon"/>
+			<FIELD name="最低星级" type="DWORD" code="minStar"/>
+			<FIELD name="最高星级" type="DWORD" code="maxStar"/>
+			<FIELD name="最高潜力附加" type="DWORD" code="maxPotential"/>
+			<FIELD name="开启模式" type="DWORD" code="activeType"/>
+			<FIELD name="开服后天数" type="DWORD" code="dayNum"/>
+			<FIELD name="开启日期" type="DWORD" code="activeDate"/>
+			<FIELD name="持续天数" type="DWORD" code="lastTime"/>
+			<FIELD name="间隔天数" type="DWORD" code="interval"/>
+		</SHEET>
+		
+		<SHEET name="奖池" filename="SummonPrize.bytes" struct="SummonPrize" index="ID">
+			<FIELD name="奖池id" type="DWORD" code="id"/>
+			<FIELD name="奖池内容" type="string" code="prize"/>
+		</SHEET>
+		
+		<SHEET name="星级权重" filename="StarWeight.bytes" struct="StarWeight" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="星级" type="DWORD" code="star"/>
+			<FIELD name="权重" type="DWORD" code="weight"/>
+		</SHEET>
+	</table>
+	
+	<table name="talent.xls">
+		<SHEET name="天赋配置" filename="TalentData.bytes" struct="TalentData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="名称" type="string" code="name"/>
+			<FIELD name="描述" type="string" code="des"/>
+			<FIELD name="图标" type="string" code="icon"/>
+			<FIELD name="天赋系别" type="DWORD" code="talentType"/>
+			<FIELD name="效果类型" type="DWORD" code="effectType"/>
+			<FIELD name="效果值" type="float" code="effectVal"/>
+			<FIELD name="条件" type="string" code="condition"/>
+		</SHEET>
+	</table>
+	
+	<table name="task.xls">
+		<SHEET name="任务配置" filename="TaskData.bytes" struct="TaskData" index="ID">
+			<FIELD name="id" type="DWORD" code="id"/>
+			<FIELD name="任务名" type="string" code="name"/>			
+			<FIELD name="任务目标说明" type="string" code="des"/>	
+			<FIELD name="图标" type="string" code="icon"/>		
+			<FIELD name="任务类型" type="DWORD" code="taskType"/>
+			<FIELD name="任务目标" type="string" code="target"/>
+			<FIELD name="接取条件" type="string" code="condition"/>	
+			<FIELD name="后续任务" type="string" code="succTask"/>			
+			<FIELD name="任务奖励" type="string" code="bonus"/>
+			<FIELD name="任务剧情" type="string" code="story"/>			
+		</SHEET>
+	</table>
+	
+	<table name="text.xls">
+			<SHEET name="hero_text" filename="HeroText.bytes" struct="HeroText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="备注" type="string" code="textDes"/>
+			</SHEET>
+			<SHEET name="dungeon_text" filename="DungeonText.bytes" struct="DungeonText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="文字" type="string" code="textDes"/>
+			</SHEET>
+			<SHEET name="monster_text" filename="MonsterText.bytes" struct="MonsterText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="文字" type="string" code="textDes"/>
+			</SHEET>
+			<SHEET name="field_text" filename="FieldText.bytes" struct="FieldText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="文字" type="string" code="textDes"/>
+			</SHEET>	
+			<SHEET name="combination_text" filename="CombinationText.bytes" struct="CombinationText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="文字" type="string" code="textDes"/>
+			</SHEET>
+			<SHEET name="skill_text" filename="SkillText.bytes" struct="SkillText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="文字" type="string" code="textDes"/>
+			</SHEET>	
+			<SHEET name="currency_text" filename="CurrencyText.bytes" struct="CurrencyText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="文字" type="string" code="textDes"/>
+			</SHEET>	
+			<SHEET name="buff_text" filename="BuffText.bytes" struct="BuffText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="文字" type="string" code="textDes"/>
+			</SHEET>
+			<SHEET name="item_text" filename="ItemText.bytes" struct="ItemText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="文字" type="string" code="textDes"/>
+			</SHEET>
+			<SHEET name="rune_text" filename="RuneText.bytes" struct="RuneText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="文字" type="string" code="textDes"/>
+			</SHEET>	
+			<SHEET name="task_text" filename="TaskText.bytes" struct="TaskText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="文字" type="string" code="textDes"/>
+			</SHEET>	
+			<SHEET name="talent_text" filename="TalentText.bytes" struct="TalentText" index="ID">
+				<FIELD name="id" type="DWORD" code="id"/>
+				<FIELD name="字段" type="string" code="name"/>				
+				<FIELD name="文字" type="string" code="textDes"/>
+			</SHEET>			
+	</table>
+
+	<table name="world.xls">
+		<SHEET name="世界配置" filename="WorldData.bytes" struct="WorldData" index="ID">
+			<FIELD name="世界id" type="DWORD" code="id"/>
+			<FIELD name="世界名称" type="string" code="name"/>
+			<FIELD name="世界图标" type="string" code="icon"/>
+			<FIELD name="背景图" type="string" code="background"/>				
+			<FIELD name="当前版本是否开放" type="DWORD" code="available"/>	
+			<FIELD name="副本分布" type="string" code="dungeonRoute"/>
+			<FIELD name="前置副本" type="DWORD" code="preDungeon"/>				
+		</SHEET>
+	</table>
+
+</database>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
